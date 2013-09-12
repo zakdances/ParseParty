@@ -1,1 +1,0 @@
-../../VEVerbalExpressions/Lib/VerbalExpressions.h

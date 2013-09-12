@@ -6,12 +6,6 @@
 // project.
 
 
-// AKVerbalExpression
-#define COCOAPODS_POD_AVAILABLE_AKVerbalExpression
-#define COCOAPODS_VERSION_MAJOR_AKVerbalExpression 0
-#define COCOAPODS_VERSION_MINOR_AKVerbalExpression 4
-#define COCOAPODS_VERSION_PATCH_AKVerbalExpression 0
-
 // NSOrderedDictionary
 #define COCOAPODS_POD_AVAILABLE_NSOrderedDictionary
 #define COCOAPODS_VERSION_MAJOR_NSOrderedDictionary 0
@@ -29,16 +23,4 @@
 #define COCOAPODS_VERSION_MAJOR_ParseKit 0
 #define COCOAPODS_VERSION_MINOR_ParseKit 7
 #define COCOAPODS_VERSION_PATCH_ParseKit 0
-
-// VEVerbalExpressions
-#define COCOAPODS_POD_AVAILABLE_VEVerbalExpressions
-#define COCOAPODS_VERSION_MAJOR_VEVerbalExpressions 0
-#define COCOAPODS_VERSION_MINOR_VEVerbalExpressions 1
-#define COCOAPODS_VERSION_PATCH_VEVerbalExpressions 2
-
-// VerbalExpressions-for-Objective-C
-#define COCOAPODS_POD_AVAILABLE_VerbalExpressions_for_Objective_C
-#define COCOAPODS_VERSION_MAJOR_VerbalExpressions_for_Objective_C 0
-#define COCOAPODS_VERSION_MINOR_VerbalExpressions_for_Objective_C 0
-#define COCOAPODS_VERSION_PATCH_VerbalExpressions_for_Objective_C 1
 
