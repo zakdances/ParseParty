@@ -1,0 +1,625 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"css",
+				"cssContent"
+			],
+			[
+				"Reacti",
+				"ReactiveCocoaIO"
+			],
+			[
+				"main-",
+				"main-portrait"
+			],
+			[
+				"my",
+				"myTSpan"
+			],
+			[
+				"he",
+				"helvetica"
+			],
+			[
+				"in",
+				"index"
+			],
+			[
+				"padding",
+				"padding-top"
+			],
+			[
+				"margin",
+				"margin-right"
+			],
+			[
+				"padd",
+				"padding-top"
+			],
+			[
+				"lo",
+				"lowercase"
+			],
+			[
+				"just",
+				"justify-content"
+			],
+			[
+				"fil",
+				"fill"
+			],
+			[
+				"cla",
+				"classList"
+			],
+			[
+				"cen",
+				"centerOfBtns"
+			],
+			[
+				"ali",
+				"align-items"
+			],
+			[
+				"jus",
+				"justify-content"
+			],
+			[
+				"text",
+				"textContent"
+			],
+			[
+				"gr",
+				"groupBBox"
+			],
+			[
+				"sv",
+				"svgButton"
+			],
+			[
+				"new",
+				"newOrder"
+			],
+			[
+				"ne",
+				"newOrder"
+			],
+			[
+				"but",
+				"buttonPositions"
+			],
+			[
+				"h",
+				"huh"
+			],
+			[
+				"por",
+				"portfolio-btn"
+			],
+			[
+				"att",
+				"attr"
+			],
+			[
+				"inn",
+				"innerCircle"
+			],
+			[
+				"ci",
+				"circleText"
+			],
+			[
+				"for",
+				"forin	Array Comprehension"
+			],
+			[
+				"tex",
+				"text"
+			],
+			[
+				"cir",
+				"circleRadius"
+			],
+			[
+				"fo",
+				"forx	Range Comprehension (exclusive)"
+			],
+			[
+				"back",
+				"background-color"
+			],
+			[
+				"pos",
+				"position"
+			],
+			[
+				"po",
+				"position"
+			],
+			[
+				"textL",
+				"textLength"
+			],
+			[
+				"at",
+				"attr"
+			],
+			[
+				"rota",
+				"rotateY"
+			],
+			[
+				"over",
+				"overflow"
+			],
+			[
+				"bac",
+				"background-color"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "/Users/zak/Zak/projects/libraries/Codesaur/XCode/Codesaur/Codesaur/html.html",
+			"settings":
+			{
+				"buffer_size": 3225,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Users/zak/Zak/projects/libraries/Codesaur/XCode/Codesaur/Codesaur/parser.coffee",
+			"settings":
+			{
+				"buffer_size": 2202,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "Objective-CSS.podspec",
+			"settings":
+			{
+				"buffer_size": 4862,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "Objective-CSS-Test/Podfile",
+			"settings":
+			{
+				"buffer_size": 35,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 49.0,
+		"selected_items":
+		[
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"instal",
+				"Package Control: Install Package"
+			],
+			[
+				"remo",
+				"Package Control: Remove Package"
+			],
+			[
+				"sublimelint",
+				"SublimeLint: Show All Errors"
+			],
+			[
+				"lint",
+				"SublimeLint: Show All Errors"
+			],
+			[
+				"list",
+				"Package Control: List Packages"
+			],
+			[
+				"comp",
+				"Coffee: Compile File"
+			],
+			[
+				"coff",
+				"Coffee: Compile File"
+			],
+			[
+				"install pa",
+				"Package Control: Install Package"
+			],
+			[
+				"pac",
+				"Package Control: Install Package"
+			],
+			[
+				"ins",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 453.0
+	},
+	"console":
+	{
+		"height": 126.0,
+		"history":
+		[
+			"coffee",
+			"node",
+			"coffee",
+			"python"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/Users/zak/Zak/projects/libraries/Codesaur/XCode/Codesaur/submodules/Objective-CSS/Objective-CSS.podspec",
+		"/Users/zak/Zak/projects/libraries/Codesaur/XCode/Codesaur/submodules/ObjectiveCVerbalExpressions/README.md",
+		"/Users/zak/Zak/projects/libraries/Codesaur/XCode/Codesaur/submodules/ObjectiveCVerbalExpressions/VEVerbalExpressions.podspec",
+		"/Users/zak/Zak/projects/libraries/Codesaur/XCode/Codesaur/submodules/ObjectiveCVerbalExpressions/VerbalExpressions.podspec",
+		"/Users/zak/Zak/projects/Objective-CSS/TestProject/Podfile",
+		"/Users/zak/Zak/projects/libraries/Codesaur/XCode/Codesaur/Codesaur/parser.js",
+		"/Users/zak/Zak/projects/ZaksBlog/web/public/css/global.scss",
+		"/Users/zak/Zak/projects/libraries/Codesaur/XCode/Codesaur/submodules/CSSOM/Jakefile.js",
+		"/Users/zak/Zak/projects/libraries/Codesaur/XCode/Codesaur/submodules/CSSOM/build/CSSOM.js",
+		"/Users/zak/Zak/projects/libraries/Codesaur/XCode/Codesaur/submodules/CSSOM/src/CSSOM.js",
+		"/Users/zak/Zak/projects/libraries/Codesaur/XCode/Codesaur/submodules/CSSOM/lib/clone.js",
+		"/Users/zak/Zak/projects/libraries/Codesaur/XCode/Codesaur/submodules/CSSOM/lib/parse.js",
+		"/Users/zak/Zak/projects/libraries/Codesaur/XCode/Codesaur/submodules/CSSOM/lib/CSSValueExpression.js",
+		"/Users/zak/Zak/projects/libraries/Codesaur/XCode/Codesaur/submodules/CSSOM/lib/CSSValue.js",
+		"/Users/zak/Zak/projects/libraries/Codesaur/XCode/Codesaur/submodules/CSSOM/lib/CSSDocumentRule.js",
+		"/Users/zak/Zak/projects/libraries/Codesaur/XCode/Codesaur/submodules/CSSOM/lib/CSSKeyframeRule.js",
+		"/Users/zak/Zak/projects/libraries/Codesaur/XCode/Codesaur/submodules/CSSOM/lib/CSSKeyframesRule.js",
+		"/Users/zak/Zak/projects/libraries/Codesaur/XCode/Codesaur/submodules/CSSOM/lib/CSSStyleSheet.js",
+		"/Users/zak/Zak/projects/libraries/Codesaur/XCode/Codesaur/submodules/CSSOM/lib/CSSFontFaceRule.js",
+		"/Users/zak/Zak/projects/libraries/Codesaur/XCode/Codesaur/submodules/CSSOM/lib/CSSImportRule.js",
+		"/Users/zak/Zak/projects/libraries/Codesaur/XCode/Codesaur/submodules/CSSOM/lib/CSSMediaRule.js",
+		"/Users/zak/Zak/projects/libraries/Codesaur/XCode/Codesaur/submodules/CSSOM/lib/CSSStyleRule.js",
+		"/Users/zak/Zak/projects/libraries/Codesaur/XCode/Codesaur/submodules/CSSOM/lib/StyleSheet.js",
+		"/Users/zak/Zak/projects/libraries/Codesaur/XCode/Codesaur/submodules/CSSOM/lib/CSSStyleDeclaration.js",
+		"/Users/zak/Zak/projects/libraries/Codesaur/XCode/Codesaur/submodules/CSSOM/src/files.js",
+		"/Users/zak/Zak/projects/libraries/Codesaur/XCode/Codesaur/submodules/CSSOM/spec/helper.js",
+		"/Users/zak/Zak/projects/libraries/Codesaur/XCode/Codesaur/submodules/CSSOM/docs/parse.js",
+		"/Users/zak/Zak/projects/libraries/Codesaur/XCode/Codesaur/submodules/CSSOM/src/loader.js",
+		"/Users/zak/Library/Application Support/Sublime Text 3/Packages/JSHint Gutter/.jshintrc",
+		"/Users/zak/Zak/projects/libraries/Codesaur/XCode/Codesaur/submodules/CSSOM/lib/CSSRule.js",
+		"/Users/zak/Zak/projects/libraries/Codesaur/XCode/Codesaur/submodules/CSSOM/lib/MediaList.js",
+		"/Users/zak/Zak/projects/libraries/Codesaur/XCode/Codesaur/Codesaur/parser.coffee",
+		"/Users/zak/Zak/projects/libraries/Codesaur/Sublime Text 3 Plugin/Codesaur/main.py",
+		"/Users/zak/Zak/projects/libraries/Codesaur/XCode/Codesaur/Codesaur/CSSOM.js",
+		"/Users/zak/Library/Application Support/Sublime Text 3/Packages/JSHint Gutter/JSHint.sublime-settings",
+		"/Users/zak/Library/Application Support/Sublime Text 3/Packages/sublimelint/SublimeLint.sublime-settings",
+		"/Users/zak/Zak/projects/libraries/Codesaur/XCode/Codesaur/submodules/CSSOM/spec/CSSStyleRule.spec.js",
+		"/Users/zak/Zak/projects/libraries/Codesaur/XCode/Codesaur/Codesaur/gummybears.coffee",
+		"/Users/zak/Zak/projects/libraries/Codesaur/XCode/Codesaur/Codesaur/gummybears.js",
+		"/Users/zak/Zak/projects/libraries/Codesaur/XCode/Codesaur/Codesaur/skittles.coffee",
+		"/Users/zak/Zak/projects/libraries/Codesaur/XCode/Codesaur/Codesaur/skittles.js",
+		"/Users/zak/Library/Application Support/Sublime Text 3/Packages/User/CoffeeScript.sublime-settings",
+		"/Users/zak/Library/Application Support/Sublime Text 3/Packages/Better CoffeeScript/CoffeeScript.sublime-settings",
+		"/Users/zak/.bash_profile",
+		"/Users/zak/.bashrc",
+		"/Users/zak/Zak/projects/libraries/Codesaur/Gruntfile.coffee",
+		"/Users/zak/Zak/projects/libraries/Codesaur/XCode/Codesaur/submodules/ReactiveCocoaIO/.gitignore",
+		"/Users/zak/Zak/projects/libraries/Codesaur/XCode/Codesaur/Podfile",
+		"/Users/zak/Zak/projects/libraries/Codesaur/XCode/Codesaur/submodules/ReactiveCocoa.podspec",
+		"/Users/zak/Zak/projects/libraries/Codesaur/XCode/Codesaur/submodules/ReactiveCocoaLayout/ReactiveCocoaLayout.podspec",
+		"/Users/zak/Zak/projects/libraries/Codesaur/XCode/Codesaur/submodules/ReactiveCocoaIO/.git",
+		"/Users/zak/Zak/projects/libraries/Codesaur/XCode/Codesaur/submodules/ReactiveCocoaIO/.gitmodules",
+		"/Users/zak/Zak/projects/libraries/Codesaur/XCode/Codesaur/submodules/ReactiveCocoaIO/ReactiveCocoaIO.podspec",
+		"/Users/zak/Zak/projects/libraries/Codesaur/XCode/Codesaur/submodules/ReactiveCocoaIO.podspec",
+		"/Users/zak/Zak/projects/libraries/Codesaur/XCode/Codesaur/submodules/Archimedes.podspec",
+		"/Users/zak/Zak/projects/libraries/Codesaur/package.json",
+		"/Users/zak/Google Drive/Zak/projects/libraries/Codesaur/app/yaml/manifest.yml",
+		"/Users/zak/Google Drive/Zak/projects/libraries/Codesaur/popup.js",
+		"/Users/zak/Google Drive/Zak/projects/libraries/Codesaur/popup.html",
+		"/Users/zak/Google Drive/Zak/projects/libraries/Codesaur/manifest.json",
+		"/Users/zak/Google Drive/Zak/projects/ZaksBlog/web/public/html/index.jade",
+		"/Users/zak/Google Drive/Zak/projects/ZaksBlog/web/server.coffee",
+		"/Users/zak/Google Drive/Zak/projects/ZaksBlog/web/public/js/app.coffee",
+		"/Users/zak/Google Drive/Zak/projects/ZaksBlog/web/public/js/controllers.coffee",
+		"/Users/zak/Google Drive/Zak/projects/ZaksBlog/web/public/js/directives.coffee",
+		"/Users/zak/Google Drive/Zak/projects/ZaksBlog/web/public/js/compiled/build.js",
+		"/Users/zak/Google Drive/Zak/projects/ZaksBlog/web/package.json",
+		"/Users/zak/Google Drive/Zak/projects/ZaksBlog/web/Gruntfile.coffee",
+		"/Users/zak/Google Drive/Zak/projects/ZaksBlog/web/public/css/compiled/build.css",
+		"/Users/zak/Google Drive/Zak/projects/ZaksBlog/web/public/html/blog.jade",
+		"/Users/zak/Google Drive/Zak/projects/ZaksBlog/web/public/css/global.scss",
+		"/Users/zak/Google Drive/Zak/projects/ZaksBlog/web/node_modules/grunt-nodemon/node_modules/nodemon/nodemon.js",
+		"/Users/zak/Google Drive/Zak/projects/libraries/nodemon/nodemon.js",
+		"/Users/zak/Google Drive/Zak/projects/ZaksBlog/web/public/css/settings.scss",
+		"/Users/zak/Google Drive/Zak/projects/ZaksBlog/web/public/css/mixins.scss",
+		"/Users/zak/Google Drive/Zak/projects/ZaksBlog/web/node_modules/grunt-nodemon/node_modules/nodemon/faq.md",
+		"/Users/zak/Google Drive/Zak/projects/ZaksBlog/web/public/html/mixins.jade",
+		"/Users/zak/Google Drive/Zak/projects/ZaksBlog/web/public/css/blog.scss",
+		"/Users/zak/Google Drive/Zak/projects/ZaksBlog/web/public/js/threejsHelpers.coffee",
+		"/Users/zak/Google Drive/Zak/projects/ZaksBlog/web/public/js/svgTemplates.coffee",
+		"/Users/zak/Google Drive/Zak/projects/ZaksBlog/web/public/js/compiled/test.js",
+		"/Users/zak/Google Drive/Zak/projects/ZaksBlog/web/public/html/test.jade",
+		"/Users/zak/Google Drive/Zak/projects/ZaksBlog/web/public/html/test2.jade",
+		"/Users/zak/Google Drive/Zak/projects/ZaksBlog/web/public/js/test.coffee",
+		"/Users/zak/Google Drive/Zak/projects/ZaksBlog/web/public/css/test.scss",
+		"/Users/zak/Library/Application Support/Sublime Text 3/Packages/SideBarEnhancements/Side Bar.sublime-settings",
+		"/Users/zak/Library/Application Support/Sublime Text 3/Packages/Package Control/Package Control.sublime-settings",
+		"/Users/zak/Library/Application Support/Sublime Text 3/Installed Packages/Better CoffeeScript.sublime-package",
+		"/Users/zak/Library/Application Support/Sublime Text 3/Packages/Better CoffeeScript/Keymaps/Default (OSX).sublime-keymap"
+	],
+	"find":
+	{
+		"height": 37.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"CSSStyleRule",
+			"()",
+			"strict",
+			"default",
+			"strict",
+			"CSSOM",
+			"json",
+			"CodeMirror",
+			"nvm",
+			"node",
+			"console.l",
+			"util.e",
+			"killing no",
+			"util.error",
+			"console.e",
+			"console",
+			"cssPath",
+			"ul",
+			"when",
+			"logo-b",
+			"y.",
+			"y.or",
+			"buttonPositions",
+			"pad",
+			"svg",
+			"border",
+			"boder",
+			"label",
+			".label",
+			"contro",
+			"contr",
+			"justi"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 2,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "/Users/zak/Zak/projects/libraries/Codesaur/XCode/Codesaur/Codesaur/html.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3225,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								428,
+								428
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "/Users/zak/Zak/projects/libraries/Codesaur/XCode/Codesaur/Codesaur/parser.coffee",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2202,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1216,
+								1216
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Better CoffeeScript/CoffeeScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 241.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "Objective-CSS.podspec",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 4862,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2725,
+								2725
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Ruby/Ruby.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 517.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "Objective-CSS-Test/Podfile",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 35,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								34,
+								34
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Ruby/Ruby.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 23.0
+	},
+	"input":
+	{
+		"height": 0.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"project": "Objective-CSS.sublime-project",
+	"replace":
+	{
+		"height": 46.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"selected_items":
+		[
+			[
+				"",
+				"~/Zak/projects/ZaksBlog/web/zaksblog.sublime-project"
+			]
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 236.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

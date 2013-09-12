@@ -1,0 +1,1 @@
+PODS_OBJECTIVE_CSS_OTHER_LDFLAGS = -framework Foundation

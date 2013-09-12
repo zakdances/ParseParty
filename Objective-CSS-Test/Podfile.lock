@@ -1,0 +1,38 @@
+PODS:
+  - AKVerbalExpression (0.4.0)
+  - NSOrderedDictionary (0.0.1)
+  - Objective-CSS (0.0.1):
+    - AKVerbalExpression
+    - NSOrderedDictionary
+    - ParseKit
+    - VerbalExpressions-for-Objective-C
+    - VEVerbalExpressions
+  - ParseKit (0.7)
+  - VerbalExpressions-for-Objective-C (0.0.1)
+  - VEVerbalExpressions (0.1.2)
+
+DEPENDENCIES:
+  - NSOrderedDictionary (from `https://github.com/zakdances/NSOrderedDictionary.git`)
+  - Objective-CSS (from `../`)
+  - ParseKit (from `https://raw.github.com/NocturnalCode/parsekit/1d414b14ca33fbe159d2d6dd4a73bf1dd19c885c/ParseKit.podspec`)
+  - VerbalExpressions-for-Objective-C (from `https://github.com/zakdances/VerbalExpressions-for-Objective-C.git`)
+
+EXTERNAL SOURCES:
+  NSOrderedDictionary:
+    :git: https://github.com/zakdances/NSOrderedDictionary.git
+  Objective-CSS:
+    :path: ../
+  ParseKit:
+    :podspec: https://raw.github.com/NocturnalCode/parsekit/1d414b14ca33fbe159d2d6dd4a73bf1dd19c885c/ParseKit.podspec
+  VerbalExpressions-for-Objective-C:
+    :git: https://github.com/zakdances/VerbalExpressions-for-Objective-C.git
+
+SPEC CHECKSUMS:
+  AKVerbalExpression: 004a09c06f37772488695b8dba28c44d96b437da
+  NSOrderedDictionary: 07a300bd37b356c3a00af488c121828241bd6ff9
+  Objective-CSS: a6b94042d38837eeee379ed3a22d6eb612066150
+  ParseKit: b7a059d743342b674bf905792fd66f1027bd3d8d
+  VerbalExpressions-for-Objective-C: 8a7f591fa63f7fc5462ba365d81de73a7b094603
+  VEVerbalExpressions: 94715e4f851afe481edf1b9626bb024f01d31ff9
+
+COCOAPODS: 0.24.0

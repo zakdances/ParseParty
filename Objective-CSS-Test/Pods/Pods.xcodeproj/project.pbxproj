@@ -1,0 +1,2169 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		00261F7D367E41F29C2A0F00 /* PKPatternNode.m in Sources */ = {isa = PBXBuildFile; fileRef = BF32E84D09CC4BB5A91E1FC3 /* PKPatternNode.m */; };
+		01F74AE512F44A7EA706D7A4 /* PKNumber.m in Sources */ = {isa = PBXBuildFile; fileRef = 1098CAC2C7E04B3589A81041 /* PKNumber.m */; };
+		0332D9726A9545FD8D61426A /* PKNegation.h in Headers */ = {isa = PBXBuildFile; fileRef = 0352A03E829D45469FADA6CD /* PKNegation.h */; };
+		066C61CB170842B6B6551406 /* PKChar.h in Headers */ = {isa = PBXBuildFile; fileRef = 36198625445043A886B59C66 /* PKChar.h */; };
+		07C19D5FF52B4C0BA92AE35B /* ICUTemplateMatcher.h in Headers */ = {isa = PBXBuildFile; fileRef = BD7C83CEEAF3470E81A0BB13 /* ICUTemplateMatcher.h */; };
+		0A1695E786AE4E35AD92B8E2 /* PKDelimitDescriptorCollection.h in Headers */ = {isa = PBXBuildFile; fileRef = D68986B9778D406480B28E64 /* PKDelimitDescriptorCollection.h */; };
+		0BC97CD0E40A4B6D94072D73 /* PKDelimitedNode.h in Headers */ = {isa = PBXBuildFile; fileRef = 117E199B56AE4A779831ABB2 /* PKDelimitedNode.h */; };
+		0D0AA27087654B309D3C4045 /* PKDelimitDescriptor.m in Sources */ = {isa = PBXBuildFile; fileRef = A1636E0825E14649A84FE047 /* PKDelimitDescriptor.m */; };
+		0D8EDEE9A7384D2F8FFC573C /* RegexKitLite.h in Headers */ = {isa = PBXBuildFile; fileRef = 8758E73102E54F9091C6B8F7 /* RegexKitLite.h */; };
+		0E0A96060A3F43D7B636FC65 /* PKCompositeParser.h in Headers */ = {isa = PBXBuildFile; fileRef = 4E7D268159D648638EC9D4F2 /* PKCompositeParser.h */; };
+		0E7839311B834295AA8CD28E /* PKActionNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 014F5B004BF7463BAC5695F8 /* PKActionNode.m */; };
+		0FE764B9B31344B7996856DE /* PKSymbolState.h in Headers */ = {isa = PBXBuildFile; fileRef = C41920D331074BE2A9CC9EF7 /* PKSymbolState.h */; };
+		105F8B69AE0D47A6B39DA731 /* PKPattern.m in Sources */ = {isa = PBXBuildFile; fileRef = DE20A21F0E8C4AA19E62AD1A /* PKPattern.m */; };
+		1112B44B57934412B2553132 /* PKWhitespace.m in Sources */ = {isa = PBXBuildFile; fileRef = 2878B88AD1B346D2AA5AC477 /* PKWhitespace.m */; };
+		116287272C374F1D9DD4C2C0 /* PKAssembly.m in Sources */ = {isa = PBXBuildFile; fileRef = E9713C4F91F54CB19E9DEFED /* PKAssembly.m */; };
+		124E7EC2B81249AEAB9EB210 /* PKReader.h in Headers */ = {isa = PBXBuildFile; fileRef = 739ACFC5C55F45E6984C3966 /* PKReader.h */; };
+		125D96C1AD3147BCB4D09F5F /* MGTemplateFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 4E73B98D3211458D84343711 /* MGTemplateFilter.h */; };
+		197F3E5BC8514E72B5062AF1 /* Pods-VEVerbalExpressions-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 6036F17723E246A2B5FF11B8 /* Pods-VEVerbalExpressions-dummy.m */; };
+		1983A02A2BFF41C4A67FF43A /* PKParserFactory.h in Headers */ = {isa = PBXBuildFile; fileRef = 74D9D0658E9A47819C7B9C56 /* PKParserFactory.h */; };
+		1A7AF03849464B0698F0D644 /* NSString+ParseKitAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 0E0D46572F534FC89B721AA4 /* NSString+ParseKitAdditions.h */; };
+		1A9E1A979E8D4990AF311CD1 /* PKMultipleNode.m in Sources */ = {isa = PBXBuildFile; fileRef = E2CBE507742449679494BCD3 /* PKMultipleNode.m */; };
+		1C740336F5584FC6928201A1 /* PKDifference.h in Headers */ = {isa = PBXBuildFile; fileRef = 42380FE3F319413E84BADE6D /* PKDifference.h */; };
+		1CF74FAE3C3F49D08158747A /* OCSSParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C4A4F7CAF334EB9BC3B50E3 /* OCSSParser.m */; };
+		1E410D941D9446E1B40343F4 /* PKCharacterAssembly.m in Sources */ = {isa = PBXBuildFile; fileRef = A8D1536BD49B40ECA89FE48B /* PKCharacterAssembly.m */; };
+		1E98FC492CD943E2800105BF /* PKResolutionPhaseVisitor.m in Sources */ = {isa = PBXBuildFile; fileRef = 78045482D29841F8B882D365 /* PKResolutionPhaseVisitor.m */; };
+		1FEE0A1B4A6F4E448B03A259 /* ICUTemplateMatcher.m in Sources */ = {isa = PBXBuildFile; fileRef = FC88AA2ABCFC492391B8D3AF /* ICUTemplateMatcher.m */; };
+		22DCDC4ADC31498D9645CCEA /* PKTrackException.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D1F049DBE424BD5B560B3FA /* PKTrackException.m */; };
+		230951036670495CA6A0EF77 /* PKWord.m in Sources */ = {isa = PBXBuildFile; fileRef = D049F3F8314A445EACF80228 /* PKWord.m */; };
+		241B336D412B4DDD9F130E29 /* PKTokenArraySource.h in Headers */ = {isa = PBXBuildFile; fileRef = ECD4C53533924A96AA73E360 /* PKTokenArraySource.h */; };
+		24B6FC499DCC48BE80A41F9D /* PKEmpty.m in Sources */ = {isa = PBXBuildFile; fileRef = 958F8AD1948242DCA85CDC49 /* PKEmpty.m */; };
+		2538128891774692926821AF /* Pods-NSOrderedDictionary-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B506D41776694B0C9B3A7E9D /* Pods-NSOrderedDictionary-dummy.m */; };
+		261225291F344AA6927A3D40 /* PKReferenceNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 945120813428429A8E714C8D /* PKReferenceNode.m */; };
+		26213A969F99459E800DE8BD /* PKTrack.m in Sources */ = {isa = PBXBuildFile; fileRef = B2041A5316EF42BDA43A06CC /* PKTrack.m */; };
+		26D499E020E04544A6D0F994 /* libPods-AKVerbalExpression.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D6F0EA30BEBC4C5193F69963 /* libPods-AKVerbalExpression.a */; };
+		26FC2F7CD3F249B5ADF9B276 /* ParseKit.h in Headers */ = {isa = PBXBuildFile; fileRef = A78F0D96D6CD45418B4BC1A7 /* ParseKit.h */; };
+		27D17EE8BD8A4C94956ED196 /* MGTemplateEngine.h in Headers */ = {isa = PBXBuildFile; fileRef = 203352B058D347C7A0930306 /* MGTemplateEngine.h */; };
+		2A46BC7197204A788789251C /* PKTokenizer.m in Sources */ = {isa = PBXBuildFile; fileRef = C73974FBB1CB45AB81572444 /* PKTokenizer.m */; };
+		2AA51C5E2BD140A1A5311628 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10B461B7E83442EF99D9E65B /* Cocoa.framework */; };
+		2AFF2587329240F686793B65 /* PKQuoteState.h in Headers */ = {isa = PBXBuildFile; fileRef = 202AB6100C79410CBC693BC8 /* PKQuoteState.h */; };
+		2B4B82679B834554A640A7E8 /* MGTemplateStandardFilters.h in Headers */ = {isa = PBXBuildFile; fileRef = 71DE3ADE1016469FB2423E38 /* MGTemplateStandardFilters.h */; };
+		2B527F5B236C46BEA9862CF7 /* NSArray_DeepMutableCopy.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C1E43507B11492EA971490F /* NSArray_DeepMutableCopy.m */; };
+		2EE2A41E9C1F43BA845E43A5 /* PKSRecognitionException.m in Sources */ = {isa = PBXBuildFile; fileRef = 09476410FEAF4485B777BA7A /* PKSRecognitionException.m */; };
+		2EF88023D37B4B2ABF24AD4C /* PKTokenizerState.h in Headers */ = {isa = PBXBuildFile; fileRef = 61EF488C052B442EA56B18F9 /* PKTokenizerState.h */; };
+		3125B6A23624461B8CA16923 /* PKDefinitionNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 95C9AADF92C04CE581D47ECE /* PKDefinitionNode.m */; };
+		3315E8720E7643F1A96E46F1 /* PKWord.h in Headers */ = {isa = PBXBuildFile; fileRef = 060EA633803D4D7A8D635B4F /* PKWord.h */; };
+		335EF91030564FC48D4BBCA3 /* PKTerminal.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A33F42135F747B08B11195B /* PKTerminal.m */; };
+		3360C254DAC848118E5CFAB6 /* PKWhitespaceState.m in Sources */ = {isa = PBXBuildFile; fileRef = B31A7A14B77B4A0A90412C41 /* PKWhitespaceState.m */; };
+		345E257B18A240548F0CFB0F /* PKDigit.m in Sources */ = {isa = PBXBuildFile; fileRef = BCD983E4DFE34EDA8DB3028B /* PKDigit.m */; };
+		35E5E774A0404AF2999482C1 /* PKTypes.h in Headers */ = {isa = PBXBuildFile; fileRef = B814408ABBAA4F2BB8678326 /* PKTypes.h */; };
+		3678DB2D222F4FF7A79C2069 /* PKAny.h in Headers */ = {isa = PBXBuildFile; fileRef = C6622E54FA9E452EA420069C /* PKAny.h */; };
+		37461FF309204A02871603CE /* PKConstantNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E42DBCE03524693AFADE36C /* PKConstantNode.m */; };
+		37C8AF2B58AA4956B47F9310 /* NSDictionary_DeepMutableCopy.h in Headers */ = {isa = PBXBuildFile; fileRef = 5881294C2E9D44588EDE87A3 /* NSDictionary_DeepMutableCopy.h */; };
+		3821D2BFAE6E4F149108B163 /* MGTemplateMarker.h in Headers */ = {isa = PBXBuildFile; fileRef = B5EA03F38017477FBFABA48F /* MGTemplateMarker.h */; };
+		3887F23EC40C41938195E8BB /* PKBaseVisitor.m in Sources */ = {isa = PBXBuildFile; fileRef = 05642CF5BD374A338663AD55 /* PKBaseVisitor.m */; };
+		39B1307C65D944229598DE9D /* PKTwitterState.h in Headers */ = {isa = PBXBuildFile; fileRef = EA7DE59DF4584E9F8AF3058F /* PKTwitterState.h */; };
+		3AA06D172A2B4688A7F7647E /* DeepMutableCopy.h in Headers */ = {isa = PBXBuildFile; fileRef = 1925A19F7405400EBE3B846C /* DeepMutableCopy.h */; };
+		3D17F23F08A04A4CA0CDE60E /* PKSRecognitionException.h in Headers */ = {isa = PBXBuildFile; fileRef = E3D67BFC1BF04A4098C7D920 /* PKSRecognitionException.h */; };
+		3D5F0AB6580940D1B746444E /* PKNegation.m in Sources */ = {isa = PBXBuildFile; fileRef = D5DE04AC6815422E852F0DD8 /* PKNegation.m */; };
+		3E9BCD2350A0441289E39C86 /* PKSParserGenVisitor.m in Sources */ = {isa = PBXBuildFile; fileRef = 555552960C4B4D849ACEF093 /* PKSParserGenVisitor.m */; };
+		3EEFC53CD184446094D2B420 /* PKCollectionParser.h in Headers */ = {isa = PBXBuildFile; fileRef = 684D2876FAFD4FDC8EE29B93 /* PKCollectionParser.h */; };
+		3FCDAAEF742D4A5FBB62CEE4 /* PKDelimitDescriptor.h in Headers */ = {isa = PBXBuildFile; fileRef = 0AFA87D9CBC24900881AA2DB /* PKDelimitDescriptor.h */; };
+		417AE0549A2B47BC99EB4376 /* PKWhitespace.h in Headers */ = {isa = PBXBuildFile; fileRef = 6E9824F54817445A93E713E7 /* PKWhitespace.h */; };
+		42FC3D523E764EA3A08B3D15 /* VerbalExpressions.h in Headers */ = {isa = PBXBuildFile; fileRef = 7D36611E635141C0B9CDC446 /* VerbalExpressions.h */; };
+		46CD519CB1FA4BA0B8558F90 /* PKWhitespaceState.h in Headers */ = {isa = PBXBuildFile; fileRef = 7A612B4037E349D0B2755521 /* PKWhitespaceState.h */; };
+		47C3EB8E19784B7BAB37A7EF /* PKCompositeNode.h in Headers */ = {isa = PBXBuildFile; fileRef = B21018CA32EA4FE7A93C2893 /* PKCompositeNode.h */; };
+		484832DCEFC84AEDB8F53E8A /* PKURLState.h in Headers */ = {isa = PBXBuildFile; fileRef = 73D93755822245C6AC14A783 /* PKURLState.h */; };
+		4899676C5EF14DA88C1E9A46 /* VerbalExpressions.m in Sources */ = {isa = PBXBuildFile; fileRef = 367128D41B874D8B80036885 /* VerbalExpressions.m */; settings = {COMPILER_FLAGS = "-fobjc-arc -DOS_OBJECT_USE_OBJC=0"; }; };
+		48C09827B1F64FA8BBBF9780 /* PKConstantNode.h in Headers */ = {isa = PBXBuildFile; fileRef = 026682C0BCCA4F79AF355BE7 /* PKConstantNode.h */; };
+		4AD76B5E0935449393984423 /* PKComment.m in Sources */ = {isa = PBXBuildFile; fileRef = 4827778020C24017A2E50E57 /* PKComment.m */; };
+		4B843254C60944C193FD077F /* PKSParserGenVisitor.h in Headers */ = {isa = PBXBuildFile; fileRef = 6EA801893A984E9B99F9F60A /* PKSParserGenVisitor.h */; };
+		4BA7015319A7498F9FB21848 /* NSArray_DeepMutableCopy.h in Headers */ = {isa = PBXBuildFile; fileRef = 08AA08DC60034C0496C4343E /* NSArray_DeepMutableCopy.h */; };
+		4E818C6EA57046C4AC0FC14C /* PKAlternation.m in Sources */ = {isa = PBXBuildFile; fileRef = 2301F3551AAA4AB58AB9C7EA /* PKAlternation.m */; };
+		5022EF1CD62B48C1ACFD5D18 /* PKTokenizer.h in Headers */ = {isa = PBXBuildFile; fileRef = 42B3713A91D14C6BAA21052E /* PKTokenizer.h */; };
+		506F017A53C24B1B9274FCB5 /* PKMultiLineCommentState.h in Headers */ = {isa = PBXBuildFile; fileRef = B6C7D25EFE3C455DB28CFBCC /* PKMultiLineCommentState.h */; };
+		50FD29B7C39F456ABCB9956C /* PKQuoteState.m in Sources */ = {isa = PBXBuildFile; fileRef = BBAD346FCE7E411F8C9C4258 /* PKQuoteState.m */; };
+		524385B5D2C4496D9A383D7E /* PKCaseInsensitiveLiteral.h in Headers */ = {isa = PBXBuildFile; fileRef = FD5433C8175E44D48E950BCF /* PKCaseInsensitiveLiteral.h */; };
+		52DEED6764FF4A38BD403DBD /* PKSymbolRootNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 78C0720DD2D148CB883357DA /* PKSymbolRootNode.m */; };
+		54011BF2B208488EB458168C /* MGTemplateEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = C69F9A18414641F6BEE0817F /* MGTemplateEngine.m */; };
+		55B67231AFA5424CB83E06F6 /* PKTwitterState.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E00EC30D1B84BF28894EF92 /* PKTwitterState.m */; };
+		55ED679A8CF44F5BB1226534 /* Pods-AKVerbalExpression-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = DDE7BA0B80F14E2FA14C713F /* Pods-AKVerbalExpression-dummy.m */; };
+		56B6D9D5253B424FB6880656 /* PKTrackException.h in Headers */ = {isa = PBXBuildFile; fileRef = 385E5EB9E0134D0DBBFA31D0 /* PKTrackException.h */; };
+		57F22F5D14574810A5A03D59 /* PKWordState.m in Sources */ = {isa = PBXBuildFile; fileRef = 552517F5F340426BAF803B20 /* PKWordState.m */; };
+		5814940619FB4E3DAB80ACCF /* NSMutableSet+ParseKitAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D613253A03343749561C9B6 /* NSMutableSet+ParseKitAdditions.m */; };
+		5A0739D318D14BAB829E4FEF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F3CC54F9A374F6EB10493B7 /* Foundation.framework */; };
+		5A08EBC133F040D294FCBAF7 /* Pods-Objective-CSS-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 7283DBAEBD704831825219F4 /* Pods-Objective-CSS-dummy.m */; };
+		5A1BAA823DF54CAB95CD08AD /* PKPattern.h in Headers */ = {isa = PBXBuildFile; fileRef = 7A550A7AAF8B47F6AD502C37 /* PKPattern.h */; };
+		5B0242F7C92C480A96AAB022 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10B461B7E83442EF99D9E65B /* Cocoa.framework */; };
+		5BE9672E978B4EC5A9855AF0 /* PKAST.h in Headers */ = {isa = PBXBuildFile; fileRef = 8100C1788FAE4A0B9A1B3070 /* PKAST.h */; };
+		5DAC5F4198C74D8099924892 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10B461B7E83442EF99D9E65B /* Cocoa.framework */; };
+		5E9C0410814D4AF884BBDFF0 /* PKTrack.h in Headers */ = {isa = PBXBuildFile; fileRef = 06DE2E4E138C476F89D431B9 /* PKTrack.h */; };
+		6432AEFC49EA41F398774CF1 /* libPods-Objective-CSS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BC8AFE2266C449BA1B9C524 /* libPods-Objective-CSS.a */; };
+		662ABAE7C1634935BF5181B9 /* PKLowercaseWord.h in Headers */ = {isa = PBXBuildFile; fileRef = 3F17851BE3DA44618AF8746A /* PKLowercaseWord.h */; };
+		669C9B311CC742E5B1EABFAF /* PKDelimitedString.m in Sources */ = {isa = PBXBuildFile; fileRef = 9ADACD891A364704BF57491F /* PKDelimitedString.m */; };
+		685D2B3E5DA140CFACA07E0A /* PKSequence.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F9263940B5B43858D6F3FA6 /* PKSequence.m */; };
+		6D10A141DB5F45CD987A1618 /* PKSingleLineCommentState.h in Headers */ = {isa = PBXBuildFile; fileRef = 43E1212158AC40319DCC15F5 /* PKSingleLineCommentState.h */; };
+		6E80A61F61B34B258E7A62E4 /* PKIntersection.m in Sources */ = {isa = PBXBuildFile; fileRef = 828D61BDEE7B425FA17ACD54 /* PKIntersection.m */; };
+		6EA3EFD650DC4F1DA87CCD4F /* PKNumberState.m in Sources */ = {isa = PBXBuildFile; fileRef = 350DC840FFE547259F9D2B6C /* PKNumberState.m */; };
+		70A7AAC58D6449E186DADE69 /* PKQuotedString.h in Headers */ = {isa = PBXBuildFile; fileRef = 417EB8C504604934AC4CD58B /* PKQuotedString.h */; };
+		744FD85C2B1645B991871313 /* PKTokenAssembly.h in Headers */ = {isa = PBXBuildFile; fileRef = 9D4B80D8906D4A11AA268641 /* PKTokenAssembly.h */; };
+		77D3214FAD034EDD957E9722 /* PKQuotedString.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C340554D67646048150C384 /* PKQuotedString.m */; };
+		77F9225DF3254CF69297C1BF /* PKLowercaseWord.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FDBF76A86074E71969283C1 /* PKLowercaseWord.m */; };
+		786E2D546049474E8BF3A878 /* PKCommentState.h in Headers */ = {isa = PBXBuildFile; fileRef = F6457CA4F7044A4BB012C627 /* PKCommentState.h */; };
+		78F3591A2F7C4B8A94C5FD07 /* PKDelimitedString.h in Headers */ = {isa = PBXBuildFile; fileRef = FDD01A9FCEAD41C286A5344B /* PKDelimitedString.h */; };
+		79170939D2BB49F8995618DA /* PKSingleLineCommentState.m in Sources */ = {isa = PBXBuildFile; fileRef = 92FC9590E8FB40E7A177E6AE /* PKSingleLineCommentState.m */; };
+		7A608DBBD6FC40ECB55D34AD /* PKAlternationNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 30AC2514ED534871A7BFC12C /* PKAlternationNode.m */; };
+		7AF5EE1FE1B54486A0C997AC /* libPods-NSOrderedDictionary.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 620440280EC94C87A27667BC /* libPods-NSOrderedDictionary.a */; };
+		7B4A098B3A2542D3B0885AC7 /* NSOrderedDictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = C4FE438F806843D69E46F75B /* NSOrderedDictionary.m */; settings = {COMPILER_FLAGS = "-fobjc-arc -DOS_OBJECT_USE_OBJC=0"; }; };
+		7B81D9C7FF294EC3B5FB3C50 /* libPods-VEVerbalExpressions.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C8E241F8AC145FE87EE299A /* libPods-VEVerbalExpressions.a */; };
+		7C9D3928799A4E66B326E534 /* PKSTokenKindDescriptor.h in Headers */ = {isa = PBXBuildFile; fileRef = 7B0A0C7B76A74C23A360B6D9 /* PKSTokenKindDescriptor.h */; };
+		7D894A0510754AFE8202E563 /* PKURLState.m in Sources */ = {isa = PBXBuildFile; fileRef = ABBB99AF027F401D829B75BB /* PKURLState.m */; };
+		7F058D2814334503B26AF3C5 /* RegexKitLite.m in Sources */ = {isa = PBXBuildFile; fileRef = 1843DA1939F14D1A9B3FE496 /* RegexKitLite.m */; };
+		7F4485F655D74C15A4CF8894 /* PKAlternationNode.h in Headers */ = {isa = PBXBuildFile; fileRef = 489547E42CF44E6BBF5076DF /* PKAlternationNode.h */; };
+		81C1CFC623974B47B1C7D963 /* PKBaseNode.h in Headers */ = {isa = PBXBuildFile; fileRef = 540674F450B74A00A22B0C9C /* PKBaseNode.h */; };
+		82E940670D7D451BAF280110 /* PKSymbolNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 0524B40951274CC5A85F5B0F /* PKSymbolNode.m */; };
+		8375B8EC2AEF427D9A29372A /* PKCompositeParser.m in Sources */ = {isa = PBXBuildFile; fileRef = F85D9D5C56514058BC80291B /* PKCompositeParser.m */; };
+		84C33761411C41B9AB794F08 /* PKSymbolState.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C1610FF636F44DEBF14AFB8 /* PKSymbolState.m */; };
+		84D81E9EBC16495388749E84 /* PKSTokenKindDescriptor.m in Sources */ = {isa = PBXBuildFile; fileRef = 771DB87CD5C54A8EA8DD2762 /* PKSTokenKindDescriptor.m */; };
+		85E5AC8DC25E4F02AE7CA171 /* PKDefinitionNode.h in Headers */ = {isa = PBXBuildFile; fileRef = 318CB278BCDF41FABF94EB73 /* PKDefinitionNode.h */; };
+		896142F595564167B898966D /* PKNumber.h in Headers */ = {isa = PBXBuildFile; fileRef = F63190EE9C7E4FB699079CF2 /* PKNumber.h */; };
+		8D9E40692262478F9374CC9F /* NSDictionary_DeepMutableCopy.m in Sources */ = {isa = PBXBuildFile; fileRef = 072D0D73D65E4F409C5D7260 /* NSDictionary_DeepMutableCopy.m */; };
+		8F6198FEA4A642F9AD172A84 /* PKBaseNode.m in Sources */ = {isa = PBXBuildFile; fileRef = F0184364C46F4EAB94FA42F1 /* PKBaseNode.m */; };
+		8FD215864F7042DC90510F37 /* PKSymbolRootNode.h in Headers */ = {isa = PBXBuildFile; fileRef = F7FC292B058C4B5C87649A43 /* PKSymbolRootNode.h */; };
+		8FE064AF07214A97B9A984F3 /* PKAlternation.h in Headers */ = {isa = PBXBuildFile; fileRef = EFD4A0C8CE5A4DF485AD6A37 /* PKAlternation.h */; };
+		91C9EAC410DE4A8EB68BEBFA /* Pods-VerbalExpressions-for-Objective-C-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FBAF19D0C44438680E3D7FD /* Pods-VerbalExpressions-for-Objective-C-dummy.m */; };
+		925B646254834E47910704D4 /* PKDelimitedNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 8263A5EA078542F3949592C9 /* PKDelimitedNode.m */; };
+		92FF16C7BA294FE6A2931DF7 /* PKSymbol.h in Headers */ = {isa = PBXBuildFile; fileRef = 692378DF114046229295CAEF /* PKSymbol.h */; };
+		94508E990FDC4D73BEA9DF6B /* PKSpecificChar.m in Sources */ = {isa = PBXBuildFile; fileRef = 9194B562F4044A4DBD3B5BDA /* PKSpecificChar.m */; };
+		98B1DB4229E34D95A4458CC2 /* PKMultiLineCommentState.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B527CDCEC7F4955ACD3A061 /* PKMultiLineCommentState.m */; };
+		991DFAE69DF34AB2A98BE71B /* PKHashtagState.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B120614D2A94B0EB41A93B2 /* PKHashtagState.m */; };
+		9A3B5B9F4F2040DBBEC31AB2 /* PKActionNode.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D67D6EE00834782A0698F9D /* PKActionNode.h */; };
+		9AEBCC4165B844A59DD03436 /* PKUppercaseWord.m in Sources */ = {isa = PBXBuildFile; fileRef = E773D5CDFF6845819C8F74B1 /* PKUppercaseWord.m */; };
+		9DA87717049F4D6DBF070405 /* MGTemplateStandardMarkers.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E03661581194D0896002D59 /* MGTemplateStandardMarkers.m */; };
+		9E4B74F6A57B40728B764FFD /* NSString+ParseKitAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EC868B4841C4B51B7C655EF /* NSString+ParseKitAdditions.m */; };
+		9F245715E74842B4A628E9CD /* PKDigit.h in Headers */ = {isa = PBXBuildFile; fileRef = 20C83125FC6A4B40BE5789D7 /* PKDigit.h */; };
+		9FC8218A838C4496BDECDD11 /* PKParser.h in Headers */ = {isa = PBXBuildFile; fileRef = 65BA29C2FF7E4620AAE0997D /* PKParser.h */; };
+		9FCAA5D79AE541378A844E0A /* PKWordState.h in Headers */ = {isa = PBXBuildFile; fileRef = 8099D3FB32274336AD50A3D5 /* PKWordState.h */; };
+		A097B51B6B5B4E399B963810 /* PKPatternNode.h in Headers */ = {isa = PBXBuildFile; fileRef = 36840199AB2347A4964E0AD5 /* PKPatternNode.h */; };
+		A130DEDC37164B0685E09C34 /* PKDefinitionPhaseVisitor.h in Headers */ = {isa = PBXBuildFile; fileRef = E7221D8311534CAEB83F3F24 /* PKDefinitionPhaseVisitor.h */; };
+		A1AA6ED327244E21A7906472 /* Pods-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 197E2230FC384DA58E1B1826 /* Pods-dummy.m */; };
+		A1C3255A718040C49C6FC19D /* PKEmailState.m in Sources */ = {isa = PBXBuildFile; fileRef = C726794213B641B2A46EF522 /* PKEmailState.m */; };
+		A26DDF6B9279412BA1470BA8 /* MGTemplateStandardFilters.m in Sources */ = {isa = PBXBuildFile; fileRef = 923C7E984043485C9745431E /* MGTemplateStandardFilters.m */; };
+		A29FED89B2B94BDA9CBCDE0E /* PKHashtagState.h in Headers */ = {isa = PBXBuildFile; fileRef = DC4587B750F843F4938542F6 /* PKHashtagState.h */; };
+		A4F1B73E49814BB0A25B7CE1 /* PKCommentState.m in Sources */ = {isa = PBXBuildFile; fileRef = 1988D2235465421B85A93EFB /* PKCommentState.m */; };
+		A4F27C9922364AA6865814A7 /* PKIntersection.h in Headers */ = {isa = PBXBuildFile; fileRef = D1813D11E20340C8A653A5E9 /* PKIntersection.h */; };
+		A6B401933B674EE0A91B7CAC /* PKSTokenAssembly.m in Sources */ = {isa = PBXBuildFile; fileRef = F01385788317432B893BA7F2 /* PKSTokenAssembly.m */; };
+		A7AEE2D85B2A44DC935F7407 /* PKDifference.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E46A90138EC428AA93603B0 /* PKDifference.m */; };
+		AA151A25A6764291BE869CDC /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10B461B7E83442EF99D9E65B /* Cocoa.framework */; };
+		AC17D7772B8E4FDF8C8557B2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F3CC54F9A374F6EB10493B7 /* Foundation.framework */; };
+		AD0CF1160831435BB66C0F35 /* PKNumberState.h in Headers */ = {isa = PBXBuildFile; fileRef = EDDC9B7EB9AB4C8CB3F521FB /* PKNumberState.h */; };
+		AD8BBAD5F41B4559A8F66146 /* libPods-VerbalExpressions-for-Objective-C.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EB3FC2C328C64472A3686805 /* libPods-VerbalExpressions-for-Objective-C.a */; };
+		B20C248039A84E21BF4CBAA9 /* PKLiteralNode.h in Headers */ = {isa = PBXBuildFile; fileRef = 209862E7B0EC4FB5A83294A9 /* PKLiteralNode.h */; };
+		B2F97B59DC144EA888801820 /* PKReader.m in Sources */ = {isa = PBXBuildFile; fileRef = 51F702C4238E4098B4E255F8 /* PKReader.m */; };
+		B3083C4A59B24822BE9DCD00 /* PKDelimitState.h in Headers */ = {isa = PBXBuildFile; fileRef = C21A617EE22E48AB8AE24553 /* PKDelimitState.h */; };
+		B3CA54C0118746F0B7C111B9 /* PKSParser.h in Headers */ = {isa = PBXBuildFile; fileRef = F8A0937DFB4941C08DAC0FA3 /* PKSParser.h */; };
+		B3FE8642D53D418AA31FA47B /* PKLiteral.h in Headers */ = {isa = PBXBuildFile; fileRef = 2EE301A755EF47BCBF079BF4 /* PKLiteral.h */; };
+		B74A8F99DB51478990C652BC /* PKSymbolNode.h in Headers */ = {isa = PBXBuildFile; fileRef = E9889E2224324C1AACF2F066 /* PKSymbolNode.h */; };
+		B74E88C9E71A4026A30A58A0 /* PKAssembly.h in Headers */ = {isa = PBXBuildFile; fileRef = 1DA17FA93BA643D894AD044C /* PKAssembly.h */; };
+		B7DA23980B1C415D8AE14748 /* PKAST.m in Sources */ = {isa = PBXBuildFile; fileRef = A865CD5019F84587B86FC86A /* PKAST.m */; };
+		B8A0F293807B472AAD8F312A /* PRHVerbalExpression.m in Sources */ = {isa = PBXBuildFile; fileRef = BEFCC8B33C294CA4800A8BD5 /* PRHVerbalExpression.m */; settings = {COMPILER_FLAGS = "-fobjc-arc -DOS_OBJECT_USE_OBJC=0"; }; };
+		B8DCC58F7F804ED897CEF962 /* PKParserFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FF2C9313D1A4AE7A9886583 /* PKParserFactory.m */; };
+		B95E735F5E594BD0AA522947 /* PKSTokenAssembly.h in Headers */ = {isa = PBXBuildFile; fileRef = C5A6BA2E455E4ADAB0D00262 /* PKSTokenAssembly.h */; };
+		BBA04F83DBB74BD9AC4F0C6C /* AKVerbalExpression.h in Headers */ = {isa = PBXBuildFile; fileRef = 54638A3687F24A99AD038CF8 /* AKVerbalExpression.h */; };
+		BBB049AD769C4172AB73C87C /* NSOrderedDictionary.h in Headers */ = {isa = PBXBuildFile; fileRef = A14368BECDD54B08BB74E04C /* NSOrderedDictionary.h */; };
+		BD66594A85E94E80B12CF26D /* PKReferenceNode.h in Headers */ = {isa = PBXBuildFile; fileRef = 0C911406497B4A45B2F91B52 /* PKReferenceNode.h */; };
+		BD804B7022964EF78503B90B /* PKLiteral.m in Sources */ = {isa = PBXBuildFile; fileRef = DEB979B9100940B7A5CDDF5D /* PKLiteral.m */; };
+		BD8A4ADA2CEA47BCA04597EE /* PKCollectionNode.h in Headers */ = {isa = PBXBuildFile; fileRef = 7B34994AE97645F2A7C9FCF9 /* PKCollectionNode.h */; };
+		C007BFE3E75943C88A9BAB7E /* PKLetter.m in Sources */ = {isa = PBXBuildFile; fileRef = 2270EC2822974761BE6D4071 /* PKLetter.m */; };
+		C00B4AA773D04FD3A74A7071 /* OCSSParser.h in Headers */ = {isa = PBXBuildFile; fileRef = D2F0A126892A4241AD74AC4A /* OCSSParser.h */; };
+		C2B061C51BD7427A888E9055 /* PKOptionalNode.m in Sources */ = {isa = PBXBuildFile; fileRef = BBEE7822C5AC4BDE92792042 /* PKOptionalNode.m */; };
+		C4A71CA3F50640368AD20FF8 /* PKLiteralNode.m in Sources */ = {isa = PBXBuildFile; fileRef = B18DC660088046E987F90FED /* PKLiteralNode.m */; };
+		C5D18C606EF74F249CD90BCE /* PKBaseVisitor.h in Headers */ = {isa = PBXBuildFile; fileRef = 3F568B9FC98241D19F4F48A0 /* PKBaseVisitor.h */; };
+		C6051BF5EED14486A8280581 /* PKComment.h in Headers */ = {isa = PBXBuildFile; fileRef = 8C2237D0E27D4AAFA4BD65C2 /* PKComment.h */; };
+		C62FFA84E4694BDC88A31CA4 /* PRHVerbalExpression.h in Headers */ = {isa = PBXBuildFile; fileRef = 543C1CF5D0404BFCA945E784 /* PRHVerbalExpression.h */; };
+		C6470F95E4EB4824BD0FEDF0 /* PKDelimitDescriptorCollection.m in Sources */ = {isa = PBXBuildFile; fileRef = 8717248502254D4FB9D8B661 /* PKDelimitDescriptorCollection.m */; };
+		C6882382796B4DC08226D2C5 /* AKVerbalExpression.m in Sources */ = {isa = PBXBuildFile; fileRef = 57BA0301302C4E3C98EBEC7E /* AKVerbalExpression.m */; settings = {COMPILER_FLAGS = "-fobjc-arc -DOS_OBJECT_USE_OBJC=0"; }; };
+		C749142F84CB4F6383AA67B4 /* PKCompositeNode.m in Sources */ = {isa = PBXBuildFile; fileRef = C27792F241204C9880D4D65E /* PKCompositeNode.m */; };
+		C8F1C21AFEF04C8C983E0866 /* PKOptionalNode.h in Headers */ = {isa = PBXBuildFile; fileRef = 233CC947DAAF4823B55CFEEB /* PKOptionalNode.h */; };
+		CB695F470F4C4A5D97B0E9E9 /* PKToken.h in Headers */ = {isa = PBXBuildFile; fileRef = 7154A674879A41C1BD21938E /* PKToken.h */; };
+		CC14BB97C61C4B7EB51BB092 /* PKAny.m in Sources */ = {isa = PBXBuildFile; fileRef = 17976F38239745D3B158BDEC /* PKAny.m */; };
+		CE2943F8996647A0AB501944 /* ParseKitParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 131710536E034DD8B034D328 /* ParseKitParser.m */; };
+		CE37CD73B9B54671A7CF9BA9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F3CC54F9A374F6EB10493B7 /* Foundation.framework */; };
+		CEF52BD294B04796B9B6E584 /* NSArray+ParseKitAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B400B0269564EC3B0ABA6A7 /* NSArray+ParseKitAdditions.m */; };
+		CF462622B8A14DC09516DD9B /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10B461B7E83442EF99D9E65B /* Cocoa.framework */; };
+		D31F9AAB06F34BFCBBC196E4 /* PKResolutionPhaseVisitor.h in Headers */ = {isa = PBXBuildFile; fileRef = F3A1B6FAE13A463689A40575 /* PKResolutionPhaseVisitor.h */; };
+		D32DC3716DFB42ABA4D2C328 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10B461B7E83442EF99D9E65B /* Cocoa.framework */; };
+		D5E632347863440DB68D87C3 /* PKParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 40FFE80B005C42249869A0B6 /* PKParser.m */; };
+		D88FF5041CE449A4B378FFC0 /* Pods-ParseKit-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D71202893D04F199311EC45 /* Pods-ParseKit-dummy.m */; };
+		DAB63C5195054F8C9EAF7E44 /* PKRootNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C295C8DA09F43519C464BF5 /* PKRootNode.m */; };
+		DBCB11EA70484EC0A68B6430 /* PKCaseInsensitiveLiteral.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E6832D566EB46C89D41BA74 /* PKCaseInsensitiveLiteral.m */; };
+		DC389F2B980040FAAF3C463A /* libPods-ParseKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 43E69932368D4ABD8BCDE9AC /* libPods-ParseKit.a */; };
+		DE521EA478A7495AB4684E6C /* PKSequence.h in Headers */ = {isa = PBXBuildFile; fileRef = 04F5E73D5050424EB2CDA153 /* PKSequence.h */; };
+		E35C4E4743064802968CE420 /* PKTokenArraySource.m in Sources */ = {isa = PBXBuildFile; fileRef = 29E60B5E4E0242D79C0842F2 /* PKTokenArraySource.m */; };
+		E3A55AA09C1040ECBD49471A /* PKTokenizerState.m in Sources */ = {isa = PBXBuildFile; fileRef = A1A9FA38AD8E48AE8FF43325 /* PKTokenizerState.m */; };
+		E3BA312009A74927A3EA62DB /* NSMutableSet+ParseKitAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = DAB929FFAE964B618C76447F /* NSMutableSet+ParseKitAdditions.h */; };
+		E48B4BEA39BB4D9692060F86 /* PKLetter.h in Headers */ = {isa = PBXBuildFile; fileRef = 345C15A604DE41A3B3855650 /* PKLetter.h */; };
+		E522CA3771684C0EA3C353C9 /* PKEmailState.h in Headers */ = {isa = PBXBuildFile; fileRef = BC0C5F8B2AA5458D86385D66 /* PKEmailState.h */; };
+		E54BAC61BDD345A2B9E1DE15 /* PKCollectionParser.m in Sources */ = {isa = PBXBuildFile; fileRef = E8E3BEB3381649ED91E3DB57 /* PKCollectionParser.m */; };
+		E5691434C9544CA28EE97C99 /* ParseKitParser.h in Headers */ = {isa = PBXBuildFile; fileRef = 041CE54E5D6040DB86114F6D /* ParseKitParser.h */; };
+		E730F2FC09CC4D77AEB89A0A /* PKDefinitionPhaseVisitor.m in Sources */ = {isa = PBXBuildFile; fileRef = 2580188A46124C36A75CFC8E /* PKDefinitionPhaseVisitor.m */; };
+		E8F2CAADFFE3473B90AB2A98 /* PKSpecificChar.h in Headers */ = {isa = PBXBuildFile; fileRef = 67FA3B9268C8465EBC4F1711 /* PKSpecificChar.h */; };
+		E90B81E6A3CE4A0584B30EF9 /* PKToken.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A8180C0412F439AAA7FAB69 /* PKToken.m */; };
+		EA02F8F2E3674384B66CD146 /* PKNodeVisitor.h in Headers */ = {isa = PBXBuildFile; fileRef = 5E40E140F6B04A3A9E553669 /* PKNodeVisitor.h */; };
+		EA8DD4C6C88E42879B159ED9 /* PKUppercaseWord.h in Headers */ = {isa = PBXBuildFile; fileRef = 9A8AD955E8B744DBA3BC11C2 /* PKUppercaseWord.h */; };
+		EA8EB55609F44BE5B5E1E55B /* PKSParser.m in Sources */ = {isa = PBXBuildFile; fileRef = A1E885BD18404D6ABA1C5CC6 /* PKSParser.m */; };
+		EAC738B15FC147349171DB78 /* PKChar.m in Sources */ = {isa = PBXBuildFile; fileRef = B826E88494B84041A4386540 /* PKChar.m */; };
+		EBB2A3718E7E4AD39AAD340B /* PKTokenAssembly.m in Sources */ = {isa = PBXBuildFile; fileRef = 00DE912E8EEC4F62A09047D8 /* PKTokenAssembly.m */; };
+		EC43B70974024BB1A301E96C /* PKSymbol.m in Sources */ = {isa = PBXBuildFile; fileRef = 103EA2DBB2D9491A90D02EBD /* PKSymbol.m */; };
+		ED4A6372CC5E4227B7637F19 /* PKRootNode.h in Headers */ = {isa = PBXBuildFile; fileRef = 309F64ADE1ED4CE7ABCE2249 /* PKRootNode.h */; };
+		ED75E56C0A324BB08A280AFF /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10B461B7E83442EF99D9E65B /* Cocoa.framework */; };
+		EE7F8EBE7A724505B270B4E4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F3CC54F9A374F6EB10493B7 /* Foundation.framework */; };
+		EFB9CEE1836D466E9CF00570 /* PKCollectionNode.m in Sources */ = {isa = PBXBuildFile; fileRef = C0504F4147F54F36AEC8AF52 /* PKCollectionNode.m */; };
+		EFBFEB89AD414CD6A98BC3AD /* PKTerminal.h in Headers */ = {isa = PBXBuildFile; fileRef = 02154722E516475D98BDAB14 /* PKTerminal.h */; };
+		EFC5DEBC0E5A4D6AB070A765 /* MGTemplateStandardMarkers.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D08251C9F1C47BC9DD27462 /* MGTemplateStandardMarkers.h */; };
+		F095F69A3D544E42BE7E7CB8 /* PKRepetition.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B2977FAAC5C4EEBAD84FFDA /* PKRepetition.h */; };
+		F0EC4FF70BA844FA9A418732 /* PKDelimitState.m in Sources */ = {isa = PBXBuildFile; fileRef = E66DA745934A466AB335995F /* PKDelimitState.m */; };
+		F2728FE943774811A1356569 /* NSArray+ParseKitAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = A634D24D3FFA437B9351D973 /* NSArray+ParseKitAdditions.h */; };
+		F62705B2FE8D490EA9235330 /* PKCharacterAssembly.h in Headers */ = {isa = PBXBuildFile; fileRef = 4EB33408FCBF459992C02372 /* PKCharacterAssembly.h */; };
+		F6E3683DBF1B45268AACC4BE /* PKMultipleNode.h in Headers */ = {isa = PBXBuildFile; fileRef = 6FDB3A722E534978A3A06D07 /* PKMultipleNode.h */; };
+		F8C7C6FECD154A1CBDFD1BEF /* PKEmpty.h in Headers */ = {isa = PBXBuildFile; fileRef = F4BCB17949DF4177A21351E2 /* PKEmpty.h */; };
+		FFDE89086A6748EFAFA27F3D /* PKRepetition.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B8AA70E945A4C9B86C49B0F /* PKRepetition.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		1B9A4B1504E24F89B422E5C4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 17C6C247504A4215ACBC37FE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B890612A996F446180D9CFC4;
+			remoteInfo = "Pods-ParseKit";
+		};
+		3484A39C31B84F45AF389BC1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 17C6C247504A4215ACBC37FE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9E006817B8314380887BAFB0;
+			remoteInfo = "Pods-VEVerbalExpressions";
+		};
+		3873075D9C5D4CE9BDA7DAB1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 17C6C247504A4215ACBC37FE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B890612A996F446180D9CFC4;
+			remoteInfo = "Pods-ParseKit";
+		};
+		50AE7CAECA4B4277A6E2A528 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 17C6C247504A4215ACBC37FE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 26BBB2338670437AA729DCC4;
+			remoteInfo = "Pods-VerbalExpressions-for-Objective-C";
+		};
+		68A739CEC55A415C938D2498 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 17C6C247504A4215ACBC37FE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F761C4DFA0084BD3A690B639;
+			remoteInfo = "Pods-NSOrderedDictionary";
+		};
+		7CF7A5926C2F4212AA4B40C2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 17C6C247504A4215ACBC37FE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 26BBB2338670437AA729DCC4;
+			remoteInfo = "Pods-VerbalExpressions-for-Objective-C";
+		};
+		9A18C9B2477244E784FDC59F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 17C6C247504A4215ACBC37FE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 847F78AB092A43A6BD007CCE;
+			remoteInfo = "Pods-Objective-CSS";
+		};
+		B9946DEC9C9D496A90D8B1F0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 17C6C247504A4215ACBC37FE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F761C4DFA0084BD3A690B639;
+			remoteInfo = "Pods-NSOrderedDictionary";
+		};
+		BB80E5F799EF405A8F26F8AB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 17C6C247504A4215ACBC37FE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9E006817B8314380887BAFB0;
+			remoteInfo = "Pods-VEVerbalExpressions";
+		};
+		D18E0FAA51424E80A8244278 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 17C6C247504A4215ACBC37FE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 00C9C418E350481C8810166C;
+			remoteInfo = "Pods-AKVerbalExpression";
+		};
+		E45C5AC0E8FB43C18D88D0F6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 17C6C247504A4215ACBC37FE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 00C9C418E350481C8810166C;
+			remoteInfo = "Pods-AKVerbalExpression";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		00DE912E8EEC4F62A09047D8 /* PKTokenAssembly.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PKTokenAssembly.m; path = src/PKTokenAssembly.m; sourceTree = "<group>"; };
+		014F5B004BF7463BAC5695F8 /* PKActionNode.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PKActionNode.m; path = src/nodes/PKActionNode.m; sourceTree = "<group>"; };
+		02154722E516475D98BDAB14 /* PKTerminal.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PKTerminal.h; path = include/ParseKit/PKTerminal.h; sourceTree = "<group>"; };
+		026682C0BCCA4F79AF355BE7 /* PKConstantNode.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PKConstantNode.h; path = src/nodes/PKConstantNode.h; sourceTree = "<group>"; };
+		034356DE60674B0B89801C93 /* Pods-VEVerbalExpressions-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-VEVerbalExpressions-prefix.pch"; sourceTree = "<group>"; };
+		0352A03E829D45469FADA6CD /* PKNegation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PKNegation.h; path = include/ParseKit/PKNegation.h; sourceTree = "<group>"; };
+		041CE54E5D6040DB86114F6D /* ParseKitParser.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ParseKitParser.h; path = src/ParseKitParser.h; sourceTree = "<group>"; };
+		04F5E73D5050424EB2CDA153 /* PKSequence.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PKSequence.h; path = include/ParseKit/PKSequence.h; sourceTree = "<group>"; };
+		0524B40951274CC5A85F5B0F /* PKSymbolNode.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PKSymbolNode.m; path = src/PKSymbolNode.m; sourceTree = "<group>"; };
+		05642CF5BD374A338663AD55 /* PKBaseVisitor.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PKBaseVisitor.m; path = src/PKBaseVisitor.m; sourceTree = "<group>"; };
+		060EA633803D4D7A8D635B4F /* PKWord.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PKWord.h; path = include/ParseKit/PKWord.h; sourceTree = "<group>"; };
+		06DE2E4E138C476F89D431B9 /* PKTrack.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PKTrack.h; path = include/ParseKit/PKTrack.h; sourceTree = "<group>"; };
+		072D0D73D65E4F409C5D7260 /* NSDictionary_DeepMutableCopy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = NSDictionary_DeepMutableCopy.m; path = lib/MGTemplateEngine/NSDictionary_DeepMutableCopy.m; sourceTree = "<group>"; };
+		08AA08DC60034C0496C4343E /* NSArray_DeepMutableCopy.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = NSArray_DeepMutableCopy.h; path = lib/MGTemplateEngine/NSArray_DeepMutableCopy.h; sourceTree = "<group>"; };
+		09476410FEAF4485B777BA7A /* PKSRecognitionException.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PKSRecognitionException.m; path = src/PKSRecognitionException.m; sourceTree = "<group>"; };
+		0AFA87D9CBC24900881AA2DB /* PKDelimitDescriptor.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PKDelimitDescriptor.h; path = src/PKDelimitDescriptor.h; sourceTree = "<group>"; };
+		0B0F289077854420BA4557EE /* Pods-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-resources.sh"; sourceTree = "<group>"; };
+		0B400B0269564EC3B0ABA6A7 /* NSArray+ParseKitAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSArray+ParseKitAdditions.m"; path = "src/NSArray+ParseKitAdditions.m"; sourceTree = "<group>"; };
+		0C911406497B4A45B2F91B52 /* PKReferenceNode.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PKReferenceNode.h; path = src/nodes/PKReferenceNode.h; sourceTree = "<group>"; };
+		0E0D46572F534FC89B721AA4 /* NSString+ParseKitAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSString+ParseKitAdditions.h"; path = "src/NSString+ParseKitAdditions.h"; sourceTree = "<group>"; };
+		103EA2DBB2D9491A90D02EBD /* PKSymbol.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PKSymbol.m; path = src/PKSymbol.m; sourceTree = "<group>"; };
+		1098CAC2C7E04B3589A81041 /* PKNumber.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PKNumber.m; path = src/PKNumber.m; sourceTree = "<group>"; };
+		10B461B7E83442EF99D9E65B /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/System/Library/Frameworks/Cocoa.framework; sourceTree = DEVELOPER_DIR; };
+		117E199B56AE4A779831ABB2 /* PKDelimitedNode.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PKDelimitedNode.h; path = src/nodes/PKDelimitedNode.h; sourceTree = "<group>"; };
+		131710536E034DD8B034D328 /* ParseKitParser.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ParseKitParser.m; path = src/ParseKitParser.m; sourceTree = "<group>"; };
+		161C5C1207074760B1805EA2 /* Pods-VerbalExpressions-for-Objective-C-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-VerbalExpressions-for-Objective-C-Private.xcconfig"; sourceTree = "<group>"; };
+		16F150038FCC46BE8F5E798A /* Pods-NSOrderedDictionary-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-NSOrderedDictionary-prefix.pch"; sourceTree = "<group>"; };
+		17976F38239745D3B158BDEC /* PKAny.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PKAny.m; path = src/PKAny.m; sourceTree = "<group>"; };
+		1843DA1939F14D1A9B3FE496 /* RegexKitLite.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = RegexKitLite.m; path = src/RegexKitLite.m; sourceTree = "<group>"; };
+		1925A19F7405400EBE3B846C /* DeepMutableCopy.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DeepMutableCopy.h; path = lib/MGTemplateEngine/DeepMutableCopy.h; sourceTree = "<group>"; };
+		197E2230FC384DA58E1B1826 /* Pods-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-dummy.m"; sourceTree = "<group>"; };
+		1988D2235465421B85A93EFB /* PKCommentState.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PKCommentState.m; path = src/PKCommentState.m; sourceTree = "<group>"; };
+		1DA17FA93BA643D894AD044C /* PKAssembly.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PKAssembly.h; path = include/ParseKit/PKAssembly.h; sourceTree = "<group>"; };
+		202AB6100C79410CBC693BC8 /* PKQuoteState.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PKQuoteState.h; path = include/ParseKit/PKQuoteState.h; sourceTree = "<group>"; };
+		203352B058D347C7A0930306 /* MGTemplateEngine.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MGTemplateEngine.h; path = lib/MGTemplateEngine/MGTemplateEngine.h; sourceTree = "<group>"; };
+		209862E7B0EC4FB5A83294A9 /* PKLiteralNode.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PKLiteralNode.h; path = src/nodes/PKLiteralNode.h; sourceTree = "<group>"; };
+		20C83125FC6A4B40BE5789D7 /* PKDigit.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PKDigit.h; path = include/ParseKit/PKDigit.h; sourceTree = "<group>"; };
+		2270EC2822974761BE6D4071 /* PKLetter.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PKLetter.m; path = src/PKLetter.m; sourceTree = "<group>"; };
+		2301F3551AAA4AB58AB9C7EA /* PKAlternation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PKAlternation.m; path = src/PKAlternation.m; sourceTree = "<group>"; };
+		233CC947DAAF4823B55CFEEB /* PKOptionalNode.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PKOptionalNode.h; path = src/nodes/PKOptionalNode.h; sourceTree = "<group>"; };
+		23F6A514DD174AC2BA1253A3 /* Pods-NSOrderedDictionary-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-NSOrderedDictionary-Private.xcconfig"; sourceTree = "<group>"; };
+		242EDB0566C14330A10B7641 /* Pods-VerbalExpressions-for-Objective-C.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-VerbalExpressions-for-Objective-C.xcconfig"; sourceTree = "<group>"; };
+		2580188A46124C36A75CFC8E /* PKDefinitionPhaseVisitor.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PKDefinitionPhaseVisitor.m; path = src/PKDefinitionPhaseVisitor.m; sourceTree = "<group>"; };
+		2878B88AD1B346D2AA5AC477 /* PKWhitespace.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PKWhitespace.m; path = src/PKWhitespace.m; sourceTree = "<group>"; };
+		2925923F8E0A4359902AF63B /* Pods-AKVerbalExpression-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-AKVerbalExpression-prefix.pch"; sourceTree = "<group>"; };
+		29E60B5E4E0242D79C0842F2 /* PKTokenArraySource.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PKTokenArraySource.m; path = src/PKTokenArraySource.m; sourceTree = "<group>"; };
+		2C295C8DA09F43519C464BF5 /* PKRootNode.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PKRootNode.m; path = src/nodes/PKRootNode.m; sourceTree = "<group>"; };
+		2D613253A03343749561C9B6 /* NSMutableSet+ParseKitAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSMutableSet+ParseKitAdditions.m"; path = "src/NSMutableSet+ParseKitAdditions.m"; sourceTree = "<group>"; };
+		2E6832D566EB46C89D41BA74 /* PKCaseInsensitiveLiteral.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PKCaseInsensitiveLiteral.m; path = src/PKCaseInsensitiveLiteral.m; sourceTree = "<group>"; };
+		2EC868B4841C4B51B7C655EF /* NSString+ParseKitAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSString+ParseKitAdditions.m"; path = "src/NSString+ParseKitAdditions.m"; sourceTree = "<group>"; };
+		2EE301A755EF47BCBF079BF4 /* PKLiteral.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PKLiteral.h; path = include/ParseKit/PKLiteral.h; sourceTree = "<group>"; };
+		309F64ADE1ED4CE7ABCE2249 /* PKRootNode.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PKRootNode.h; path = src/nodes/PKRootNode.h; sourceTree = "<group>"; };
+		30AC2514ED534871A7BFC12C /* PKAlternationNode.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PKAlternationNode.m; path = src/nodes/PKAlternationNode.m; sourceTree = "<group>"; };
+		318CB278BCDF41FABF94EB73 /* PKDefinitionNode.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PKDefinitionNode.h; path = src/nodes/PKDefinitionNode.h; sourceTree = "<group>"; };
+		345C15A604DE41A3B3855650 /* PKLetter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PKLetter.h; path = include/ParseKit/PKLetter.h; sourceTree = "<group>"; };
+		350DC840FFE547259F9D2B6C /* PKNumberState.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PKNumberState.m; path = src/PKNumberState.m; sourceTree = "<group>"; };
+		36198625445043A886B59C66 /* PKChar.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PKChar.h; path = include/ParseKit/PKChar.h; sourceTree = "<group>"; };
+		367128D41B874D8B80036885 /* VerbalExpressions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = VerbalExpressions.m; path = Lib/VerbalExpressions.m; sourceTree = "<group>"; };
+		36840199AB2347A4964E0AD5 /* PKPatternNode.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PKPatternNode.h; path = src/nodes/PKPatternNode.h; sourceTree = "<group>"; };
+		3697846C7F3C4B6AA79D4052 /* Pods-VEVerbalExpressions.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-VEVerbalExpressions.xcconfig"; sourceTree = "<group>"; };
+		385E5EB9E0134D0DBBFA31D0 /* PKTrackException.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PKTrackException.h; path = include/ParseKit/PKTrackException.h; sourceTree = "<group>"; };
+		3B8AA70E945A4C9B86C49B0F /* PKRepetition.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PKRepetition.m; path = src/PKRepetition.m; sourceTree = "<group>"; };
+		3D08251C9F1C47BC9DD27462 /* MGTemplateStandardMarkers.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MGTemplateStandardMarkers.h; path = lib/MGTemplateEngine/MGTemplateStandardMarkers.h; sourceTree = "<group>"; };
+		3D67D6EE00834782A0698F9D /* PKActionNode.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PKActionNode.h; path = src/nodes/PKActionNode.h; sourceTree = "<group>"; };
+		3F17851BE3DA44618AF8746A /* PKLowercaseWord.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PKLowercaseWord.h; path = include/ParseKit/PKLowercaseWord.h; sourceTree = "<group>"; };
+		3F3CC54F9A374F6EB10493B7 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		3F568B9FC98241D19F4F48A0 /* PKBaseVisitor.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PKBaseVisitor.h; path = src/PKBaseVisitor.h; sourceTree = "<group>"; };
+		3FDBF76A86074E71969283C1 /* PKLowercaseWord.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PKLowercaseWord.m; path = src/PKLowercaseWord.m; sourceTree = "<group>"; };
+		40FFE80B005C42249869A0B6 /* PKParser.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PKParser.m; path = src/PKParser.m; sourceTree = "<group>"; };
+		417EB8C504604934AC4CD58B /* PKQuotedString.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PKQuotedString.h; path = include/ParseKit/PKQuotedString.h; sourceTree = "<group>"; };
+		42380FE3F319413E84BADE6D /* PKDifference.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PKDifference.h; path = include/ParseKit/PKDifference.h; sourceTree = "<group>"; };
+		42B3713A91D14C6BAA21052E /* PKTokenizer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PKTokenizer.h; path = include/ParseKit/PKTokenizer.h; sourceTree = "<group>"; };
+		43E1212158AC40319DCC15F5 /* PKSingleLineCommentState.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PKSingleLineCommentState.h; path = include/ParseKit/PKSingleLineCommentState.h; sourceTree = "<group>"; };
+		43E69932368D4ABD8BCDE9AC /* libPods-ParseKit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ParseKit.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4639000C89B54FF2994244B7 /* Pods-environment.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-environment.h"; sourceTree = "<group>"; };
+		4827778020C24017A2E50E57 /* PKComment.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PKComment.m; path = src/PKComment.m; sourceTree = "<group>"; };
+		489547E42CF44E6BBF5076DF /* PKAlternationNode.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PKAlternationNode.h; path = src/nodes/PKAlternationNode.h; sourceTree = "<group>"; };
+		4BC8AFE2266C449BA1B9C524 /* libPods-Objective-CSS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Objective-CSS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4C4A4F7CAF334EB9BC3B50E3 /* OCSSParser.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = OCSSParser.m; path = Classes/OCSSParser.m; sourceTree = "<group>"; };
+		4E73B98D3211458D84343711 /* MGTemplateFilter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MGTemplateFilter.h; path = lib/MGTemplateEngine/MGTemplateFilter.h; sourceTree = "<group>"; };
+		4E7D268159D648638EC9D4F2 /* PKCompositeParser.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PKCompositeParser.h; path = include/ParseKit/PKCompositeParser.h; sourceTree = "<group>"; };
+		4EB33408FCBF459992C02372 /* PKCharacterAssembly.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PKCharacterAssembly.h; path = include/ParseKit/PKCharacterAssembly.h; sourceTree = "<group>"; };
+		51F702C4238E4098B4E255F8 /* PKReader.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PKReader.m; path = src/PKReader.m; sourceTree = "<group>"; };
+		540674F450B74A00A22B0C9C /* PKBaseNode.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PKBaseNode.h; path = src/nodes/PKBaseNode.h; sourceTree = "<group>"; };
+		543C1CF5D0404BFCA945E784 /* PRHVerbalExpression.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PRHVerbalExpression.h; path = VerbalExpressions/PRHVerbalExpression.h; sourceTree = "<group>"; };
+		54638A3687F24A99AD038CF8 /* AKVerbalExpression.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AKVerbalExpression.h; path = AKVerbalExpression/AKVerbalExpression.h; sourceTree = "<group>"; };
+		54C23F2C81B547218FF315A5 /* Pods-ParseKit-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-ParseKit-prefix.pch"; sourceTree = "<group>"; };
+		552517F5F340426BAF803B20 /* PKWordState.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PKWordState.m; path = src/PKWordState.m; sourceTree = "<group>"; };
+		555552960C4B4D849ACEF093 /* PKSParserGenVisitor.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PKSParserGenVisitor.m; path = src/PKSParserGenVisitor.m; sourceTree = "<group>"; };
+		57BA0301302C4E3C98EBEC7E /* AKVerbalExpression.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AKVerbalExpression.m; path = AKVerbalExpression/AKVerbalExpression.m; sourceTree = "<group>"; };
+		5881294C2E9D44588EDE87A3 /* NSDictionary_DeepMutableCopy.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = NSDictionary_DeepMutableCopy.h; path = lib/MGTemplateEngine/NSDictionary_DeepMutableCopy.h; sourceTree = "<group>"; };
+		5B120614D2A94B0EB41A93B2 /* PKHashtagState.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PKHashtagState.m; path = src/PKHashtagState.m; sourceTree = "<group>"; };
+		5C340554D67646048150C384 /* PKQuotedString.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PKQuotedString.m; path = src/PKQuotedString.m; sourceTree = "<group>"; };
+		5C8E241F8AC145FE87EE299A /* libPods-VEVerbalExpressions.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-VEVerbalExpressions.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5E03661581194D0896002D59 /* MGTemplateStandardMarkers.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MGTemplateStandardMarkers.m; path = lib/MGTemplateEngine/MGTemplateStandardMarkers.m; sourceTree = "<group>"; };
+		5E40E140F6B04A3A9E553669 /* PKNodeVisitor.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PKNodeVisitor.h; path = src/PKNodeVisitor.h; sourceTree = "<group>"; };
+		5E42DBCE03524693AFADE36C /* PKConstantNode.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PKConstantNode.m; path = src/nodes/PKConstantNode.m; sourceTree = "<group>"; };
+		5FF2C9313D1A4AE7A9886583 /* PKParserFactory.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PKParserFactory.m; path = src/PKParserFactory.m; sourceTree = "<group>"; };
+		6036F17723E246A2B5FF11B8 /* Pods-VEVerbalExpressions-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-VEVerbalExpressions-dummy.m"; sourceTree = "<group>"; };
+		61EF488C052B442EA56B18F9 /* PKTokenizerState.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PKTokenizerState.h; path = include/ParseKit/PKTokenizerState.h; sourceTree = "<group>"; };
+		620440280EC94C87A27667BC /* libPods-NSOrderedDictionary.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-NSOrderedDictionary.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		65BA29C2FF7E4620AAE0997D /* PKParser.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PKParser.h; path = include/ParseKit/PKParser.h; sourceTree = "<group>"; };
+		67D30AF74FCF4F0F8C4BBCB4 /* Pods-NSOrderedDictionary.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-NSOrderedDictionary.xcconfig"; sourceTree = "<group>"; };
+		67FA3B9268C8465EBC4F1711 /* PKSpecificChar.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PKSpecificChar.h; path = include/ParseKit/PKSpecificChar.h; sourceTree = "<group>"; };
+		684D2876FAFD4FDC8EE29B93 /* PKCollectionParser.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PKCollectionParser.h; path = include/ParseKit/PKCollectionParser.h; sourceTree = "<group>"; };
+		692378DF114046229295CAEF /* PKSymbol.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PKSymbol.h; path = include/ParseKit/PKSymbol.h; sourceTree = "<group>"; };
+		6B527CDCEC7F4955ACD3A061 /* PKMultiLineCommentState.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PKMultiLineCommentState.m; path = src/PKMultiLineCommentState.m; sourceTree = "<group>"; };
+		6C8A876D6A934D86872A6409 /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		6D71202893D04F199311EC45 /* Pods-ParseKit-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-ParseKit-dummy.m"; sourceTree = "<group>"; };
+		6E9824F54817445A93E713E7 /* PKWhitespace.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PKWhitespace.h; path = include/ParseKit/PKWhitespace.h; sourceTree = "<group>"; };
+		6EA801893A984E9B99F9F60A /* PKSParserGenVisitor.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PKSParserGenVisitor.h; path = src/PKSParserGenVisitor.h; sourceTree = "<group>"; };
+		6F9263940B5B43858D6F3FA6 /* PKSequence.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PKSequence.m; path = src/PKSequence.m; sourceTree = "<group>"; };
+		6FDB3A722E534978A3A06D07 /* PKMultipleNode.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PKMultipleNode.h; path = src/nodes/PKMultipleNode.h; sourceTree = "<group>"; };
+		7154A674879A41C1BD21938E /* PKToken.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PKToken.h; path = include/ParseKit/PKToken.h; sourceTree = "<group>"; };
+		71DE3ADE1016469FB2423E38 /* MGTemplateStandardFilters.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MGTemplateStandardFilters.h; path = lib/MGTemplateEngine/MGTemplateStandardFilters.h; sourceTree = "<group>"; };
+		7283DBAEBD704831825219F4 /* Pods-Objective-CSS-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Objective-CSS-dummy.m"; sourceTree = "<group>"; };
+		739ACFC5C55F45E6984C3966 /* PKReader.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PKReader.h; path = include/ParseKit/PKReader.h; sourceTree = "<group>"; };
+		73D93755822245C6AC14A783 /* PKURLState.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PKURLState.h; path = include/ParseKit/PKURLState.h; sourceTree = "<group>"; };
+		73F57E891BBD4BA98903E399 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		74D9D0658E9A47819C7B9C56 /* PKParserFactory.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PKParserFactory.h; path = include/ParseKit/PKParserFactory.h; sourceTree = "<group>"; };
+		771DB87CD5C54A8EA8DD2762 /* PKSTokenKindDescriptor.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PKSTokenKindDescriptor.m; path = src/PKSTokenKindDescriptor.m; sourceTree = "<group>"; };
+		78045482D29841F8B882D365 /* PKResolutionPhaseVisitor.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PKResolutionPhaseVisitor.m; path = src/PKResolutionPhaseVisitor.m; sourceTree = "<group>"; };
+		78C0720DD2D148CB883357DA /* PKSymbolRootNode.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PKSymbolRootNode.m; path = src/PKSymbolRootNode.m; sourceTree = "<group>"; };
+		7A550A7AAF8B47F6AD502C37 /* PKPattern.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PKPattern.h; path = include/ParseKit/PKPattern.h; sourceTree = "<group>"; };
+		7A612B4037E349D0B2755521 /* PKWhitespaceState.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PKWhitespaceState.h; path = include/ParseKit/PKWhitespaceState.h; sourceTree = "<group>"; };
+		7A8180C0412F439AAA7FAB69 /* PKToken.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PKToken.m; path = src/PKToken.m; sourceTree = "<group>"; };
+		7B0A0C7B76A74C23A360B6D9 /* PKSTokenKindDescriptor.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PKSTokenKindDescriptor.h; path = src/PKSTokenKindDescriptor.h; sourceTree = "<group>"; };
+		7B34994AE97645F2A7C9FCF9 /* PKCollectionNode.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PKCollectionNode.h; path = src/nodes/PKCollectionNode.h; sourceTree = "<group>"; };
+		7D1F049DBE424BD5B560B3FA /* PKTrackException.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PKTrackException.m; path = src/PKTrackException.m; sourceTree = "<group>"; };
+		7D36611E635141C0B9CDC446 /* VerbalExpressions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = VerbalExpressions.h; path = Lib/VerbalExpressions.h; sourceTree = "<group>"; };
+		8099D3FB32274336AD50A3D5 /* PKWordState.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PKWordState.h; path = include/ParseKit/PKWordState.h; sourceTree = "<group>"; };
+		8100C1788FAE4A0B9A1B3070 /* PKAST.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PKAST.h; path = include/ParseKit/PKAST.h; sourceTree = "<group>"; };
+		8263A5EA078542F3949592C9 /* PKDelimitedNode.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PKDelimitedNode.m; path = src/nodes/PKDelimitedNode.m; sourceTree = "<group>"; };
+		828D61BDEE7B425FA17ACD54 /* PKIntersection.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PKIntersection.m; path = src/PKIntersection.m; sourceTree = "<group>"; };
+		829359E6B2ED4A48984E942E /* Pods-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-acknowledgements.plist"; sourceTree = "<group>"; };
+		838289FA02AA4049AE954B53 /* Pods-AKVerbalExpression.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-AKVerbalExpression.xcconfig"; sourceTree = "<group>"; };
+		8717248502254D4FB9D8B661 /* PKDelimitDescriptorCollection.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PKDelimitDescriptorCollection.m; path = src/PKDelimitDescriptorCollection.m; sourceTree = "<group>"; };
+		8758E73102E54F9091C6B8F7 /* RegexKitLite.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RegexKitLite.h; path = src/RegexKitLite.h; sourceTree = "<group>"; };
+		8B2977FAAC5C4EEBAD84FFDA /* PKRepetition.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PKRepetition.h; path = include/ParseKit/PKRepetition.h; sourceTree = "<group>"; };
+		8C2237D0E27D4AAFA4BD65C2 /* PKComment.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PKComment.h; path = include/ParseKit/PKComment.h; sourceTree = "<group>"; };
+		8E46A90138EC428AA93603B0 /* PKDifference.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PKDifference.m; path = src/PKDifference.m; sourceTree = "<group>"; };
+		8FBAF19D0C44438680E3D7FD /* Pods-VerbalExpressions-for-Objective-C-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-VerbalExpressions-for-Objective-C-dummy.m"; sourceTree = "<group>"; };
+		9194B562F4044A4DBD3B5BDA /* PKSpecificChar.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PKSpecificChar.m; path = src/PKSpecificChar.m; sourceTree = "<group>"; };
+		923C7E984043485C9745431E /* MGTemplateStandardFilters.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MGTemplateStandardFilters.m; path = lib/MGTemplateEngine/MGTemplateStandardFilters.m; sourceTree = "<group>"; };
+		92FC9590E8FB40E7A177E6AE /* PKSingleLineCommentState.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PKSingleLineCommentState.m; path = src/PKSingleLineCommentState.m; sourceTree = "<group>"; };
+		945120813428429A8E714C8D /* PKReferenceNode.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PKReferenceNode.m; path = src/nodes/PKReferenceNode.m; sourceTree = "<group>"; };
+		958F8AD1948242DCA85CDC49 /* PKEmpty.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PKEmpty.m; path = src/PKEmpty.m; sourceTree = "<group>"; };
+		95C9AADF92C04CE581D47ECE /* PKDefinitionNode.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PKDefinitionNode.m; path = src/nodes/PKDefinitionNode.m; sourceTree = "<group>"; };
+		9A33F42135F747B08B11195B /* PKTerminal.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PKTerminal.m; path = src/PKTerminal.m; sourceTree = "<group>"; };
+		9A8AD955E8B744DBA3BC11C2 /* PKUppercaseWord.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PKUppercaseWord.h; path = include/ParseKit/PKUppercaseWord.h; sourceTree = "<group>"; };
+		9ADACD891A364704BF57491F /* PKDelimitedString.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PKDelimitedString.m; path = src/PKDelimitedString.m; sourceTree = "<group>"; };
+		9C1610FF636F44DEBF14AFB8 /* PKSymbolState.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PKSymbolState.m; path = src/PKSymbolState.m; sourceTree = "<group>"; };
+		9C1E43507B11492EA971490F /* NSArray_DeepMutableCopy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = NSArray_DeepMutableCopy.m; path = lib/MGTemplateEngine/NSArray_DeepMutableCopy.m; sourceTree = "<group>"; };
+		9D4B80D8906D4A11AA268641 /* PKTokenAssembly.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PKTokenAssembly.h; path = include/ParseKit/PKTokenAssembly.h; sourceTree = "<group>"; };
+		9E00EC30D1B84BF28894EF92 /* PKTwitterState.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PKTwitterState.m; path = src/PKTwitterState.m; sourceTree = "<group>"; };
+		A14368BECDD54B08BB74E04C /* NSOrderedDictionary.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = NSOrderedDictionary.h; sourceTree = "<group>"; };
+		A1636E0825E14649A84FE047 /* PKDelimitDescriptor.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PKDelimitDescriptor.m; path = src/PKDelimitDescriptor.m; sourceTree = "<group>"; };
+		A1A9FA38AD8E48AE8FF43325 /* PKTokenizerState.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PKTokenizerState.m; path = src/PKTokenizerState.m; sourceTree = "<group>"; };
+		A1E885BD18404D6ABA1C5CC6 /* PKSParser.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PKSParser.m; path = src/PKSParser.m; sourceTree = "<group>"; };
+		A52BE2A8B88F414EBC834A50 /* Pods-VerbalExpressions-for-Objective-C-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-VerbalExpressions-for-Objective-C-prefix.pch"; sourceTree = "<group>"; };
+		A634D24D3FFA437B9351D973 /* NSArray+ParseKitAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSArray+ParseKitAdditions.h"; path = "src/NSArray+ParseKitAdditions.h"; sourceTree = "<group>"; };
+		A78F0D96D6CD45418B4BC1A7 /* ParseKit.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ParseKit.h; path = include/ParseKit/ParseKit.h; sourceTree = "<group>"; };
+		A865CD5019F84587B86FC86A /* PKAST.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PKAST.m; path = src/PKAST.m; sourceTree = "<group>"; };
+		A8D1536BD49B40ECA89FE48B /* PKCharacterAssembly.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PKCharacterAssembly.m; path = src/PKCharacterAssembly.m; sourceTree = "<group>"; };
+		ABBB99AF027F401D829B75BB /* PKURLState.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PKURLState.m; path = src/PKURLState.m; sourceTree = "<group>"; };
+		B18DC660088046E987F90FED /* PKLiteralNode.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PKLiteralNode.m; path = src/nodes/PKLiteralNode.m; sourceTree = "<group>"; };
+		B2041A5316EF42BDA43A06CC /* PKTrack.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PKTrack.m; path = src/PKTrack.m; sourceTree = "<group>"; };
+		B21018CA32EA4FE7A93C2893 /* PKCompositeNode.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PKCompositeNode.h; path = src/nodes/PKCompositeNode.h; sourceTree = "<group>"; };
+		B31A7A14B77B4A0A90412C41 /* PKWhitespaceState.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PKWhitespaceState.m; path = src/PKWhitespaceState.m; sourceTree = "<group>"; };
+		B506D41776694B0C9B3A7E9D /* Pods-NSOrderedDictionary-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-NSOrderedDictionary-dummy.m"; sourceTree = "<group>"; };
+		B5A64BC839CD41CFA6022653 /* Pods-AKVerbalExpression-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-AKVerbalExpression-Private.xcconfig"; sourceTree = "<group>"; };
+		B5EA03F38017477FBFABA48F /* MGTemplateMarker.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MGTemplateMarker.h; path = lib/MGTemplateEngine/MGTemplateMarker.h; sourceTree = "<group>"; };
+		B6C7D25EFE3C455DB28CFBCC /* PKMultiLineCommentState.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PKMultiLineCommentState.h; path = include/ParseKit/PKMultiLineCommentState.h; sourceTree = "<group>"; };
+		B77803AC0FB948AB81EE9C9E /* scss.grammar */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = scss.grammar; path = Classes/scss.grammar; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		B814408ABBAA4F2BB8678326 /* PKTypes.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PKTypes.h; path = include/ParseKit/PKTypes.h; sourceTree = "<group>"; };
+		B826E88494B84041A4386540 /* PKChar.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PKChar.m; path = src/PKChar.m; sourceTree = "<group>"; };
+		BBAD346FCE7E411F8C9C4258 /* PKQuoteState.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PKQuoteState.m; path = src/PKQuoteState.m; sourceTree = "<group>"; };
+		BBEE7822C5AC4BDE92792042 /* PKOptionalNode.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PKOptionalNode.m; path = src/nodes/PKOptionalNode.m; sourceTree = "<group>"; };
+		BC0C5F8B2AA5458D86385D66 /* PKEmailState.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PKEmailState.h; path = include/ParseKit/PKEmailState.h; sourceTree = "<group>"; };
+		BCD983E4DFE34EDA8DB3028B /* PKDigit.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PKDigit.m; path = src/PKDigit.m; sourceTree = "<group>"; };
+		BD7C83CEEAF3470E81A0BB13 /* ICUTemplateMatcher.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ICUTemplateMatcher.h; path = lib/MGTemplateEngine/ICUTemplateMatcher.h; sourceTree = "<group>"; };
+		BEA08A760A214BBC81E2D256 /* Pods-Objective-CSS-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Objective-CSS-Private.xcconfig"; sourceTree = "<group>"; };
+		BEFCC8B33C294CA4800A8BD5 /* PRHVerbalExpression.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PRHVerbalExpression.m; path = VerbalExpressions/PRHVerbalExpression.m; sourceTree = "<group>"; };
+		BF32E84D09CC4BB5A91E1FC3 /* PKPatternNode.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PKPatternNode.m; path = src/nodes/PKPatternNode.m; sourceTree = "<group>"; };
+		C04FAF47135F4BDE80CD565C /* Pods-VEVerbalExpressions-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-VEVerbalExpressions-Private.xcconfig"; sourceTree = "<group>"; };
+		C0504F4147F54F36AEC8AF52 /* PKCollectionNode.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PKCollectionNode.m; path = src/nodes/PKCollectionNode.m; sourceTree = "<group>"; };
+		C21A617EE22E48AB8AE24553 /* PKDelimitState.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PKDelimitState.h; path = include/ParseKit/PKDelimitState.h; sourceTree = "<group>"; };
+		C27792F241204C9880D4D65E /* PKCompositeNode.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PKCompositeNode.m; path = src/nodes/PKCompositeNode.m; sourceTree = "<group>"; };
+		C41092E06C694D3AAC3555D6 /* Pods-ParseKit.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ParseKit.xcconfig"; sourceTree = "<group>"; };
+		C41920D331074BE2A9CC9EF7 /* PKSymbolState.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PKSymbolState.h; path = include/ParseKit/PKSymbolState.h; sourceTree = "<group>"; };
+		C4FE438F806843D69E46F75B /* NSOrderedDictionary.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = NSOrderedDictionary.m; sourceTree = "<group>"; };
+		C5A6BA2E455E4ADAB0D00262 /* PKSTokenAssembly.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PKSTokenAssembly.h; path = include/ParseKit/PKSTokenAssembly.h; sourceTree = "<group>"; };
+		C6622E54FA9E452EA420069C /* PKAny.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PKAny.h; path = include/ParseKit/PKAny.h; sourceTree = "<group>"; };
+		C69F9A18414641F6BEE0817F /* MGTemplateEngine.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MGTemplateEngine.m; path = lib/MGTemplateEngine/MGTemplateEngine.m; sourceTree = "<group>"; };
+		C726794213B641B2A46EF522 /* PKEmailState.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PKEmailState.m; path = src/PKEmailState.m; sourceTree = "<group>"; };
+		C73974FBB1CB45AB81572444 /* PKTokenizer.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PKTokenizer.m; path = src/PKTokenizer.m; sourceTree = "<group>"; };
+		D002565EB252430BBA41296C /* Pods-Objective-CSS.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Objective-CSS.xcconfig"; sourceTree = "<group>"; };
+		D049F3F8314A445EACF80228 /* PKWord.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PKWord.m; path = src/PKWord.m; sourceTree = "<group>"; };
+		D1813D11E20340C8A653A5E9 /* PKIntersection.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PKIntersection.h; path = include/ParseKit/PKIntersection.h; sourceTree = "<group>"; };
+		D2F0A126892A4241AD74AC4A /* OCSSParser.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OCSSParser.h; path = Classes/OCSSParser.h; sourceTree = "<group>"; };
+		D2F30663E5CB4A29B19689B4 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Pods.xcconfig; sourceTree = "<group>"; };
+		D5DE04AC6815422E852F0DD8 /* PKNegation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PKNegation.m; path = src/PKNegation.m; sourceTree = "<group>"; };
+		D68986B9778D406480B28E64 /* PKDelimitDescriptorCollection.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PKDelimitDescriptorCollection.h; path = src/PKDelimitDescriptorCollection.h; sourceTree = "<group>"; };
+		D6F0EA30BEBC4C5193F69963 /* libPods-AKVerbalExpression.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-AKVerbalExpression.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DAB929FFAE964B618C76447F /* NSMutableSet+ParseKitAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSMutableSet+ParseKitAdditions.h"; path = "src/NSMutableSet+ParseKitAdditions.h"; sourceTree = "<group>"; };
+		DC4587B750F843F4938542F6 /* PKHashtagState.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PKHashtagState.h; path = include/ParseKit/PKHashtagState.h; sourceTree = "<group>"; };
+		DDE7BA0B80F14E2FA14C713F /* Pods-AKVerbalExpression-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-AKVerbalExpression-dummy.m"; sourceTree = "<group>"; };
+		DE20A21F0E8C4AA19E62AD1A /* PKPattern.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PKPattern.m; path = src/PKPattern.m; sourceTree = "<group>"; };
+		DEB979B9100940B7A5CDDF5D /* PKLiteral.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PKLiteral.m; path = src/PKLiteral.m; sourceTree = "<group>"; };
+		E2CBE507742449679494BCD3 /* PKMultipleNode.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PKMultipleNode.m; path = src/nodes/PKMultipleNode.m; sourceTree = "<group>"; };
+		E3D67BFC1BF04A4098C7D920 /* PKSRecognitionException.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PKSRecognitionException.h; path = include/ParseKit/PKSRecognitionException.h; sourceTree = "<group>"; };
+		E61E287F5B5046FCADAFC160 /* Pods-Objective-CSS-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Objective-CSS-prefix.pch"; sourceTree = "<group>"; };
+		E66DA745934A466AB335995F /* PKDelimitState.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PKDelimitState.m; path = src/PKDelimitState.m; sourceTree = "<group>"; };
+		E7221D8311534CAEB83F3F24 /* PKDefinitionPhaseVisitor.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PKDefinitionPhaseVisitor.h; path = src/PKDefinitionPhaseVisitor.h; sourceTree = "<group>"; };
+		E773D5CDFF6845819C8F74B1 /* PKUppercaseWord.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PKUppercaseWord.m; path = src/PKUppercaseWord.m; sourceTree = "<group>"; };
+		E8E3BEB3381649ED91E3DB57 /* PKCollectionParser.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PKCollectionParser.m; path = src/PKCollectionParser.m; sourceTree = "<group>"; };
+		E9713C4F91F54CB19E9DEFED /* PKAssembly.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PKAssembly.m; path = src/PKAssembly.m; sourceTree = "<group>"; };
+		E9889E2224324C1AACF2F066 /* PKSymbolNode.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PKSymbolNode.h; path = include/ParseKit/PKSymbolNode.h; sourceTree = "<group>"; };
+		EA7DE59DF4584E9F8AF3058F /* PKTwitterState.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PKTwitterState.h; path = include/ParseKit/PKTwitterState.h; sourceTree = "<group>"; };
+		EB3FC2C328C64472A3686805 /* libPods-VerbalExpressions-for-Objective-C.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-VerbalExpressions-for-Objective-C.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		ECD4C53533924A96AA73E360 /* PKTokenArraySource.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PKTokenArraySource.h; path = include/ParseKit/PKTokenArraySource.h; sourceTree = "<group>"; };
+		EDDC9B7EB9AB4C8CB3F521FB /* PKNumberState.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PKNumberState.h; path = include/ParseKit/PKNumberState.h; sourceTree = "<group>"; };
+		EFD4A0C8CE5A4DF485AD6A37 /* PKAlternation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PKAlternation.h; path = include/ParseKit/PKAlternation.h; sourceTree = "<group>"; };
+		F01385788317432B893BA7F2 /* PKSTokenAssembly.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PKSTokenAssembly.m; path = src/PKSTokenAssembly.m; sourceTree = "<group>"; };
+		F0184364C46F4EAB94FA42F1 /* PKBaseNode.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PKBaseNode.m; path = src/nodes/PKBaseNode.m; sourceTree = "<group>"; };
+		F3A1B6FAE13A463689A40575 /* PKResolutionPhaseVisitor.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PKResolutionPhaseVisitor.h; path = src/PKResolutionPhaseVisitor.h; sourceTree = "<group>"; };
+		F4BCB17949DF4177A21351E2 /* PKEmpty.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PKEmpty.h; path = include/ParseKit/PKEmpty.h; sourceTree = "<group>"; };
+		F63190EE9C7E4FB699079CF2 /* PKNumber.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PKNumber.h; path = include/ParseKit/PKNumber.h; sourceTree = "<group>"; };
+		F6457CA4F7044A4BB012C627 /* PKCommentState.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PKCommentState.h; path = include/ParseKit/PKCommentState.h; sourceTree = "<group>"; };
+		F7FC292B058C4B5C87649A43 /* PKSymbolRootNode.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PKSymbolRootNode.h; path = include/ParseKit/PKSymbolRootNode.h; sourceTree = "<group>"; };
+		F85D9D5C56514058BC80291B /* PKCompositeParser.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PKCompositeParser.m; path = src/PKCompositeParser.m; sourceTree = "<group>"; };
+		F8A0937DFB4941C08DAC0FA3 /* PKSParser.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PKSParser.h; path = include/ParseKit/PKSParser.h; sourceTree = "<group>"; };
+		F8DDD3238851438F869641B2 /* Pods-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-acknowledgements.markdown"; sourceTree = "<group>"; };
+		FC88AA2ABCFC492391B8D3AF /* ICUTemplateMatcher.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ICUTemplateMatcher.m; path = lib/MGTemplateEngine/ICUTemplateMatcher.m; sourceTree = "<group>"; };
+		FD5433C8175E44D48E950BCF /* PKCaseInsensitiveLiteral.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PKCaseInsensitiveLiteral.h; path = include/ParseKit/PKCaseInsensitiveLiteral.h; sourceTree = "<group>"; };
+		FDD01A9FCEAD41C286A5344B /* PKDelimitedString.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PKDelimitedString.h; path = include/ParseKit/PKDelimitedString.h; sourceTree = "<group>"; };
+		FF14268715164832AF340DD8 /* Pods-ParseKit-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ParseKit-Private.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		20EEFC2DD9F24D2E9646F3E1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ED75E56C0A324BB08A280AFF /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		558EAF9B7D024D54AB48216A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AA151A25A6764291BE869CDC /* Cocoa.framework in Frameworks */,
+				AC17D7772B8E4FDF8C8557B2 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6496766E59D44BA6912EADFA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D32DC3716DFB42ABA4D2C328 /* Cocoa.framework in Frameworks */,
+				26D499E020E04544A6D0F994 /* libPods-AKVerbalExpression.a in Frameworks */,
+				7AF5EE1FE1B54486A0C997AC /* libPods-NSOrderedDictionary.a in Frameworks */,
+				6432AEFC49EA41F398774CF1 /* libPods-Objective-CSS.a in Frameworks */,
+				DC389F2B980040FAAF3C463A /* libPods-ParseKit.a in Frameworks */,
+				7B81D9C7FF294EC3B5FB3C50 /* libPods-VEVerbalExpressions.a in Frameworks */,
+				AD8BBAD5F41B4559A8F66146 /* libPods-VerbalExpressions-for-Objective-C.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A30CED3C94D4463D8FF50054 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2AA51C5E2BD140A1A5311628 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B26CA4132D174FB69EB16ED9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5B0242F7C92C480A96AAB022 /* Cocoa.framework in Frameworks */,
+				5A0739D318D14BAB829E4FEF /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D8B6E67A3ACB43518489111F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5DAC5F4198C74D8099924892 /* Cocoa.framework in Frameworks */,
+				CE37CD73B9B54671A7CF9BA9 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F6B2DBD39B0448E783B53AEB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CF462622B8A14DC09516DD9B /* Cocoa.framework in Frameworks */,
+				EE7F8EBE7A724505B270B4E4 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		02563EA432F8413B8040818D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				43E69932368D4ABD8BCDE9AC /* libPods-ParseKit.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		0465C7013C554970B30E8127 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				23F6A514DD174AC2BA1253A3 /* Pods-NSOrderedDictionary-Private.xcconfig */,
+				B506D41776694B0C9B3A7E9D /* Pods-NSOrderedDictionary-dummy.m */,
+				16F150038FCC46BE8F5E798A /* Pods-NSOrderedDictionary-prefix.pch */,
+				67D30AF74FCF4F0F8C4BBCB4 /* Pods-NSOrderedDictionary.xcconfig */,
+			);
+			name = "Support Files";
+			sourceTree = SOURCE_ROOT;
+		};
+		1070B832D8234166B67CD341 /* Source Files */ = {
+			isa = PBXGroup;
+			children = (
+				D2F0A126892A4241AD74AC4A /* OCSSParser.h */,
+				4C4A4F7CAF334EB9BC3B50E3 /* OCSSParser.m */,
+			);
+			name = "Source Files";
+			sourceTree = "<group>";
+		};
+		15A89649979544C39D858238 /* Source Files */ = {
+			isa = PBXGroup;
+			children = (
+				A14368BECDD54B08BB74E04C /* NSOrderedDictionary.h */,
+				C4FE438F806843D69E46F75B /* NSOrderedDictionary.m */,
+			);
+			name = "Source Files";
+			sourceTree = "<group>";
+		};
+		17AAC31ED5CC470FB785AEA0 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4BC8AFE2266C449BA1B9C524 /* libPods-Objective-CSS.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		18C1AEE4BAC34828BDAF4396 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				CABCC515146D453FA74A0C23 /* Pods */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		255E2E41A93647FA9B1D2257 /* AKVerbalExpression */ = {
+			isa = PBXGroup;
+			children = (
+				AB0A7F26EC764B69854F9DCA /* Products */,
+				6387E1A59A4D49B6B50E0635 /* Source Files */,
+				B67FC62651D64D0EA7BE1834 /* Support Files */,
+			);
+			path = AKVerbalExpression;
+			sourceTree = "<group>";
+		};
+		3129211E29954E4B9491CE96 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				255E2E41A93647FA9B1D2257 /* AKVerbalExpression */,
+				C4E8C8986B034BAEA893B8B6 /* NSOrderedDictionary */,
+				619829F414D1427592C5AE9C /* ParseKit */,
+				FFFEFF0746324934A4B3A502 /* VEVerbalExpressions */,
+				D43E444BF1EA4289A167A526 /* VerbalExpressions-for-Objective-C */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		366E54BF10D34AA49B864E93 /* Objective-CSS */ = {
+			isa = PBXGroup;
+			children = (
+				17AAC31ED5CC470FB785AEA0 /* Products */,
+				C9DE8B23C3DB4B0C8954D5DE /* Resources */,
+				1070B832D8234166B67CD341 /* Source Files */,
+				8D88F994F8AD4588818D36D7 /* Support Files */,
+			);
+			name = "Objective-CSS";
+			path = ../..;
+			sourceTree = "<group>";
+		};
+		41F24687C71846308ED7063D /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				161C5C1207074760B1805EA2 /* Pods-VerbalExpressions-for-Objective-C-Private.xcconfig */,
+				8FBAF19D0C44438680E3D7FD /* Pods-VerbalExpressions-for-Objective-C-dummy.m */,
+				A52BE2A8B88F414EBC834A50 /* Pods-VerbalExpressions-for-Objective-C-prefix.pch */,
+				242EDB0566C14330A10B7641 /* Pods-VerbalExpressions-for-Objective-C.xcconfig */,
+			);
+			name = "Support Files";
+			sourceTree = SOURCE_ROOT;
+		};
+		503A622AD79D4604BE6B732A /* Development Pods */ = {
+			isa = PBXGroup;
+			children = (
+				366E54BF10D34AA49B864E93 /* Objective-CSS */,
+			);
+			name = "Development Pods";
+			sourceTree = "<group>";
+		};
+		619829F414D1427592C5AE9C /* ParseKit */ = {
+			isa = PBXGroup;
+			children = (
+				02563EA432F8413B8040818D /* Products */,
+				A4BFE5A0522F4AF3BE678F6F /* Source Files */,
+				A676675DE222423882FF7369 /* Support Files */,
+			);
+			path = ParseKit;
+			sourceTree = "<group>";
+		};
+		6387E1A59A4D49B6B50E0635 /* Source Files */ = {
+			isa = PBXGroup;
+			children = (
+				54638A3687F24A99AD038CF8 /* AKVerbalExpression.h */,
+				57BA0301302C4E3C98EBEC7E /* AKVerbalExpression.m */,
+			);
+			name = "Source Files";
+			sourceTree = "<group>";
+		};
+		6F6B8453CE164BDE9DAFB703 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				73F57E891BBD4BA98903E399 /* libPods.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		894F5ACBCA804626AEBA023F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5C8E241F8AC145FE87EE299A /* libPods-VEVerbalExpressions.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8D88F994F8AD4588818D36D7 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				BEA08A760A214BBC81E2D256 /* Pods-Objective-CSS-Private.xcconfig */,
+				7283DBAEBD704831825219F4 /* Pods-Objective-CSS-dummy.m */,
+				E61E287F5B5046FCADAFC160 /* Pods-Objective-CSS-prefix.pch */,
+				D002565EB252430BBA41296C /* Pods-Objective-CSS.xcconfig */,
+			);
+			name = "Support Files";
+			sourceTree = SOURCE_ROOT;
+		};
+		9A97A6ECCCD3474BBF64D1FC /* Source Files */ = {
+			isa = PBXGroup;
+			children = (
+				543C1CF5D0404BFCA945E784 /* PRHVerbalExpression.h */,
+				BEFCC8B33C294CA4800A8BD5 /* PRHVerbalExpression.m */,
+			);
+			name = "Source Files";
+			sourceTree = "<group>";
+		};
+		9C494EF3D5184C9A9637D08C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				620440280EC94C87A27667BC /* libPods-NSOrderedDictionary.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A43F8E17EF544F18A4AE6605 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				C04FAF47135F4BDE80CD565C /* Pods-VEVerbalExpressions-Private.xcconfig */,
+				6036F17723E246A2B5FF11B8 /* Pods-VEVerbalExpressions-dummy.m */,
+				034356DE60674B0B89801C93 /* Pods-VEVerbalExpressions-prefix.pch */,
+				3697846C7F3C4B6AA79D4052 /* Pods-VEVerbalExpressions.xcconfig */,
+			);
+			name = "Support Files";
+			sourceTree = SOURCE_ROOT;
+		};
+		A4BFE5A0522F4AF3BE678F6F /* Source Files */ = {
+			isa = PBXGroup;
+			children = (
+				1925A19F7405400EBE3B846C /* DeepMutableCopy.h */,
+				BD7C83CEEAF3470E81A0BB13 /* ICUTemplateMatcher.h */,
+				FC88AA2ABCFC492391B8D3AF /* ICUTemplateMatcher.m */,
+				203352B058D347C7A0930306 /* MGTemplateEngine.h */,
+				C69F9A18414641F6BEE0817F /* MGTemplateEngine.m */,
+				4E73B98D3211458D84343711 /* MGTemplateFilter.h */,
+				B5EA03F38017477FBFABA48F /* MGTemplateMarker.h */,
+				71DE3ADE1016469FB2423E38 /* MGTemplateStandardFilters.h */,
+				923C7E984043485C9745431E /* MGTemplateStandardFilters.m */,
+				3D08251C9F1C47BC9DD27462 /* MGTemplateStandardMarkers.h */,
+				5E03661581194D0896002D59 /* MGTemplateStandardMarkers.m */,
+				A634D24D3FFA437B9351D973 /* NSArray+ParseKitAdditions.h */,
+				0B400B0269564EC3B0ABA6A7 /* NSArray+ParseKitAdditions.m */,
+				08AA08DC60034C0496C4343E /* NSArray_DeepMutableCopy.h */,
+				9C1E43507B11492EA971490F /* NSArray_DeepMutableCopy.m */,
+				5881294C2E9D44588EDE87A3 /* NSDictionary_DeepMutableCopy.h */,
+				072D0D73D65E4F409C5D7260 /* NSDictionary_DeepMutableCopy.m */,
+				DAB929FFAE964B618C76447F /* NSMutableSet+ParseKitAdditions.h */,
+				2D613253A03343749561C9B6 /* NSMutableSet+ParseKitAdditions.m */,
+				0E0D46572F534FC89B721AA4 /* NSString+ParseKitAdditions.h */,
+				2EC868B4841C4B51B7C655EF /* NSString+ParseKitAdditions.m */,
+				8100C1788FAE4A0B9A1B3070 /* PKAST.h */,
+				A865CD5019F84587B86FC86A /* PKAST.m */,
+				3D67D6EE00834782A0698F9D /* PKActionNode.h */,
+				014F5B004BF7463BAC5695F8 /* PKActionNode.m */,
+				EFD4A0C8CE5A4DF485AD6A37 /* PKAlternation.h */,
+				2301F3551AAA4AB58AB9C7EA /* PKAlternation.m */,
+				489547E42CF44E6BBF5076DF /* PKAlternationNode.h */,
+				30AC2514ED534871A7BFC12C /* PKAlternationNode.m */,
+				C6622E54FA9E452EA420069C /* PKAny.h */,
+				17976F38239745D3B158BDEC /* PKAny.m */,
+				1DA17FA93BA643D894AD044C /* PKAssembly.h */,
+				E9713C4F91F54CB19E9DEFED /* PKAssembly.m */,
+				540674F450B74A00A22B0C9C /* PKBaseNode.h */,
+				F0184364C46F4EAB94FA42F1 /* PKBaseNode.m */,
+				3F568B9FC98241D19F4F48A0 /* PKBaseVisitor.h */,
+				05642CF5BD374A338663AD55 /* PKBaseVisitor.m */,
+				FD5433C8175E44D48E950BCF /* PKCaseInsensitiveLiteral.h */,
+				2E6832D566EB46C89D41BA74 /* PKCaseInsensitiveLiteral.m */,
+				36198625445043A886B59C66 /* PKChar.h */,
+				B826E88494B84041A4386540 /* PKChar.m */,
+				4EB33408FCBF459992C02372 /* PKCharacterAssembly.h */,
+				A8D1536BD49B40ECA89FE48B /* PKCharacterAssembly.m */,
+				7B34994AE97645F2A7C9FCF9 /* PKCollectionNode.h */,
+				C0504F4147F54F36AEC8AF52 /* PKCollectionNode.m */,
+				684D2876FAFD4FDC8EE29B93 /* PKCollectionParser.h */,
+				E8E3BEB3381649ED91E3DB57 /* PKCollectionParser.m */,
+				8C2237D0E27D4AAFA4BD65C2 /* PKComment.h */,
+				4827778020C24017A2E50E57 /* PKComment.m */,
+				F6457CA4F7044A4BB012C627 /* PKCommentState.h */,
+				1988D2235465421B85A93EFB /* PKCommentState.m */,
+				B21018CA32EA4FE7A93C2893 /* PKCompositeNode.h */,
+				C27792F241204C9880D4D65E /* PKCompositeNode.m */,
+				4E7D268159D648638EC9D4F2 /* PKCompositeParser.h */,
+				F85D9D5C56514058BC80291B /* PKCompositeParser.m */,
+				026682C0BCCA4F79AF355BE7 /* PKConstantNode.h */,
+				5E42DBCE03524693AFADE36C /* PKConstantNode.m */,
+				318CB278BCDF41FABF94EB73 /* PKDefinitionNode.h */,
+				95C9AADF92C04CE581D47ECE /* PKDefinitionNode.m */,
+				E7221D8311534CAEB83F3F24 /* PKDefinitionPhaseVisitor.h */,
+				2580188A46124C36A75CFC8E /* PKDefinitionPhaseVisitor.m */,
+				0AFA87D9CBC24900881AA2DB /* PKDelimitDescriptor.h */,
+				A1636E0825E14649A84FE047 /* PKDelimitDescriptor.m */,
+				D68986B9778D406480B28E64 /* PKDelimitDescriptorCollection.h */,
+				8717248502254D4FB9D8B661 /* PKDelimitDescriptorCollection.m */,
+				C21A617EE22E48AB8AE24553 /* PKDelimitState.h */,
+				E66DA745934A466AB335995F /* PKDelimitState.m */,
+				117E199B56AE4A779831ABB2 /* PKDelimitedNode.h */,
+				8263A5EA078542F3949592C9 /* PKDelimitedNode.m */,
+				FDD01A9FCEAD41C286A5344B /* PKDelimitedString.h */,
+				9ADACD891A364704BF57491F /* PKDelimitedString.m */,
+				42380FE3F319413E84BADE6D /* PKDifference.h */,
+				8E46A90138EC428AA93603B0 /* PKDifference.m */,
+				20C83125FC6A4B40BE5789D7 /* PKDigit.h */,
+				BCD983E4DFE34EDA8DB3028B /* PKDigit.m */,
+				BC0C5F8B2AA5458D86385D66 /* PKEmailState.h */,
+				C726794213B641B2A46EF522 /* PKEmailState.m */,
+				F4BCB17949DF4177A21351E2 /* PKEmpty.h */,
+				958F8AD1948242DCA85CDC49 /* PKEmpty.m */,
+				DC4587B750F843F4938542F6 /* PKHashtagState.h */,
+				5B120614D2A94B0EB41A93B2 /* PKHashtagState.m */,
+				D1813D11E20340C8A653A5E9 /* PKIntersection.h */,
+				828D61BDEE7B425FA17ACD54 /* PKIntersection.m */,
+				345C15A604DE41A3B3855650 /* PKLetter.h */,
+				2270EC2822974761BE6D4071 /* PKLetter.m */,
+				2EE301A755EF47BCBF079BF4 /* PKLiteral.h */,
+				DEB979B9100940B7A5CDDF5D /* PKLiteral.m */,
+				209862E7B0EC4FB5A83294A9 /* PKLiteralNode.h */,
+				B18DC660088046E987F90FED /* PKLiteralNode.m */,
+				3F17851BE3DA44618AF8746A /* PKLowercaseWord.h */,
+				3FDBF76A86074E71969283C1 /* PKLowercaseWord.m */,
+				B6C7D25EFE3C455DB28CFBCC /* PKMultiLineCommentState.h */,
+				6B527CDCEC7F4955ACD3A061 /* PKMultiLineCommentState.m */,
+				6FDB3A722E534978A3A06D07 /* PKMultipleNode.h */,
+				E2CBE507742449679494BCD3 /* PKMultipleNode.m */,
+				0352A03E829D45469FADA6CD /* PKNegation.h */,
+				D5DE04AC6815422E852F0DD8 /* PKNegation.m */,
+				5E40E140F6B04A3A9E553669 /* PKNodeVisitor.h */,
+				F63190EE9C7E4FB699079CF2 /* PKNumber.h */,
+				1098CAC2C7E04B3589A81041 /* PKNumber.m */,
+				EDDC9B7EB9AB4C8CB3F521FB /* PKNumberState.h */,
+				350DC840FFE547259F9D2B6C /* PKNumberState.m */,
+				233CC947DAAF4823B55CFEEB /* PKOptionalNode.h */,
+				BBEE7822C5AC4BDE92792042 /* PKOptionalNode.m */,
+				65BA29C2FF7E4620AAE0997D /* PKParser.h */,
+				40FFE80B005C42249869A0B6 /* PKParser.m */,
+				74D9D0658E9A47819C7B9C56 /* PKParserFactory.h */,
+				5FF2C9313D1A4AE7A9886583 /* PKParserFactory.m */,
+				7A550A7AAF8B47F6AD502C37 /* PKPattern.h */,
+				DE20A21F0E8C4AA19E62AD1A /* PKPattern.m */,
+				36840199AB2347A4964E0AD5 /* PKPatternNode.h */,
+				BF32E84D09CC4BB5A91E1FC3 /* PKPatternNode.m */,
+				202AB6100C79410CBC693BC8 /* PKQuoteState.h */,
+				BBAD346FCE7E411F8C9C4258 /* PKQuoteState.m */,
+				417EB8C504604934AC4CD58B /* PKQuotedString.h */,
+				5C340554D67646048150C384 /* PKQuotedString.m */,
+				739ACFC5C55F45E6984C3966 /* PKReader.h */,
+				51F702C4238E4098B4E255F8 /* PKReader.m */,
+				0C911406497B4A45B2F91B52 /* PKReferenceNode.h */,
+				945120813428429A8E714C8D /* PKReferenceNode.m */,
+				8B2977FAAC5C4EEBAD84FFDA /* PKRepetition.h */,
+				3B8AA70E945A4C9B86C49B0F /* PKRepetition.m */,
+				F3A1B6FAE13A463689A40575 /* PKResolutionPhaseVisitor.h */,
+				78045482D29841F8B882D365 /* PKResolutionPhaseVisitor.m */,
+				309F64ADE1ED4CE7ABCE2249 /* PKRootNode.h */,
+				2C295C8DA09F43519C464BF5 /* PKRootNode.m */,
+				F8A0937DFB4941C08DAC0FA3 /* PKSParser.h */,
+				A1E885BD18404D6ABA1C5CC6 /* PKSParser.m */,
+				6EA801893A984E9B99F9F60A /* PKSParserGenVisitor.h */,
+				555552960C4B4D849ACEF093 /* PKSParserGenVisitor.m */,
+				E3D67BFC1BF04A4098C7D920 /* PKSRecognitionException.h */,
+				09476410FEAF4485B777BA7A /* PKSRecognitionException.m */,
+				C5A6BA2E455E4ADAB0D00262 /* PKSTokenAssembly.h */,
+				F01385788317432B893BA7F2 /* PKSTokenAssembly.m */,
+				7B0A0C7B76A74C23A360B6D9 /* PKSTokenKindDescriptor.h */,
+				771DB87CD5C54A8EA8DD2762 /* PKSTokenKindDescriptor.m */,
+				04F5E73D5050424EB2CDA153 /* PKSequence.h */,
+				6F9263940B5B43858D6F3FA6 /* PKSequence.m */,
+				43E1212158AC40319DCC15F5 /* PKSingleLineCommentState.h */,
+				92FC9590E8FB40E7A177E6AE /* PKSingleLineCommentState.m */,
+				67FA3B9268C8465EBC4F1711 /* PKSpecificChar.h */,
+				9194B562F4044A4DBD3B5BDA /* PKSpecificChar.m */,
+				692378DF114046229295CAEF /* PKSymbol.h */,
+				103EA2DBB2D9491A90D02EBD /* PKSymbol.m */,
+				E9889E2224324C1AACF2F066 /* PKSymbolNode.h */,
+				0524B40951274CC5A85F5B0F /* PKSymbolNode.m */,
+				F7FC292B058C4B5C87649A43 /* PKSymbolRootNode.h */,
+				78C0720DD2D148CB883357DA /* PKSymbolRootNode.m */,
+				C41920D331074BE2A9CC9EF7 /* PKSymbolState.h */,
+				9C1610FF636F44DEBF14AFB8 /* PKSymbolState.m */,
+				02154722E516475D98BDAB14 /* PKTerminal.h */,
+				9A33F42135F747B08B11195B /* PKTerminal.m */,
+				7154A674879A41C1BD21938E /* PKToken.h */,
+				7A8180C0412F439AAA7FAB69 /* PKToken.m */,
+				ECD4C53533924A96AA73E360 /* PKTokenArraySource.h */,
+				29E60B5E4E0242D79C0842F2 /* PKTokenArraySource.m */,
+				9D4B80D8906D4A11AA268641 /* PKTokenAssembly.h */,
+				00DE912E8EEC4F62A09047D8 /* PKTokenAssembly.m */,
+				42B3713A91D14C6BAA21052E /* PKTokenizer.h */,
+				C73974FBB1CB45AB81572444 /* PKTokenizer.m */,
+				61EF488C052B442EA56B18F9 /* PKTokenizerState.h */,
+				A1A9FA38AD8E48AE8FF43325 /* PKTokenizerState.m */,
+				06DE2E4E138C476F89D431B9 /* PKTrack.h */,
+				B2041A5316EF42BDA43A06CC /* PKTrack.m */,
+				385E5EB9E0134D0DBBFA31D0 /* PKTrackException.h */,
+				7D1F049DBE424BD5B560B3FA /* PKTrackException.m */,
+				EA7DE59DF4584E9F8AF3058F /* PKTwitterState.h */,
+				9E00EC30D1B84BF28894EF92 /* PKTwitterState.m */,
+				B814408ABBAA4F2BB8678326 /* PKTypes.h */,
+				73D93755822245C6AC14A783 /* PKURLState.h */,
+				ABBB99AF027F401D829B75BB /* PKURLState.m */,
+				9A8AD955E8B744DBA3BC11C2 /* PKUppercaseWord.h */,
+				E773D5CDFF6845819C8F74B1 /* PKUppercaseWord.m */,
+				6E9824F54817445A93E713E7 /* PKWhitespace.h */,
+				2878B88AD1B346D2AA5AC477 /* PKWhitespace.m */,
+				7A612B4037E349D0B2755521 /* PKWhitespaceState.h */,
+				B31A7A14B77B4A0A90412C41 /* PKWhitespaceState.m */,
+				060EA633803D4D7A8D635B4F /* PKWord.h */,
+				D049F3F8314A445EACF80228 /* PKWord.m */,
+				8099D3FB32274336AD50A3D5 /* PKWordState.h */,
+				552517F5F340426BAF803B20 /* PKWordState.m */,
+				A78F0D96D6CD45418B4BC1A7 /* ParseKit.h */,
+				041CE54E5D6040DB86114F6D /* ParseKitParser.h */,
+				131710536E034DD8B034D328 /* ParseKitParser.m */,
+				8758E73102E54F9091C6B8F7 /* RegexKitLite.h */,
+				1843DA1939F14D1A9B3FE496 /* RegexKitLite.m */,
+			);
+			name = "Source Files";
+			sourceTree = "<group>";
+		};
+		A676675DE222423882FF7369 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				FF14268715164832AF340DD8 /* Pods-ParseKit-Private.xcconfig */,
+				6D71202893D04F199311EC45 /* Pods-ParseKit-dummy.m */,
+				54C23F2C81B547218FF315A5 /* Pods-ParseKit-prefix.pch */,
+				C41092E06C694D3AAC3555D6 /* Pods-ParseKit.xcconfig */,
+			);
+			name = "Support Files";
+			sourceTree = SOURCE_ROOT;
+		};
+		AB0A7F26EC764B69854F9DCA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D6F0EA30BEBC4C5193F69963 /* libPods-AKVerbalExpression.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B67FC62651D64D0EA7BE1834 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				B5A64BC839CD41CFA6022653 /* Pods-AKVerbalExpression-Private.xcconfig */,
+				DDE7BA0B80F14E2FA14C713F /* Pods-AKVerbalExpression-dummy.m */,
+				2925923F8E0A4359902AF63B /* Pods-AKVerbalExpression-prefix.pch */,
+				838289FA02AA4049AE954B53 /* Pods-AKVerbalExpression.xcconfig */,
+			);
+			name = "Support Files";
+			sourceTree = SOURCE_ROOT;
+		};
+		C4E8C8986B034BAEA893B8B6 /* NSOrderedDictionary */ = {
+			isa = PBXGroup;
+			children = (
+				9C494EF3D5184C9A9637D08C /* Products */,
+				15A89649979544C39D858238 /* Source Files */,
+				0465C7013C554970B30E8127 /* Support Files */,
+			);
+			path = NSOrderedDictionary;
+			sourceTree = "<group>";
+		};
+		C9DE8B23C3DB4B0C8954D5DE /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				B77803AC0FB948AB81EE9C9E /* scss.grammar */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		CABCC515146D453FA74A0C23 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F8DDD3238851438F869641B2 /* Pods-acknowledgements.markdown */,
+				829359E6B2ED4A48984E942E /* Pods-acknowledgements.plist */,
+				197E2230FC384DA58E1B1826 /* Pods-dummy.m */,
+				4639000C89B54FF2994244B7 /* Pods-environment.h */,
+				0B0F289077854420BA4557EE /* Pods-resources.sh */,
+				D2F30663E5CB4A29B19689B4 /* Pods.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		D43E444BF1EA4289A167A526 /* VerbalExpressions-for-Objective-C */ = {
+			isa = PBXGroup;
+			children = (
+				FD6F12A9AC134A43A0184B56 /* Products */,
+				9A97A6ECCCD3474BBF64D1FC /* Source Files */,
+				41F24687C71846308ED7063D /* Support Files */,
+			);
+			path = "VerbalExpressions-for-Objective-C";
+			sourceTree = "<group>";
+		};
+		DB504944AB234B85AEDC992D /* Source Files */ = {
+			isa = PBXGroup;
+			children = (
+				7D36611E635141C0B9CDC446 /* VerbalExpressions.h */,
+				367128D41B874D8B80036885 /* VerbalExpressions.m */,
+			);
+			name = "Source Files";
+			sourceTree = "<group>";
+		};
+		E12251026B12450E9A4B6302 = {
+			isa = PBXGroup;
+			children = (
+				503A622AD79D4604BE6B732A /* Development Pods */,
+				EF1E3C88E0634C688D5C7A5A /* Frameworks */,
+				3129211E29954E4B9491CE96 /* Pods */,
+				6F6B8453CE164BDE9DAFB703 /* Products */,
+				18C1AEE4BAC34828BDAF4396 /* Targets Support Files */,
+				6C8A876D6A934D86872A6409 /* Podfile */,
+			);
+			sourceTree = "<group>";
+		};
+		EF1E3C88E0634C688D5C7A5A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				10B461B7E83442EF99D9E65B /* Cocoa.framework */,
+				3F3CC54F9A374F6EB10493B7 /* Foundation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FD6F12A9AC134A43A0184B56 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EB3FC2C328C64472A3686805 /* libPods-VerbalExpressions-for-Objective-C.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FFFEFF0746324934A4B3A502 /* VEVerbalExpressions */ = {
+			isa = PBXGroup;
+			children = (
+				894F5ACBCA804626AEBA023F /* Products */,
+				DB504944AB234B85AEDC992D /* Source Files */,
+				A43F8E17EF544F18A4AE6605 /* Support Files */,
+			);
+			path = VEVerbalExpressions;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		1BAC9D08A2904E8A9B45FA23 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C00B4AA773D04FD3A74A7071 /* OCSSParser.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		603BE216578D4563B71E6F90 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BBB049AD769C4172AB73C87C /* NSOrderedDictionary.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		77F07A71D5E64B5BB97B110A /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BBA04F83DBB74BD9AC4F0C6C /* AKVerbalExpression.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9B45DC4AC2824E89BE8CB2D1 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				26FC2F7CD3F249B5ADF9B276 /* ParseKit.h in Headers */,
+				8FE064AF07214A97B9A984F3 /* PKAlternation.h in Headers */,
+				3678DB2D222F4FF7A79C2069 /* PKAny.h in Headers */,
+				B74E88C9E71A4026A30A58A0 /* PKAssembly.h in Headers */,
+				5BE9672E978B4EC5A9855AF0 /* PKAST.h in Headers */,
+				524385B5D2C4496D9A383D7E /* PKCaseInsensitiveLiteral.h in Headers */,
+				066C61CB170842B6B6551406 /* PKChar.h in Headers */,
+				F62705B2FE8D490EA9235330 /* PKCharacterAssembly.h in Headers */,
+				3EEFC53CD184446094D2B420 /* PKCollectionParser.h in Headers */,
+				C6051BF5EED14486A8280581 /* PKComment.h in Headers */,
+				786E2D546049474E8BF3A878 /* PKCommentState.h in Headers */,
+				0E0A96060A3F43D7B636FC65 /* PKCompositeParser.h in Headers */,
+				78F3591A2F7C4B8A94C5FD07 /* PKDelimitedString.h in Headers */,
+				B3083C4A59B24822BE9DCD00 /* PKDelimitState.h in Headers */,
+				1C740336F5584FC6928201A1 /* PKDifference.h in Headers */,
+				9F245715E74842B4A628E9CD /* PKDigit.h in Headers */,
+				E522CA3771684C0EA3C353C9 /* PKEmailState.h in Headers */,
+				F8C7C6FECD154A1CBDFD1BEF /* PKEmpty.h in Headers */,
+				A29FED89B2B94BDA9CBCDE0E /* PKHashtagState.h in Headers */,
+				A4F27C9922364AA6865814A7 /* PKIntersection.h in Headers */,
+				E48B4BEA39BB4D9692060F86 /* PKLetter.h in Headers */,
+				B3FE8642D53D418AA31FA47B /* PKLiteral.h in Headers */,
+				662ABAE7C1634935BF5181B9 /* PKLowercaseWord.h in Headers */,
+				506F017A53C24B1B9274FCB5 /* PKMultiLineCommentState.h in Headers */,
+				0332D9726A9545FD8D61426A /* PKNegation.h in Headers */,
+				896142F595564167B898966D /* PKNumber.h in Headers */,
+				AD0CF1160831435BB66C0F35 /* PKNumberState.h in Headers */,
+				9FC8218A838C4496BDECDD11 /* PKParser.h in Headers */,
+				1983A02A2BFF41C4A67FF43A /* PKParserFactory.h in Headers */,
+				5A1BAA823DF54CAB95CD08AD /* PKPattern.h in Headers */,
+				70A7AAC58D6449E186DADE69 /* PKQuotedString.h in Headers */,
+				2AFF2587329240F686793B65 /* PKQuoteState.h in Headers */,
+				124E7EC2B81249AEAB9EB210 /* PKReader.h in Headers */,
+				F095F69A3D544E42BE7E7CB8 /* PKRepetition.h in Headers */,
+				DE521EA478A7495AB4684E6C /* PKSequence.h in Headers */,
+				6D10A141DB5F45CD987A1618 /* PKSingleLineCommentState.h in Headers */,
+				B3CA54C0118746F0B7C111B9 /* PKSParser.h in Headers */,
+				E8F2CAADFFE3473B90AB2A98 /* PKSpecificChar.h in Headers */,
+				3D17F23F08A04A4CA0CDE60E /* PKSRecognitionException.h in Headers */,
+				B95E735F5E594BD0AA522947 /* PKSTokenAssembly.h in Headers */,
+				92FF16C7BA294FE6A2931DF7 /* PKSymbol.h in Headers */,
+				B74A8F99DB51478990C652BC /* PKSymbolNode.h in Headers */,
+				8FD215864F7042DC90510F37 /* PKSymbolRootNode.h in Headers */,
+				0FE764B9B31344B7996856DE /* PKSymbolState.h in Headers */,
+				EFBFEB89AD414CD6A98BC3AD /* PKTerminal.h in Headers */,
+				CB695F470F4C4A5D97B0E9E9 /* PKToken.h in Headers */,
+				241B336D412B4DDD9F130E29 /* PKTokenArraySource.h in Headers */,
+				744FD85C2B1645B991871313 /* PKTokenAssembly.h in Headers */,
+				5022EF1CD62B48C1ACFD5D18 /* PKTokenizer.h in Headers */,
+				2EF88023D37B4B2ABF24AD4C /* PKTokenizerState.h in Headers */,
+				5E9C0410814D4AF884BBDFF0 /* PKTrack.h in Headers */,
+				56B6D9D5253B424FB6880656 /* PKTrackException.h in Headers */,
+				39B1307C65D944229598DE9D /* PKTwitterState.h in Headers */,
+				35E5E774A0404AF2999482C1 /* PKTypes.h in Headers */,
+				EA8DD4C6C88E42879B159ED9 /* PKUppercaseWord.h in Headers */,
+				484832DCEFC84AEDB8F53E8A /* PKURLState.h in Headers */,
+				417AE0549A2B47BC99EB4376 /* PKWhitespace.h in Headers */,
+				46CD519CB1FA4BA0B8558F90 /* PKWhitespaceState.h in Headers */,
+				3315E8720E7643F1A96E46F1 /* PKWord.h in Headers */,
+				9FCAA5D79AE541378A844E0A /* PKWordState.h in Headers */,
+				9A3B5B9F4F2040DBBEC31AB2 /* PKActionNode.h in Headers */,
+				7F4485F655D74C15A4CF8894 /* PKAlternationNode.h in Headers */,
+				81C1CFC623974B47B1C7D963 /* PKBaseNode.h in Headers */,
+				BD8A4ADA2CEA47BCA04597EE /* PKCollectionNode.h in Headers */,
+				47C3EB8E19784B7BAB37A7EF /* PKCompositeNode.h in Headers */,
+				48C09827B1F64FA8BBBF9780 /* PKConstantNode.h in Headers */,
+				85E5AC8DC25E4F02AE7CA171 /* PKDefinitionNode.h in Headers */,
+				0BC97CD0E40A4B6D94072D73 /* PKDelimitedNode.h in Headers */,
+				B20C248039A84E21BF4CBAA9 /* PKLiteralNode.h in Headers */,
+				F6E3683DBF1B45268AACC4BE /* PKMultipleNode.h in Headers */,
+				C8F1C21AFEF04C8C983E0866 /* PKOptionalNode.h in Headers */,
+				A097B51B6B5B4E399B963810 /* PKPatternNode.h in Headers */,
+				BD66594A85E94E80B12CF26D /* PKReferenceNode.h in Headers */,
+				ED4A6372CC5E4227B7637F19 /* PKRootNode.h in Headers */,
+				F2728FE943774811A1356569 /* NSArray+ParseKitAdditions.h in Headers */,
+				E3BA312009A74927A3EA62DB /* NSMutableSet+ParseKitAdditions.h in Headers */,
+				1A7AF03849464B0698F0D644 /* NSString+ParseKitAdditions.h in Headers */,
+				E5691434C9544CA28EE97C99 /* ParseKitParser.h in Headers */,
+				C5D18C606EF74F249CD90BCE /* PKBaseVisitor.h in Headers */,
+				A130DEDC37164B0685E09C34 /* PKDefinitionPhaseVisitor.h in Headers */,
+				3FCDAAEF742D4A5FBB62CEE4 /* PKDelimitDescriptor.h in Headers */,
+				0A1695E786AE4E35AD92B8E2 /* PKDelimitDescriptorCollection.h in Headers */,
+				EA02F8F2E3674384B66CD146 /* PKNodeVisitor.h in Headers */,
+				D31F9AAB06F34BFCBBC196E4 /* PKResolutionPhaseVisitor.h in Headers */,
+				4B843254C60944C193FD077F /* PKSParserGenVisitor.h in Headers */,
+				7C9D3928799A4E66B326E534 /* PKSTokenKindDescriptor.h in Headers */,
+				0D8EDEE9A7384D2F8FFC573C /* RegexKitLite.h in Headers */,
+				27D17EE8BD8A4C94956ED196 /* MGTemplateEngine.h in Headers */,
+				125D96C1AD3147BCB4D09F5F /* MGTemplateFilter.h in Headers */,
+				3821D2BFAE6E4F149108B163 /* MGTemplateMarker.h in Headers */,
+				2B4B82679B834554A640A7E8 /* MGTemplateStandardFilters.h in Headers */,
+				EFC5DEBC0E5A4D6AB070A765 /* MGTemplateStandardMarkers.h in Headers */,
+				07C19D5FF52B4C0BA92AE35B /* ICUTemplateMatcher.h in Headers */,
+				3AA06D172A2B4688A7F7647E /* DeepMutableCopy.h in Headers */,
+				4BA7015319A7498F9FB21848 /* NSArray_DeepMutableCopy.h in Headers */,
+				37C8AF2B58AA4956B47F9310 /* NSDictionary_DeepMutableCopy.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F675014D3AA14FAAAA6B16B0 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C62FFA84E4694BDC88A31CA4 /* PRHVerbalExpression.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F8DE6E1E441E4DEEBFC15D06 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				42FC3D523E764EA3A08B3D15 /* VerbalExpressions.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		00C9C418E350481C8810166C /* Pods-AKVerbalExpression */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 19700C5540AE4218A3782BE0 /* Build configuration list for PBXNativeTarget "Pods-AKVerbalExpression" */;
+			buildPhases = (
+				03546E7C65734BACB574041F /* Sources */,
+				20EEFC2DD9F24D2E9646F3E1 /* Frameworks */,
+				77F07A71D5E64B5BB97B110A /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-AKVerbalExpression";
+			productName = "Pods-AKVerbalExpression";
+			productReference = D6F0EA30BEBC4C5193F69963 /* libPods-AKVerbalExpression.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		26BBB2338670437AA729DCC4 /* Pods-VerbalExpressions-for-Objective-C */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 756983F2F5DF4FEAB91A1383 /* Build configuration list for PBXNativeTarget "Pods-VerbalExpressions-for-Objective-C" */;
+			buildPhases = (
+				D09D575AFA4849DCA5E13554 /* Sources */,
+				558EAF9B7D024D54AB48216A /* Frameworks */,
+				F675014D3AA14FAAAA6B16B0 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-VerbalExpressions-for-Objective-C";
+			productName = "Pods-VerbalExpressions-for-Objective-C";
+			productReference = EB3FC2C328C64472A3686805 /* libPods-VerbalExpressions-for-Objective-C.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		847F78AB092A43A6BD007CCE /* Pods-Objective-CSS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E8E428B0F0EE450CBC77C2D5 /* Build configuration list for PBXNativeTarget "Pods-Objective-CSS" */;
+			buildPhases = (
+				B5849C793ECC4E648FCC918A /* Sources */,
+				F6B2DBD39B0448E783B53AEB /* Frameworks */,
+				1BAC9D08A2904E8A9B45FA23 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5C657A4CBD794B21B53A9CF4 /* PBXTargetDependency */,
+				9C0438A6119149D68D31FA9D /* PBXTargetDependency */,
+				A3D4DC93EE184573A578BCB7 /* PBXTargetDependency */,
+				FD48625826334B62847FF800 /* PBXTargetDependency */,
+				5A329145F66B45FA8839C07F /* PBXTargetDependency */,
+			);
+			name = "Pods-Objective-CSS";
+			productName = "Pods-Objective-CSS";
+			productReference = 4BC8AFE2266C449BA1B9C524 /* libPods-Objective-CSS.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		9E006817B8314380887BAFB0 /* Pods-VEVerbalExpressions */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 358C6DA60C6547BCB73E262B /* Build configuration list for PBXNativeTarget "Pods-VEVerbalExpressions" */;
+			buildPhases = (
+				41C2C13192E84B6EAE15D89C /* Sources */,
+				A30CED3C94D4463D8FF50054 /* Frameworks */,
+				F8DE6E1E441E4DEEBFC15D06 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-VEVerbalExpressions";
+			productName = "Pods-VEVerbalExpressions";
+			productReference = 5C8E241F8AC145FE87EE299A /* libPods-VEVerbalExpressions.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		A7015A36DD174DF398A5887B /* Pods */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C38984DC701A481B968C606C /* Build configuration list for PBXNativeTarget "Pods" */;
+			buildPhases = (
+				0E035163E71B4AD3BE037D2A /* Sources */,
+				6496766E59D44BA6912EADFA /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FE044ED9E846432BB1F85A3C /* PBXTargetDependency */,
+				D7E4BC517CE84DA79FDCB2F5 /* PBXTargetDependency */,
+				2F1A476001FC4E2E8597CD4E /* PBXTargetDependency */,
+				7AF12E2B03CF4633A05FDC98 /* PBXTargetDependency */,
+				CA29A5BD4CE641A79F187609 /* PBXTargetDependency */,
+				E9E768B708A24FC88AEEC4A2 /* PBXTargetDependency */,
+			);
+			name = Pods;
+			productName = Pods;
+			productReference = 73F57E891BBD4BA98903E399 /* libPods.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		B890612A996F446180D9CFC4 /* Pods-ParseKit */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 188B9D4ACEA5463992FC5AD6 /* Build configuration list for PBXNativeTarget "Pods-ParseKit" */;
+			buildPhases = (
+				588ACEF60FD84B58A1BC9D31 /* Sources */,
+				D8B6E67A3ACB43518489111F /* Frameworks */,
+				9B45DC4AC2824E89BE8CB2D1 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-ParseKit";
+			productName = "Pods-ParseKit";
+			productReference = 43E69932368D4ABD8BCDE9AC /* libPods-ParseKit.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		F761C4DFA0084BD3A690B639 /* Pods-NSOrderedDictionary */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8689F10C6021400F87B0FCC0 /* Build configuration list for PBXNativeTarget "Pods-NSOrderedDictionary" */;
+			buildPhases = (
+				D3AFEA62C29C4FED80A85500 /* Sources */,
+				B26CA4132D174FB69EB16ED9 /* Frameworks */,
+				603BE216578D4563B71E6F90 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-NSOrderedDictionary";
+			productName = "Pods-NSOrderedDictionary";
+			productReference = 620440280EC94C87A27667BC /* libPods-NSOrderedDictionary.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		17C6C247504A4215ACBC37FE /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0450;
+			};
+			buildConfigurationList = 4D5F93DEE50E4820A36C6CE3 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = E12251026B12450E9A4B6302;
+			productRefGroup = 6F6B8453CE164BDE9DAFB703 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				00C9C418E350481C8810166C /* Pods-AKVerbalExpression */,
+				F761C4DFA0084BD3A690B639 /* Pods-NSOrderedDictionary */,
+				847F78AB092A43A6BD007CCE /* Pods-Objective-CSS */,
+				B890612A996F446180D9CFC4 /* Pods-ParseKit */,
+				9E006817B8314380887BAFB0 /* Pods-VEVerbalExpressions */,
+				26BBB2338670437AA729DCC4 /* Pods-VerbalExpressions-for-Objective-C */,
+				A7015A36DD174DF398A5887B /* Pods */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		03546E7C65734BACB574041F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C6882382796B4DC08226D2C5 /* AKVerbalExpression.m in Sources */,
+				55ED679A8CF44F5BB1226534 /* Pods-AKVerbalExpression-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0E035163E71B4AD3BE037D2A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A1AA6ED327244E21A7906472 /* Pods-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		41C2C13192E84B6EAE15D89C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4899676C5EF14DA88C1E9A46 /* VerbalExpressions.m in Sources */,
+				197F3E5BC8514E72B5062AF1 /* Pods-VEVerbalExpressions-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		588ACEF60FD84B58A1BC9D31 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0E7839311B834295AA8CD28E /* PKActionNode.m in Sources */,
+				7A608DBBD6FC40ECB55D34AD /* PKAlternationNode.m in Sources */,
+				8F6198FEA4A642F9AD172A84 /* PKBaseNode.m in Sources */,
+				EFB9CEE1836D466E9CF00570 /* PKCollectionNode.m in Sources */,
+				C749142F84CB4F6383AA67B4 /* PKCompositeNode.m in Sources */,
+				37461FF309204A02871603CE /* PKConstantNode.m in Sources */,
+				3125B6A23624461B8CA16923 /* PKDefinitionNode.m in Sources */,
+				925B646254834E47910704D4 /* PKDelimitedNode.m in Sources */,
+				C4A71CA3F50640368AD20FF8 /* PKLiteralNode.m in Sources */,
+				1A9E1A979E8D4990AF311CD1 /* PKMultipleNode.m in Sources */,
+				C2B061C51BD7427A888E9055 /* PKOptionalNode.m in Sources */,
+				00261F7D367E41F29C2A0F00 /* PKPatternNode.m in Sources */,
+				261225291F344AA6927A3D40 /* PKReferenceNode.m in Sources */,
+				DAB63C5195054F8C9EAF7E44 /* PKRootNode.m in Sources */,
+				CEF52BD294B04796B9B6E584 /* NSArray+ParseKitAdditions.m in Sources */,
+				5814940619FB4E3DAB80ACCF /* NSMutableSet+ParseKitAdditions.m in Sources */,
+				9E4B74F6A57B40728B764FFD /* NSString+ParseKitAdditions.m in Sources */,
+				CE2943F8996647A0AB501944 /* ParseKitParser.m in Sources */,
+				4E818C6EA57046C4AC0FC14C /* PKAlternation.m in Sources */,
+				CC14BB97C61C4B7EB51BB092 /* PKAny.m in Sources */,
+				116287272C374F1D9DD4C2C0 /* PKAssembly.m in Sources */,
+				B7DA23980B1C415D8AE14748 /* PKAST.m in Sources */,
+				3887F23EC40C41938195E8BB /* PKBaseVisitor.m in Sources */,
+				DBCB11EA70484EC0A68B6430 /* PKCaseInsensitiveLiteral.m in Sources */,
+				EAC738B15FC147349171DB78 /* PKChar.m in Sources */,
+				1E410D941D9446E1B40343F4 /* PKCharacterAssembly.m in Sources */,
+				E54BAC61BDD345A2B9E1DE15 /* PKCollectionParser.m in Sources */,
+				4AD76B5E0935449393984423 /* PKComment.m in Sources */,
+				A4F1B73E49814BB0A25B7CE1 /* PKCommentState.m in Sources */,
+				8375B8EC2AEF427D9A29372A /* PKCompositeParser.m in Sources */,
+				E730F2FC09CC4D77AEB89A0A /* PKDefinitionPhaseVisitor.m in Sources */,
+				0D0AA27087654B309D3C4045 /* PKDelimitDescriptor.m in Sources */,
+				C6470F95E4EB4824BD0FEDF0 /* PKDelimitDescriptorCollection.m in Sources */,
+				669C9B311CC742E5B1EABFAF /* PKDelimitedString.m in Sources */,
+				F0EC4FF70BA844FA9A418732 /* PKDelimitState.m in Sources */,
+				A7AEE2D85B2A44DC935F7407 /* PKDifference.m in Sources */,
+				345E257B18A240548F0CFB0F /* PKDigit.m in Sources */,
+				A1C3255A718040C49C6FC19D /* PKEmailState.m in Sources */,
+				24B6FC499DCC48BE80A41F9D /* PKEmpty.m in Sources */,
+				991DFAE69DF34AB2A98BE71B /* PKHashtagState.m in Sources */,
+				6E80A61F61B34B258E7A62E4 /* PKIntersection.m in Sources */,
+				C007BFE3E75943C88A9BAB7E /* PKLetter.m in Sources */,
+				BD804B7022964EF78503B90B /* PKLiteral.m in Sources */,
+				77F9225DF3254CF69297C1BF /* PKLowercaseWord.m in Sources */,
+				98B1DB4229E34D95A4458CC2 /* PKMultiLineCommentState.m in Sources */,
+				3D5F0AB6580940D1B746444E /* PKNegation.m in Sources */,
+				01F74AE512F44A7EA706D7A4 /* PKNumber.m in Sources */,
+				6EA3EFD650DC4F1DA87CCD4F /* PKNumberState.m in Sources */,
+				D5E632347863440DB68D87C3 /* PKParser.m in Sources */,
+				B8DCC58F7F804ED897CEF962 /* PKParserFactory.m in Sources */,
+				105F8B69AE0D47A6B39DA731 /* PKPattern.m in Sources */,
+				77D3214FAD034EDD957E9722 /* PKQuotedString.m in Sources */,
+				50FD29B7C39F456ABCB9956C /* PKQuoteState.m in Sources */,
+				B2F97B59DC144EA888801820 /* PKReader.m in Sources */,
+				FFDE89086A6748EFAFA27F3D /* PKRepetition.m in Sources */,
+				1E98FC492CD943E2800105BF /* PKResolutionPhaseVisitor.m in Sources */,
+				685D2B3E5DA140CFACA07E0A /* PKSequence.m in Sources */,
+				79170939D2BB49F8995618DA /* PKSingleLineCommentState.m in Sources */,
+				EA8EB55609F44BE5B5E1E55B /* PKSParser.m in Sources */,
+				3E9BCD2350A0441289E39C86 /* PKSParserGenVisitor.m in Sources */,
+				94508E990FDC4D73BEA9DF6B /* PKSpecificChar.m in Sources */,
+				2EE2A41E9C1F43BA845E43A5 /* PKSRecognitionException.m in Sources */,
+				A6B401933B674EE0A91B7CAC /* PKSTokenAssembly.m in Sources */,
+				84D81E9EBC16495388749E84 /* PKSTokenKindDescriptor.m in Sources */,
+				EC43B70974024BB1A301E96C /* PKSymbol.m in Sources */,
+				82E940670D7D451BAF280110 /* PKSymbolNode.m in Sources */,
+				52DEED6764FF4A38BD403DBD /* PKSymbolRootNode.m in Sources */,
+				84C33761411C41B9AB794F08 /* PKSymbolState.m in Sources */,
+				335EF91030564FC48D4BBCA3 /* PKTerminal.m in Sources */,
+				E90B81E6A3CE4A0584B30EF9 /* PKToken.m in Sources */,
+				E35C4E4743064802968CE420 /* PKTokenArraySource.m in Sources */,
+				EBB2A3718E7E4AD39AAD340B /* PKTokenAssembly.m in Sources */,
+				2A46BC7197204A788789251C /* PKTokenizer.m in Sources */,
+				E3A55AA09C1040ECBD49471A /* PKTokenizerState.m in Sources */,
+				26213A969F99459E800DE8BD /* PKTrack.m in Sources */,
+				22DCDC4ADC31498D9645CCEA /* PKTrackException.m in Sources */,
+				55B67231AFA5424CB83E06F6 /* PKTwitterState.m in Sources */,
+				9AEBCC4165B844A59DD03436 /* PKUppercaseWord.m in Sources */,
+				7D894A0510754AFE8202E563 /* PKURLState.m in Sources */,
+				1112B44B57934412B2553132 /* PKWhitespace.m in Sources */,
+				3360C254DAC848118E5CFAB6 /* PKWhitespaceState.m in Sources */,
+				230951036670495CA6A0EF77 /* PKWord.m in Sources */,
+				57F22F5D14574810A5A03D59 /* PKWordState.m in Sources */,
+				7F058D2814334503B26AF3C5 /* RegexKitLite.m in Sources */,
+				54011BF2B208488EB458168C /* MGTemplateEngine.m in Sources */,
+				A26DDF6B9279412BA1470BA8 /* MGTemplateStandardFilters.m in Sources */,
+				9DA87717049F4D6DBF070405 /* MGTemplateStandardMarkers.m in Sources */,
+				1FEE0A1B4A6F4E448B03A259 /* ICUTemplateMatcher.m in Sources */,
+				2B527F5B236C46BEA9862CF7 /* NSArray_DeepMutableCopy.m in Sources */,
+				8D9E40692262478F9374CC9F /* NSDictionary_DeepMutableCopy.m in Sources */,
+				D88FF5041CE449A4B378FFC0 /* Pods-ParseKit-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B5849C793ECC4E648FCC918A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1CF74FAE3C3F49D08158747A /* OCSSParser.m in Sources */,
+				5A08EBC133F040D294FCBAF7 /* Pods-Objective-CSS-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D09D575AFA4849DCA5E13554 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B8A0F293807B472AAD8F312A /* PRHVerbalExpression.m in Sources */,
+				91C9EAC410DE4A8EB68BEBFA /* Pods-VerbalExpressions-for-Objective-C-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D3AFEA62C29C4FED80A85500 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7B4A098B3A2542D3B0885AC7 /* NSOrderedDictionary.m in Sources */,
+				2538128891774692926821AF /* Pods-NSOrderedDictionary-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		2F1A476001FC4E2E8597CD4E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 847F78AB092A43A6BD007CCE /* Pods-Objective-CSS */;
+			targetProxy = 9A18C9B2477244E784FDC59F /* PBXContainerItemProxy */;
+		};
+		5A329145F66B45FA8839C07F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F761C4DFA0084BD3A690B639 /* Pods-NSOrderedDictionary */;
+			targetProxy = B9946DEC9C9D496A90D8B1F0 /* PBXContainerItemProxy */;
+		};
+		5C657A4CBD794B21B53A9CF4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9E006817B8314380887BAFB0 /* Pods-VEVerbalExpressions */;
+			targetProxy = BB80E5F799EF405A8F26F8AB /* PBXContainerItemProxy */;
+		};
+		7AF12E2B03CF4633A05FDC98 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B890612A996F446180D9CFC4 /* Pods-ParseKit */;
+			targetProxy = 3873075D9C5D4CE9BDA7DAB1 /* PBXContainerItemProxy */;
+		};
+		9C0438A6119149D68D31FA9D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 26BBB2338670437AA729DCC4 /* Pods-VerbalExpressions-for-Objective-C */;
+			targetProxy = 7CF7A5926C2F4212AA4B40C2 /* PBXContainerItemProxy */;
+		};
+		A3D4DC93EE184573A578BCB7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 00C9C418E350481C8810166C /* Pods-AKVerbalExpression */;
+			targetProxy = D18E0FAA51424E80A8244278 /* PBXContainerItemProxy */;
+		};
+		CA29A5BD4CE641A79F187609 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9E006817B8314380887BAFB0 /* Pods-VEVerbalExpressions */;
+			targetProxy = 3484A39C31B84F45AF389BC1 /* PBXContainerItemProxy */;
+		};
+		D7E4BC517CE84DA79FDCB2F5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F761C4DFA0084BD3A690B639 /* Pods-NSOrderedDictionary */;
+			targetProxy = 68A739CEC55A415C938D2498 /* PBXContainerItemProxy */;
+		};
+		E9E768B708A24FC88AEEC4A2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 26BBB2338670437AA729DCC4 /* Pods-VerbalExpressions-for-Objective-C */;
+			targetProxy = 50AE7CAECA4B4277A6E2A528 /* PBXContainerItemProxy */;
+		};
+		FD48625826334B62847FF800 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B890612A996F446180D9CFC4 /* Pods-ParseKit */;
+			targetProxy = 1B9A4B1504E24F89B422E5C4 /* PBXContainerItemProxy */;
+		};
+		FE044ED9E846432BB1F85A3C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 00C9C418E350481C8810166C /* Pods-AKVerbalExpression */;
+			targetProxy = E45C5AC0E8FB43C18D88D0F6 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		2E9D12297AD24A5088FA1426 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FF14268715164832AF340DD8 /* Pods-ParseKit-Private.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				DSTROOT = /tmp/xcodeproj.dst;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Pods-ParseKit-prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				INSTALL_PATH = "$(BUILT_PRODUCTS_DIR)";
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		3A883153830849F2BCEEC4A7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				STRIP_INSTALLED_PRODUCT = NO;
+			};
+			name = Debug;
+		};
+		581104D3413145C08978BFBB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BEA08A760A214BBC81E2D256 /* Pods-Objective-CSS-Private.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				DSTROOT = /tmp/xcodeproj.dst;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Pods-Objective-CSS-prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				INSTALL_PATH = "$(BUILT_PRODUCTS_DIR)";
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		5CEC26E112CA4D4086F050E6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FF14268715164832AF340DD8 /* Pods-ParseKit-Private.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DSTROOT = /tmp/xcodeproj.dst;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Pods-ParseKit-prefix.pch";
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				INSTALL_PATH = "$(BUILT_PRODUCTS_DIR)";
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				OTHER_CFLAGS = (
+					"-DNS_BLOCK_ASSERTIONS=1",
+					"$(inherited)",
+				);
+				OTHER_CPLUSPLUSFLAGS = (
+					"-DNS_BLOCK_ASSERTIONS=1",
+					"$(inherited)",
+				);
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		6B516C4C280744D99EF61EA9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				STRIP_INSTALLED_PRODUCT = NO;
+			};
+			name = Release;
+		};
+		7DC08543004747DC9828A72D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D2F30663E5CB4A29B19689B4 /* Pods.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				DSTROOT = /tmp/xcodeproj.dst;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				INSTALL_PATH = "$(BUILT_PRODUCTS_DIR)";
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		8021D849F1E844289BFC1C93 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 23F6A514DD174AC2BA1253A3 /* Pods-NSOrderedDictionary-Private.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				DSTROOT = /tmp/xcodeproj.dst;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Pods-NSOrderedDictionary-prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				INSTALL_PATH = "$(BUILT_PRODUCTS_DIR)";
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		9F2C16609A4543B5A37076FB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 161C5C1207074760B1805EA2 /* Pods-VerbalExpressions-for-Objective-C-Private.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				DSTROOT = /tmp/xcodeproj.dst;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Pods-VerbalExpressions-for-Objective-C-prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				INSTALL_PATH = "$(BUILT_PRODUCTS_DIR)";
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		A633AAD100794017A14F6C5A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C04FAF47135F4BDE80CD565C /* Pods-VEVerbalExpressions-Private.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				DSTROOT = /tmp/xcodeproj.dst;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Pods-VEVerbalExpressions-prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				INSTALL_PATH = "$(BUILT_PRODUCTS_DIR)";
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		B4EBE02F5284433B8A7A093E /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 23F6A514DD174AC2BA1253A3 /* Pods-NSOrderedDictionary-Private.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DSTROOT = /tmp/xcodeproj.dst;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Pods-NSOrderedDictionary-prefix.pch";
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				INSTALL_PATH = "$(BUILT_PRODUCTS_DIR)";
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				OTHER_CFLAGS = (
+					"-DNS_BLOCK_ASSERTIONS=1",
+					"$(inherited)",
+				);
+				OTHER_CPLUSPLUSFLAGS = (
+					"-DNS_BLOCK_ASSERTIONS=1",
+					"$(inherited)",
+				);
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		D954A4A64C0E458DA3CC0BEB /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B5A64BC839CD41CFA6022653 /* Pods-AKVerbalExpression-Private.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DSTROOT = /tmp/xcodeproj.dst;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Pods-AKVerbalExpression-prefix.pch";
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				INSTALL_PATH = "$(BUILT_PRODUCTS_DIR)";
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				OTHER_CFLAGS = (
+					"-DNS_BLOCK_ASSERTIONS=1",
+					"$(inherited)",
+				);
+				OTHER_CPLUSPLUSFLAGS = (
+					"-DNS_BLOCK_ASSERTIONS=1",
+					"$(inherited)",
+				);
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		DB8F4542CB744152BE9EE722 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B5A64BC839CD41CFA6022653 /* Pods-AKVerbalExpression-Private.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				DSTROOT = /tmp/xcodeproj.dst;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Pods-AKVerbalExpression-prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				INSTALL_PATH = "$(BUILT_PRODUCTS_DIR)";
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		DD2C4F7A1A2F4131813A4CD6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D2F30663E5CB4A29B19689B4 /* Pods.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DSTROOT = /tmp/xcodeproj.dst;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				INSTALL_PATH = "$(BUILT_PRODUCTS_DIR)";
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				OTHER_CFLAGS = (
+					"-DNS_BLOCK_ASSERTIONS=1",
+					"$(inherited)",
+				);
+				OTHER_CPLUSPLUSFLAGS = (
+					"-DNS_BLOCK_ASSERTIONS=1",
+					"$(inherited)",
+				);
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		F374DD30DC7A4343A1F9050C /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BEA08A760A214BBC81E2D256 /* Pods-Objective-CSS-Private.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DSTROOT = /tmp/xcodeproj.dst;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Pods-Objective-CSS-prefix.pch";
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				INSTALL_PATH = "$(BUILT_PRODUCTS_DIR)";
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				OTHER_CFLAGS = (
+					"-DNS_BLOCK_ASSERTIONS=1",
+					"$(inherited)",
+				);
+				OTHER_CPLUSPLUSFLAGS = (
+					"-DNS_BLOCK_ASSERTIONS=1",
+					"$(inherited)",
+				);
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		FC1AE5D22E43424A96CDB2AD /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C04FAF47135F4BDE80CD565C /* Pods-VEVerbalExpressions-Private.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DSTROOT = /tmp/xcodeproj.dst;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Pods-VEVerbalExpressions-prefix.pch";
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				INSTALL_PATH = "$(BUILT_PRODUCTS_DIR)";
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				OTHER_CFLAGS = (
+					"-DNS_BLOCK_ASSERTIONS=1",
+					"$(inherited)",
+				);
+				OTHER_CPLUSPLUSFLAGS = (
+					"-DNS_BLOCK_ASSERTIONS=1",
+					"$(inherited)",
+				);
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		FFC90E573C4D473B888F47D2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 161C5C1207074760B1805EA2 /* Pods-VerbalExpressions-for-Objective-C-Private.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DSTROOT = /tmp/xcodeproj.dst;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Pods-VerbalExpressions-for-Objective-C-prefix.pch";
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				INSTALL_PATH = "$(BUILT_PRODUCTS_DIR)";
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				OTHER_CFLAGS = (
+					"-DNS_BLOCK_ASSERTIONS=1",
+					"$(inherited)",
+				);
+				OTHER_CPLUSPLUSFLAGS = (
+					"-DNS_BLOCK_ASSERTIONS=1",
+					"$(inherited)",
+				);
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		188B9D4ACEA5463992FC5AD6 /* Build configuration list for PBXNativeTarget "Pods-ParseKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5CEC26E112CA4D4086F050E6 /* Release */,
+				2E9D12297AD24A5088FA1426 /* Debug */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		19700C5540AE4218A3782BE0 /* Build configuration list for PBXNativeTarget "Pods-AKVerbalExpression" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D954A4A64C0E458DA3CC0BEB /* Release */,
+				DB8F4542CB744152BE9EE722 /* Debug */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		358C6DA60C6547BCB73E262B /* Build configuration list for PBXNativeTarget "Pods-VEVerbalExpressions" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FC1AE5D22E43424A96CDB2AD /* Release */,
+				A633AAD100794017A14F6C5A /* Debug */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4D5F93DEE50E4820A36C6CE3 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3A883153830849F2BCEEC4A7 /* Debug */,
+				6B516C4C280744D99EF61EA9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		756983F2F5DF4FEAB91A1383 /* Build configuration list for PBXNativeTarget "Pods-VerbalExpressions-for-Objective-C" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FFC90E573C4D473B888F47D2 /* Release */,
+				9F2C16609A4543B5A37076FB /* Debug */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8689F10C6021400F87B0FCC0 /* Build configuration list for PBXNativeTarget "Pods-NSOrderedDictionary" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B4EBE02F5284433B8A7A093E /* Release */,
+				8021D849F1E844289BFC1C93 /* Debug */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C38984DC701A481B968C606C /* Build configuration list for PBXNativeTarget "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DD2C4F7A1A2F4131813A4CD6 /* Release */,
+				7DC08543004747DC9828A72D /* Debug */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E8E428B0F0EE450CBC77C2D5 /* Build configuration list for PBXNativeTarget "Pods-Objective-CSS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F374DD30DC7A4343A1F9050C /* Release */,
+				581104D3413145C08978BFBB /* Debug */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 17C6C247504A4215ACBC37FE /* Project object */;
+}

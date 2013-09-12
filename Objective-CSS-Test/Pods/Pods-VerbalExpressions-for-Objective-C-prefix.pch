@@ -1,0 +1,12 @@
+#ifdef __OBJC__
+#import <Cocoa/Cocoa.h>
+#endif
+
+#import "Pods-environment.h"
+//
+// Prefix header for all source files of the 'VerbalExpressions' target in the 'VerbalExpressions' project
+//
+
+#ifdef __OBJC__
+#	import <Foundation/Foundation.h>
+#endif

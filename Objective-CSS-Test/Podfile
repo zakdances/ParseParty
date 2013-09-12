@@ -1,0 +1,4 @@
+pod 'VerbalExpressions-for-Objective-C', :git => "https://github.com/zakdances/VerbalExpressions-for-Objective-C.git"
+pod 'ParseKit', :podspec => 'https://raw.github.com/NocturnalCode/parsekit/1d414b14ca33fbe159d2d6dd4a73bf1dd19c885c/ParseKit.podspec'
+pod 'NSOrderedDictionary', :git => "https://github.com/zakdances/NSOrderedDictionary.git"
+pod 'Objective-CSS', :path => '../'
