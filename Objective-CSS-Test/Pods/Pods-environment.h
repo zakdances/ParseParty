@@ -6,12 +6,6 @@
 // project.
 
 
-// NSOrderedDictionary
-#define COCOAPODS_POD_AVAILABLE_NSOrderedDictionary
-#define COCOAPODS_VERSION_MAJOR_NSOrderedDictionary 0
-#define COCOAPODS_VERSION_MINOR_NSOrderedDictionary 0
-#define COCOAPODS_VERSION_PATCH_NSOrderedDictionary 1
-
 // Objective-CSS
 #define COCOAPODS_POD_AVAILABLE_Objective_CSS
 #define COCOAPODS_VERSION_MAJOR_Objective_CSS 0

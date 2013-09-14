@@ -86,7 +86,7 @@ Pod::Spec.new do |s|
   #  Not including the public_header_files will make all headers public.
   #
 
-  s.source_files  = 'Classes', 'Classes/**/'
+  s.source_files  = 'Classes', 'Classes/**/*.{h,m}'
   # s.exclude_files = 'Classes/Exclude'
 
   # s.public_header_files = 'Classes/**/*.h'
@@ -100,7 +100,7 @@ Pod::Spec.new do |s|
   #  non-essential files like tests, examples and documentation.
   #
 
-  s.resource  = "Classes/scss.grammar"
+  s.resource  = "Classes/*.grammar", 'Classes/**/*.grammar'
   # s.resources = "Resources/*.png"
 
   # s.preserve_paths = "FilesToSave", "MoreFilesToSave"
@@ -130,5 +130,5 @@ Pod::Spec.new do |s|
   # s.xcconfig = { 'HEADER_SEARCH_PATHS' => '$(SDKROOT)/usr/include/libxml2' }
 
   s.dependency 'ParseKit'
-  s.dependency 'NSOrderedDictionary'
+
 end

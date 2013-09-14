@@ -1,26 +1,17 @@
 PODS:
-  - NSOrderedDictionary (0.0.1)
   - Objective-CSS (0.0.1):
-    - NSOrderedDictionary
     - ParseKit
   - ParseKit (0.7)
 
 DEPENDENCIES:
-  - NSOrderedDictionary (from `https://github.com/zakdances/NSOrderedDictionary.git`)
   - Objective-CSS (from `../`)
-  - ParseKit (from `https://raw.github.com/NocturnalCode/parsekit/1d414b14ca33fbe159d2d6dd4a73bf1dd19c885c/ParseKit.podspec`)
 
 EXTERNAL SOURCES:
-  NSOrderedDictionary:
-    :git: https://github.com/zakdances/NSOrderedDictionary.git
   Objective-CSS:
     :path: ../
-  ParseKit:
-    :podspec: https://raw.github.com/NocturnalCode/parsekit/1d414b14ca33fbe159d2d6dd4a73bf1dd19c885c/ParseKit.podspec
 
 SPEC CHECKSUMS:
-  NSOrderedDictionary: 07a300bd37b356c3a00af488c121828241bd6ff9
-  Objective-CSS: 16b59269be0303443781e575191bb4e663aeaa49
+  Objective-CSS: 2006214fbf6d4462db6af9763eaea5a91836e60d
   ParseKit: b7a059d743342b674bf905792fd66f1027bd3d8d
 
 COCOAPODS: 0.24.0
