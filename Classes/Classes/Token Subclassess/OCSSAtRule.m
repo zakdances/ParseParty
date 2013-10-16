@@ -10,4 +10,15 @@
 
 @implementation OCSSAtRule
 
+- (id)init
+{
+    self = [super init];
+    if (self) {
+        // Initialization code here.
+        _cssTokenType = OCSSTokenTypeAtRule;
+    }
+    
+    return self;
+}
+
 @end

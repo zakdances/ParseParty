@@ -6,8 +6,8 @@
 //
 //
 
-#import "OCSSTreeNode.h"
+#import "OCSSToken.h"
 
-@implementation OCSSTreeNode
+@implementation OCSSToken
 
 @end

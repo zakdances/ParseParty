@@ -10,7 +10,7 @@
 
 @interface OCSSRule : OCSSToken
 
-@property (strong) NSAttributedString *selector;
+@property (strong) NSAttributedString *selectorCSS;
 @property (strong) NSMutableArray *blockContent;
 
 + (OCSSRule *)ruleWithSelector:(NSString *)selector andBlockContent:(NSArray *)blockContent;

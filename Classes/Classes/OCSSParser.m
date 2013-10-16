@@ -122,7 +122,7 @@
 //                                 @"selector": @".myClass2" ,
 //                                 @"block" : @[]};
 //    
-    [set addObjectsFromArray:@[rule1, rule2, rule3, rule4]];
+    
 //    
 //    NSTreeNode *selector1node = [NSTreeNode treeNodeWithRepresentedObject:selector1];
 //    NSTreeNode *selector2node = [NSTreeNode treeNodeWithRepresentedObject:selector2];
@@ -151,15 +151,18 @@
 
 //    [tree insertObject:selector1node atArrangedObjectIndexPath:[NSIndexPath indexPathWithIndex:0]];
 //    [tree insertObject:selector4node atArrangedObjectIndexPath:[NSIndexPath indexPathWithIndex:1]];
+    [set addObjectsFromArray:@[rule1, rule2, rule3]];
     
-    [tree
-     insertObjects:@[ rule1, rule4 ]
-    atArrangedObjectIndexPaths:@[ [NSIndexPath indexPathWithIndex:0],
-                                  [NSIndexPath indexPathWithIndex:1] ]];
+    [tree insertObject:rule1 atArrangedObjectIndexPath:[NSIndexPath indexPathWithIndex:0]];
+    [tree insertObject:rule4 atArrangedObjectIndexPath:[NSIndexPath indexPathWithIndex:1]];
+    
+//    [tree
+//                 insertObjects:@[ rule1 ]
+//    atArrangedObjectIndexPaths:@[ [NSIndexPath indexPathWithIndex:0] ]];
 
     
-    tree.selectionIndexPath = [NSIndexPath indexPathWithIndex:0];
-    NSTreeNode *node = tree.selectedNodes[0];
+//    tree.selectionIndexPath = [NSIndexPath indexPathWithIndex:0];
+//    NSTreeNode *node = tree.selectedNodes[0];
 //    [tree insertChild:selector2node];
     //    [node.mutableChildNodes addObjectsFromArray:@[selector2node, selector4node]];
 

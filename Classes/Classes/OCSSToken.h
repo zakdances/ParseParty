@@ -1,6 +1,6 @@
 //
 //  OCSSToken.h
-//  Pods
+//  Objective-CSS
 //
 //  Created by Zak.
 //
@@ -9,17 +9,20 @@
 #import <Foundation/Foundation.h>
 
 // For your convenience, here's an alternative to isKindOfClass:
-typedef NS_ENUM(NSUInteger, OCSSTokenType) {
-    OCSSTokenTypeNil,
-    OCSSTokenTypeOther,
+typedef NS_ENUM(NSInteger, OCSSTokenType) {
+    OCSSTokenTypeToken, // You should never see this (it's the root class)
     OCSSTokenTypeRule,
     OCSSTokenTypeAtRule,
+    OCSSTokenTypeSelector,
+    OCSSTokenTypeDeclarationBlock,
     OCSSTokenTypeProperty,
     OCSSTokenTypeBlockComment
 };
 
-@interface OCSSToken : NSObject
+@interface OCSSToken : NSObject {
+    OCSSTokenType _cssTokenType;
+}
 
-@property OCSSTokenType cssTokenType;
+@property (readonly) OCSSTokenType cssTokenType;
 
 @end

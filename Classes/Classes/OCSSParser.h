@@ -1,13 +1,12 @@
 //
 //  OCSSParser.h
-//  Objective-CSS-Test
+//  Objective-CSS
 //
 //  Created by Zak.
 //  Copyright (c) 2013 Zak. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
-#import <NSOrderedDictionary/NSOrderedDictionary.h>
 #import "OCSSRule.h"
 #import "OCSSSelector.h"
 @class PKParser;
