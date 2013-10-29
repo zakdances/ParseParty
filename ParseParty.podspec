@@ -3,7 +3,7 @@ Pod::Spec.new do |s|
 
 	s.name         = "ParseParty"
 	s.version      = "0.0.1"
-	s.summary      = "ParseParty is a code parser written in Objective-C for OSX and powered by CodeMirror."
+	s.summary      = "ParseParty is a code parser written in Objective-C for OSX. Powered by CodeMirror."
 
 	s.description  = <<-DESC
 									 A longer description of Objective-CSS in Markdown format.
