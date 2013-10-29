@@ -1,0 +1,1 @@
+PODS_NSATTRIBUTEDRANGE_OTHER_LDFLAGS = -framework Foundation
