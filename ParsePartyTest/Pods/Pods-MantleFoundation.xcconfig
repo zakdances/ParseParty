@@ -1,1 +1,0 @@
-PODS_MANTLEFOUNDATION_OTHER_LDFLAGS = -framework Foundation
