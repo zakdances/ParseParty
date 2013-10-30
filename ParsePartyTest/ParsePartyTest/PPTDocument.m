@@ -120,11 +120,11 @@
 
 }
 
-- (void)runAll
-{
-	[self tokenizeInput];
-//	[self parseOutput];
-}
+//- (void)runAll
+//{
+//	[self tokenizeInput];
+////	[self parseOutput];
+//}
 
 - (void)textStorageDidProcessEditing:(NSNotification *)notification
 {
