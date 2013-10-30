@@ -18,3 +18,4 @@ DerivedData
 *.sublime-project
 *.sublime-workspace
 dev/
+design/
