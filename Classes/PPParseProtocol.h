@@ -8,9 +8,24 @@
 
 #import <Foundation/Foundation.h>
 
-typedef void (^PPParseResponse) (NSDictionary *responseData);
+typedef void (^PPConfirmedResponse) (NSDictionary *responseData);
 
-typedef void (^PPSetValueResponse) (NSDictionary *responseData);
+typedef void (^PPParseResponse) (NSRange range, NSAttributedString *attributedString, NSArray *tokens, NSDictionary *responseData);
+
+typedef void (^PPReplaceResponse) (NSDictionary *responseData);
+
+typedef void (^PPModeResponse) (NSString *mode, NSDictionary *responseData);
+// Objects who wan't to listen for parser events and recieve data should adopt this protocol.
+
+//@protocol PPParseDelegate <NSObject, PPActionDelegate>
+//
+//@optional
+//
+//- (void)didParse:(NSRange)globalRange attributedString:(NSAttributedString *)attributedString tokens:(NSArray *)tokens mode:(NSString *)mode;
+//
+//@end
+
+// Objects who parse should adopt this protocol.
 
 @protocol PPParseProtocol <NSObject>
 
@@ -21,16 +36,28 @@ typedef void (^PPSetValueResponse) (NSDictionary *responseData);
 //- (void)parse:(NSAttributedString *)attributedString afterReplacingRange:(NSRange)range;
 
 //- (void)setValue:(NSString *)string mode:(NSString *)mode parse:(BOOL)parse response:(PPSetValueResponse)response;
+- (void)getMode:(PPModeResponse)response;
 
-- (void)parse:(PPParseResponse)response mode:(NSString *)mode;
+- (void)setMode:(NSString *)mode response:(PPModeResponse)response;
 
-- (void)replaceCharactersWith:(NSString *)substring range:(NSRange)range mode:(NSString *)mode parseSubstring:(BOOL)parseSubstring response:(PPSetValueResponse)response;
+- (void)parseRange:(NSRange)range response:(PPParseResponse)response;
 
-- (void)replaceAttributedCharactersWith:(NSAttributedString *)attributedSubstring mode:(NSString *)mode parseSubstring:(BOOL)parseSubstring response:(PPSetValueResponse)response;
+//- (void)replaceCharacterAt:(NSUInteger)location withCharacter:(NSString *)character triggerEvent:(NSString *)event parseRange:(NSRange)parseRange response:(PPParseResponse)response;
 
-- (void)replaceCharactersWith:(NSString *)substring range:(NSRange)range mode:(NSString *)mode parseRange:(NSRange)parseRange response:(PPSetValueResponse)response;
+- (void)replaceCharactersAt:(NSRange)range withCharacters:(NSString *)characters response:(PPReplaceResponse)response;
 
-- (void)replaceAttributedCharactersWith:(NSAttributedString *)attributedSubstring mode:(NSString *)mode parseRange:(NSRange)parseRange response:(PPSetValueResponse)response;
+- (void)replaceCharactersAt:(NSRange)range withCharacters:(NSString *)characters thenParseRange:(NSRange)parseRange response:(PPParseResponse)response;
+
+//- (void)replaceAttributedCharactersWith:(NSAttributedString *)attributedSubstring mode:(NSString *)mode thenParseSubstring:(BOOL)parseSubstring response:(PPParseResponse)response;
+
+//- (void)replaceAttributedCharactersWith:(NSAttributedString *)attributedSubstring mode:(NSString *)mode thenParseRange:(NSRange)parseRange response:(PPParseResponse)response;
+
+@optional
+
+//@property (weak) id <PPParseDelegate> parseDelegate;
+
+// Convert data such as JSON into Foundation objects such as NSAttributedStrings
+- (void)processParseData:(NSDictionary *)data thenCallBlock:(PPParseResponse)response;
 
 @end
 

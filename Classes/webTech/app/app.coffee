@@ -14,11 +14,11 @@ angular.module('myApp', [
 		$routeProvider.when '/',
 			template: '<div code-mirror="5" style="width: 100%; height: 100%;"></div>'
 			controller: 'MyCtrl1'
-			# resolve: (r.resolve for r in routes when r.controller == 'MyCtrl1')[0]
-			resolve:
-				jsBridge: ['jsBridge', (jsBridge) ->
-					jsBridge
-				]
+			resolve: (r.resolve for r in routes when r.controller == 'MyCtrl1')[0]
+			# resolve:
+			# 	jsBridge: ['jsBridge', (jsBridge) ->
+			# 		jsBridge
+			# 	]
 				# TODO: Why doesn't this work?
 				# CM: ['CM', (CM) ->
 				# 	CM

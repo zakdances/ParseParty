@@ -1,0 +1,31 @@
+{
+  "name": "NSAttributedRange",
+  "version": "0.0.1",
+  "homepage": "https://github.com/zakdances/NSAttributedRange",
+  "authors": [
+    "Zak"
+  ],
+  "description": "A simple object for Objective-C and CoffeeScript which represents a range (location and length) and a dictionary of attributes. Useful for purposes such as creating serializable models of NSAttributedStrings.",
+  "main": "NSAttributedRange.coffee",
+  "keywords": [
+    "Range",
+    "CoffeeScript"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "_release": "0.0.1",
+  "_resolution": {
+    "type": "version",
+    "tag": "0.0.1",
+    "commit": "ebb8d3ebbfa7f619331239268fc291d649bebf30"
+  },
+  "_source": "https://github.com/zakdances/NSAttributedRange.git",
+  "_target": "~0.0.1",
+  "_originalSource": "https://github.com/zakdances/NSAttributedRange.git"
+}

@@ -8,7 +8,7 @@
 
 #import <Cocoa/Cocoa.h>
 #import <ParseParty/ParseParty.h>
-
+#import <ParseParty/PPParseProtocol.h>
 @class PPTWindow;
 
 @interface PPTDocument : NSDocument <PPLoadDelegate, PPActionDelegate, NSTextStorageDelegate, NSTableViewDelegate, NSTableViewDataSource>

@@ -36,23 +36,29 @@ Pod::Spec.new do |s|
 
 	s.subspec 'WebView' do |wv|
 
-		wv.default_subspec = 'All'
+		# wv.subspec 'All' do |a|
+		# wv.osx.dependency 'CocoaPlus/WebView/Cl'
+		# wv.osx.dependency 'CocoaPlus/WebView/Ca'
+		# end
 
-		wv.subspec 'All' do |a|
-			a.osx.dependency 'CocoaPlus/WebView/Cl'
-			a.osx.dependency 'CocoaPlus/WebView/Ca'
-		end
-
-		wv.subspec 'Cl' do |cl|
+		# wv.subspec 'Cl' do |cl|
 			# Nothing here
-		end
+		# end
 
-		wv.subspec 'Ca' do |ca|
-			ca.osx.source_files  = 'OSX Categories/WebView+Plus.{h,m}'
-		end
+		# wv.subspec 'Ca' do |ca|
+		wv.osx.source_files  = 'OSX Categories/WebView+Plus.{h,m}'
+		# end
 		# cs.exclude_files = '*RAC.{h,m}'
 		# cs.ios.source_files  = 'iOS Categories/UIWebView+Plus.{h,m}'
 		
+	end
+
+	s.subspec 'NSAttributedString' do |as|
+		
+		as.source_files  = 'Categories/NSAttributedString+Plus.{h,m}'
+
+		# as.dependency = ['NSAttributedRange']
+
 	end
 
 	s.subspec 'CorePlusRac' do |cr|

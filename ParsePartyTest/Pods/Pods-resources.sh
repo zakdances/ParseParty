@@ -43,6 +43,7 @@ install_resource()
 }
 install_resource "WebViewJavascriptBridge/WebViewJavascriptBridge/WebViewJavascriptBridge.js.txt"
 install_resource "${BUILT_PRODUCTS_DIR}/PPJQueryBundle.bundle"
+install_resource "${BUILT_PRODUCTS_DIR}/PPUnderscoreBundle.bundle"
 install_resource "${BUILT_PRODUCTS_DIR}/PPCodeMirrorBundle.bundle"
 install_resource "${BUILT_PRODUCTS_DIR}/PPAngularJSBundle.bundle"
 install_resource "${BUILT_PRODUCTS_DIR}/PPMainScriptBundle.bundle"

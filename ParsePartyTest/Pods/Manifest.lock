@@ -1,31 +1,31 @@
 PODS:
-  - CocoaPlus/WebView/Ca (0.0.7)
+  - CocoaPlus/WebView (0.0.7)
   - Mantle (1.3.1):
     - Mantle/extobjc
   - Mantle/extobjc (1.3.1)
   - MantleFoundation (0.0.1):
     - Mantle
   - ParseParty/Core (0.0.1):
-    - CocoaPlus/WebView/Ca
+    - CocoaPlus/WebView
     - StandardPaths
     - WebViewJavascriptBridge
   - ParseParty/Parse (0.0.1):
-    - CocoaPlus/WebView/Ca
+    - CocoaPlus/WebView
     - Mantle
     - MantleFoundation
     - ParseParty/Tokenize
     - StandardPaths
     - WebViewJavascriptBridge
   - ParseParty/Tokenize (0.0.1):
-    - CocoaPlus/WebView/Ca
+    - CocoaPlus/WebView
     - ParseParty/Core
     - StandardPaths
     - WebViewJavascriptBridge
   - StandardPaths (1.5.4)
-  - WebViewJavascriptBridge (4.0.1)
+  - WebViewJavascriptBridge (4.1.0)
 
 DEPENDENCIES:
-  - CocoaPlus/WebView/Ca (from `../../CocoaPlus/`)
+  - CocoaPlus/WebView (from `../../CocoaPlus/`)
   - MantleFoundation (from `../../MantleFoundation`)
   - ParseParty/Parse (from `../`)
 
@@ -38,11 +38,11 @@ EXTERNAL SOURCES:
     :path: ../
 
 SPEC CHECKSUMS:
-  CocoaPlus: 3b3e642ce3202d95c9cabbb2c882244481739f9d
+  CocoaPlus: 13b9f298965897adff35b7caa8e90139f6d1caa8
   Mantle: abc3b0c81bc66eb624cf9cebb8640e377d5a44ae
   MantleFoundation: b3fbc4b1a5f16129aebb611a43718aebf0cccf4c
-  ParseParty: f77f51712b2d409c364beb2b2ddb85877ac391d4
+  ParseParty: 3e99d3105d1daf736682135b43bdbf1ed152092f
   StandardPaths: 3251b6aac8bf4e8a32e980f53e4de6d558617353
-  WebViewJavascriptBridge: f338f16ea0690e03914d8463af4b6372cb21a437
+  WebViewJavascriptBridge: eb504e9485f5b7f3fa036b6f0d748cfccb2aa18b
 
 COCOAPODS: 0.27.1

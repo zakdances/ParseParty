@@ -40,9 +40,10 @@
 	ParseParty *sharedParser = [self sharedParserWithCodeMirror:nil];
 	
 	if (!sharedParser.codeMirror) {
+		NSLog(@"you should NOT see this...");
 		sharedParser.codeMirror = [[PPCodeMirror alloc] initWithFrame:CGRectMake(0, 0, 100, 100) frameName:@"CodeMirror" groupName:@"ParseParty"];
-		sharedParser.codeMirror.loadDelegate = sharedParser;
-		sharedParser.codeMirror.actionDelegate = sharedParser;
+//		sharedParser.codeMirror.loadDelegate = sharedParser;
+//		sharedParser.codeMirror.actionDelegate = sharedParser;
 	}
 	
 	return sharedParser;
@@ -61,6 +62,13 @@
 			sharedParser.codeMirror = codeMirror;
 			codeMirror.loadDelegate = sharedParser;
 			codeMirror.actionDelegate = sharedParser;
+			
+			SEL selector = NSSelectorFromString(@"setParseEngine:");
+			if ([sharedParser respondsToSelector:selector]) {
+				NSLog(@"setting ParseParty as CodeMirror's parseDelegate...");
+				[sharedParser performSelector:selector withObject:codeMirror];
+			}
+			
 		}
 		
 		return sharedParser;
@@ -83,9 +91,9 @@
 	return cmWindow;
 }
 
-- (void)tokenize:(NSString *)string tokens:(PPTokensBlock)tokensBlock
+- (void)tokenize:(NSString *)string mode:(NSString *)mode tokens:(PPTokensBlock)tokensBlock
 {
-	[self.codeMirror tokenize:string tokens:tokensBlock];
+	[self.codeMirror tokenize:string mode:mode tokens:tokensBlock];
 }
 
 - (void)parserLoaded:(ParseParty *)parser

@@ -11,9 +11,7 @@
     'CMdi', 'CM', 'jsBridge', function(CMdi, CM, jsBridge) {
       return function(scope, elm, attrs) {
         var d, e, myCM;
-        console.log('hi');
         d = CMdi;
-        console.log('hii ' + String(CM));
         elm.css({
           'width': '100%',
           'height': '100%'
@@ -24,16 +22,15 @@
             autofocus: true,
             autoCloseBrackets: true
           });
+          $('.CodeMirror').css({
+            'width': '100%',
+            'height': '100%'
+          });
         } catch (_error) {
           e = _error;
           console.log('error CM ' + String(e));
         }
-        $('.CodeMirror').css({
-          'width': '100%',
-          'height': '100%'
-        });
         d.resolve(myCM);
-        scope.apply();
       };
     }
   ]);

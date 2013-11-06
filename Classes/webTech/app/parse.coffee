@@ -6,12 +6,12 @@
 
 # Demonstrate how to register services
 # In this case it is a simple value service.
-angular.module('myApp.services')
-.service 'attributedContent',
-	class ngAttributedStringe extends NSAttributedString
-		constructor: () ->
-			@string = ''
-			@attributedRanges = []
+# angular.module('myApp.services')
+# .service 'attributedContent',
+# 	class ngAttributedStringe extends NSAttributedString
+# 		constructor: () ->
+# 			@string = ''
+# 			@attributedRanges = []
 
 
 

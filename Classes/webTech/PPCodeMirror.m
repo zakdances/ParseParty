@@ -28,8 +28,8 @@
     self = [super initWithFrame:frame frameName:(NSString *)frameName groupName:(NSString *)groupName];
     if (self) {
         // Initialization code here.
-        
-		[self loadMe];
+        NSLog(@"CM from frame %@ %@", self, self.identifier);
+//		[self loadMe];
         
     }
 
@@ -39,7 +39,7 @@
 - (void) awakeFromNib
 {
     [super awakeFromNib];
-	NSLog(@"CM from nib");
+	NSLog(@"CM from nib %@ %@", self, self.identifier);
 	[self loadMe];
 }
 
@@ -54,23 +54,26 @@
 	
 	NSArray *resourceData = @[
 							  
-							  @{ @"bundle": [self bundleInMainBundleNamed:@"PPCodeMirrorBundle"],
-								 @"resources": @[@"codemirror.css"] },
-							  
 							  @{ @"bundle": [self bundleInMainBundleNamed:@"PPJQueryBundle"],
 								 @"resources": @[@"jquery.min.js"] },
+							  
+							  @{ @"bundle": [self bundleInMainBundleNamed:@"PPUnderscoreBundle"],
+								 @"resources": @[@"underscore.js"] },
 							  
 							  // CodeMirror________
 							  @{ @"bundle": [self bundleInMainBundleNamed:@"PPCodeMirrorBundle"],
 								 @"resources":
-									 @[@"codemirror.js",
-									   @"runmode.js",
-									   @"css.js",
-									   @"sass.js",
-									   @"less.js",
-									   @"closebrackets.js",
-									   @"matchbrackets.js"
-									   ] },
+									 @[
+										 @"codemirror.css",
+										 @"codemirror.js",
+										 @"runmode.js",
+										 @"css.js",
+										 @"sass.js",
+										 @"less.js",
+										 @"closebrackets.js",
+										 @"matchbrackets.js"
+									   ]
+								 },
 							  //__________________
 							  
 							  @{ @"bundle": [self bundleInMainBundleNamed:@"PPAngularJSBundle"],
@@ -169,6 +172,9 @@
 	
 	
 	
+	
+	
+	
 	self.webViewbridge = [WebViewJavascriptBridge bridgeForWebView:self handler:^(id data, WVJBResponseCallback callback) {
 		
 		NSLog(@"from CM: %@", data);
@@ -176,32 +182,28 @@
 		if (statusWas == PPCodeMirrorStatusUnloaded) {
 			self.status = PPCodeMirrorStatusReady;
 		}
-//		NSLog(@"huh %@", self.loadDelegate);
-		if ([self.loadDelegate respondsToSelector:@selector(parserLoaded:)] && statusWas == PPCodeMirrorStatusUnloaded) {
-			NSLog(@"firing... %@", self.loadDelegate);
+
+
+		if (self.loadDelegate && statusWas == PPCodeMirrorStatusUnloaded) {
+			// TODO: enable this
 			[self.loadDelegate parserLoaded:(ParseParty *)self];
 		}
 	}];
 	
 	[self.webViewbridge registerHandler:@"action" handler:^(id _data, WVJBResponseCallback callback) {
 		
-		NSMutableDictionary *data = [_data mutableCopy];
+		NSMutableDictionary	*data		= [_data mutableCopy];
+		NSDictionary		*parseData	= data[@"parseData"];
+		
 		self.docLength = [data[@"docLength"] unsignedIntegerValue];
 		
-		
-		if (data[@"attributedString"]) {
-//			NSLog(@"hmm %@", data[@"attributedString"]);
+		SEL selector = NSSelectorFromString(@"processParseData:");
+		if (parseData && [self respondsToSelector:selector]) {
 			
-			NSDictionary *box = @{@"attributedString": data[@"attributedString"]};
-			
-			NSError *error;
-			data[@"attributedString"] = [NSAttributedString attributedStringFromJSON:box error:&error];
-			if (error) {
-				NSLog(@"%@", error);
-			}
-//			NSLog(@"as -> %@", data[@"attributedString"]);
+			[self performSelector:selector withObject:parseData];
 			
 		}
+		
 		
 		// Callback back to JS
 		callback(@{ @"message": @(YES) });
@@ -209,7 +211,7 @@
 
 		// Callback to delegate
 		if ([self.actionDelegate respondsToSelector:@selector(parserAction:)]) {
-//			NSLog(@"yes!");
+
 			[self.actionDelegate parserAction:data];
 		}
 	}];
@@ -308,12 +310,13 @@
 
 
 
-- (void)tokenize:(NSString *)string tokens:(PPTokensBlock)tokensBlock
+
+- (void)tokenize:(NSString *)string mode:(NSString *)mode tokens:(PPTokensBlock)tokensBlock
 {
 //	NSLog(@"tokenizing...");
 
 	NSDictionary *data = @{ @"string": string,
-							@"mode": @"scss" };
+							@"mode": mode };
 	
 	[self.webViewbridge callHandler:@"tokenize" data:data responseCallback:^(id responseData) {
 		NSLog(@"tokenized!");

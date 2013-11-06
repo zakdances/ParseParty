@@ -14,6 +14,7 @@
     #define WVJB_WEAK __unsafe_unretained
 #endif
 
+typedef NSDictionary WVJBMessage;
 
 @implementation WebViewJavascriptBridge {
     WVJB_WEAK WVJB_WEBVIEW_TYPE* _webView;
@@ -47,11 +48,11 @@ static bool logging = false;
     return bridge;
 }
 
-- (void)send:(NSDictionary *)data {
+- (void)send:(id)data {
     [self send:data responseCallback:nil];
 }
 
-- (void)send:(NSDictionary *)data responseCallback:(WVJBResponseCallback)responseCallback {
+- (void)send:(id)data responseCallback:(WVJBResponseCallback)responseCallback {
     [self _sendData:data responseCallback:responseCallback handlerName:nil];
 }
 
@@ -91,8 +92,12 @@ static bool logging = false;
     _messageHandler = nil;
 }
 
-- (void)_sendData:(NSDictionary *)data responseCallback:(WVJBResponseCallback)responseCallback handlerName:(NSString*)handlerName {
-    NSMutableDictionary* message = [NSMutableDictionary dictionaryWithObject:data forKey:@"data"];
+- (void)_sendData:(id)data responseCallback:(WVJBResponseCallback)responseCallback handlerName:(NSString*)handlerName {
+    NSMutableDictionary* message = [NSMutableDictionary dictionary];
+    
+    if (data) {
+        message[@"data"] = data;
+    }
     
     if (responseCallback) {
         NSString* callbackId = [NSString stringWithFormat:@"objc_cb_%ld", ++_uniqueId];
@@ -106,7 +111,7 @@ static bool logging = false;
     [self _queueMessage:message];
 }
 
-- (void)_queueMessage:(NSDictionary *)message {
+- (void)_queueMessage:(WVJBMessage*)message {
     if (_startupMessageQueue) {
         [_startupMessageQueue addObject:message];
     } else {
@@ -114,9 +119,9 @@ static bool logging = false;
     }
 }
 
-- (void)_dispatchMessage:(NSDictionary *)message {
+- (void)_dispatchMessage:(WVJBMessage*)message {
     NSString *messageJSON = [self _serializeMessage:message];
-    [self _log:@"sending" json:messageJSON];
+    [self _log:@"SEND" json:messageJSON];
     messageJSON = [messageJSON stringByReplacingOccurrencesOfString:@"\\" withString:@"\\\\"];
     messageJSON = [messageJSON stringByReplacingOccurrencesOfString:@"\"" withString:@"\\\""];
     messageJSON = [messageJSON stringByReplacingOccurrencesOfString:@"\'" withString:@"\\\'"];
@@ -138,12 +143,18 @@ static bool logging = false;
 - (void)_flushMessageQueue {
     NSString *messageQueueString = [_webView stringByEvaluatingJavaScriptFromString:@"WebViewJavascriptBridge._fetchQueue();"];
     
-    NSArray* messages = [messageQueueString componentsSeparatedByString:kMessageSeparator];
-    for (NSString *messageJSON in messages) {
-        [self _log:@"receivd" json:messageJSON];
-        
-        NSDictionary* message = [self _deserializeMessageJSON:messageJSON];
-        
+    id messages = [self _deserializeMessageJSON:messageQueueString];
+    if (![messages isKindOfClass:[NSArray class]]) {
+        NSLog(@"WebViewJavascriptBridge: WARNING: Invalid %@ received: %@", [messages class], messages);
+        return;
+    }
+    for (WVJBMessage* message in messages) {
+        if (![message isKindOfClass:[WVJBMessage class]]) {
+            NSLog(@"WebViewJavascriptBridge: WARNING: Invalid %@ received: %@", [message class], message);
+            continue;
+        }
+        [self _log:@"RCVD" json:message];
+
         NSString* responseId = message[@"responseId"];
         if (responseId) {
             WVJBResponseCallback responseCallback = _responseCallbacks[responseId];
@@ -154,7 +165,7 @@ static bool logging = false;
             NSString* callbackId = message[@"callbackId"];
             if (callbackId) {
                 responseCallback = ^(id responseData) {
-                    NSDictionary* msg = @{ @"responseId":callbackId, @"responseData":responseData };
+                    WVJBMessage* msg = @{ @"responseId":callbackId, @"responseData":responseData };
                     [self _queueMessage:msg];
                 };
             } else {
@@ -175,8 +186,7 @@ static bool logging = false;
             }
             
             @try {
-                NSDictionary* data = message[@"data"];
-                if (!data || ((id)data) == [NSNull null]) { data = [NSDictionary dictionary]; }
+                id data = message[@"data"];
                 handler(data, responseCallback);
             }
             @catch (NSException *exception) {
@@ -186,26 +196,21 @@ static bool logging = false;
     }
 }
 
-- (NSString *)_serializeMessage:(NSDictionary *)message {
-#if defined _JSONKIT_H_
-    return [message JSONString];
-#else
+- (NSString *)_serializeMessage:(id)message {
     return [[NSString alloc] initWithData:[NSJSONSerialization dataWithJSONObject:message options:0 error:nil] encoding:NSUTF8StringEncoding];
-#endif
 }
 
-- (NSDictionary *)_deserializeMessageJSON:(NSString *)messageJSON {
-#if defined _JSONKIT_H_
-    return [messageJSON objectFromJSONString];
-#else
-    return [NSJSONSerialization JSONObjectWithData:[messageJSON dataUsingEncoding:NSUTF8StringEncoding] options:0 error:nil];
-#endif
+- (NSArray*)_deserializeMessageJSON:(NSString *)messageJSON {
+    return [NSJSONSerialization JSONObjectWithData:[messageJSON dataUsingEncoding:NSUTF8StringEncoding] options:NSJSONReadingAllowFragments error:nil];
 }
 
-- (void)_log:(NSString *)action json:(NSString *)json {
+- (void)_log:(NSString *)action json:(id)json {
     if (!logging) { return; }
-    if (json.length > 500) {
-        NSLog(@"WVJB %@: %@", action, [[json substringToIndex:500] stringByAppendingString:@" [...]"]);
+    if (![json isKindOfClass:[NSString class]]) {
+        json = [self _serializeMessage:json];
+    }
+    if ([json length] > 500) {
+        NSLog(@"WVJB %@: %@ [...]", action, [json substringToIndex:500]);
     } else {
         NSLog(@"WVJB %@: %@", action, json);
     }

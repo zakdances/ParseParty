@@ -1,5 +1,3 @@
-pod 'CocoaPlus/WebView/Ca', :path => '../../CocoaPlus/'
-# pod 'NSAttributedRange', :path => '../../NSAttributedRange/'
-# pod 'MGit', :path => '../../MGit/MGit-Objective-C'
+pod 'CocoaPlus/WebView', :path => '../../CocoaPlus/'
 pod 'MantleFoundation', :path => '../../MantleFoundation'
 pod 'ParseParty/Parse', :path => '../'

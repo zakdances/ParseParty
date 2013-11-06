@@ -11,4 +11,6 @@
 
 @interface PPCodeMirror (Parse) <PPParseProtocol>
 
+//@property (weak) id <PPParseDelegate> parseDelegate;
+
 @end

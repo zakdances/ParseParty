@@ -24,19 +24,19 @@
 //	NSLog(@"well that's great");
 }
 
-- (BOOL)applicationShouldOpenUntitledFile:(NSApplication *)sender
-{
-	NSLog(@"should I?");
+//- (BOOL)applicationShouldOpenUntitledFile:(NSApplication *)sender
+//{
+//	NSLog(@"should I?");
 //	[[NSWorkspace sharedWorkspace] openFile:@"sample.scss" withApplication:@"self"];
 
-	NSURL *url = [[NSBundle mainBundle] URLForResource:@"sample" withExtension:@"scss"];
-	
-	[[NSDocumentController sharedDocumentController] openDocumentWithContentsOfURL:url display:YES completionHandler:^(NSDocument *document, BOOL documentWasAlreadyOpen, NSError *error) {
-		NSLog(@"nice...");
-	}];
-	
-	return NO;
-}
+//	NSURL *url = [[NSBundle mainBundle] URLForResource:@"sample" withExtension:@"scss"];
+//	
+//	[[NSDocumentController sharedDocumentController] openDocumentWithContentsOfURL:url display:YES completionHandler:^(NSDocument *document, BOOL documentWasAlreadyOpen, NSError *error) {
+//		NSLog(@"nice...");
+//	}];
+//	
+//	return NO;
+//}
 
 //- (BOOL)application:(NSApplication *)sender openFile:(NSString *)filename
 //{

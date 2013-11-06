@@ -22,6 +22,8 @@
 		31028DCF180E8FB900EA7E9E /* sample.scss in Resources */ = {isa = PBXBuildFile; fileRef = 31028DCE180E8FB900EA7E9E /* sample.scss */; };
 		31028DD2180E976E00EA7E9E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 31028DD1180E976E00EA7E9E /* AppDelegate.m */; };
 		31223174180F4A0200A67E8C /* PPTWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 31223173180F4A0200A67E8C /* PPTWindow.m */; };
+		31DD273518220DCE0088BFF6 /* PPTTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 31DD273418220DCE0088BFF6 /* PPTTextView.m */; };
+		31DD2738182237CC0088BFF6 /* NSTextStorage+TextViewReference.m in Sources */ = {isa = PBXBuildFile; fileRef = 31DD2737182237CC0088BFF6 /* NSTextStorage+TextViewReference.m */; };
 		E7141C28BD0C4F5EB4D703E5 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AAA725130F6A41C5AFD38C37 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -61,6 +63,10 @@
 		31028DD1180E976E00EA7E9E /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		31223172180F4A0200A67E8C /* PPTWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPTWindow.h; sourceTree = "<group>"; };
 		31223173180F4A0200A67E8C /* PPTWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPTWindow.m; sourceTree = "<group>"; };
+		31DD273318220DCE0088BFF6 /* PPTTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPTTextView.h; sourceTree = "<group>"; };
+		31DD273418220DCE0088BFF6 /* PPTTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPTTextView.m; sourceTree = "<group>"; };
+		31DD2736182237CC0088BFF6 /* NSTextStorage+TextViewReference.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSTextStorage+TextViewReference.h"; sourceTree = "<group>"; };
+		31DD2737182237CC0088BFF6 /* NSTextStorage+TextViewReference.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSTextStorage+TextViewReference.m"; sourceTree = "<group>"; };
 		AAA725130F6A41C5AFD38C37 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC672332F976463A8CB1D9DC /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -135,6 +141,10 @@
 				31028DA7180E784A00EA7E9E /* PPTDocument.m */,
 				31223172180F4A0200A67E8C /* PPTWindow.h */,
 				31223173180F4A0200A67E8C /* PPTWindow.m */,
+				31DD273318220DCE0088BFF6 /* PPTTextView.h */,
+				31DD273418220DCE0088BFF6 /* PPTTextView.m */,
+				31DD2736182237CC0088BFF6 /* NSTextStorage+TextViewReference.h */,
+				31DD2737182237CC0088BFF6 /* NSTextStorage+TextViewReference.m */,
 				31028DD0180E976E00EA7E9E /* AppDelegate.h */,
 				31028DD1180E976E00EA7E9E /* AppDelegate.m */,
 				31028DCE180E8FB900EA7E9E /* sample.scss */,
@@ -313,9 +323,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				31028DA1180E784A00EA7E9E /* main.m in Sources */,
+				31DD273518220DCE0088BFF6 /* PPTTextView.m in Sources */,
 				31028DA8180E784A00EA7E9E /* PPTDocument.m in Sources */,
 				31223174180F4A0200A67E8C /* PPTWindow.m in Sources */,
 				31028DD2180E976E00EA7E9E /* AppDelegate.m in Sources */,
+				31DD2738182237CC0088BFF6 /* NSTextStorage+TextViewReference.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

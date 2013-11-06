@@ -6,11 +6,11 @@
 // project.
 
 
-// CocoaPlus/WebView/Ca
-#define COCOAPODS_POD_AVAILABLE_CocoaPlus_WebView_Ca
-#define COCOAPODS_VERSION_MAJOR_CocoaPlus_WebView_Ca 0
-#define COCOAPODS_VERSION_MINOR_CocoaPlus_WebView_Ca 0
-#define COCOAPODS_VERSION_PATCH_CocoaPlus_WebView_Ca 7
+// CocoaPlus/WebView
+#define COCOAPODS_POD_AVAILABLE_CocoaPlus_WebView
+#define COCOAPODS_VERSION_MAJOR_CocoaPlus_WebView 0
+#define COCOAPODS_VERSION_MINOR_CocoaPlus_WebView 0
+#define COCOAPODS_VERSION_PATCH_CocoaPlus_WebView 7
 
 // Mantle
 #define COCOAPODS_POD_AVAILABLE_Mantle
@@ -57,6 +57,6 @@
 // WebViewJavascriptBridge
 #define COCOAPODS_POD_AVAILABLE_WebViewJavascriptBridge
 #define COCOAPODS_VERSION_MAJOR_WebViewJavascriptBridge 4
-#define COCOAPODS_VERSION_MINOR_WebViewJavascriptBridge 0
-#define COCOAPODS_VERSION_PATCH_WebViewJavascriptBridge 1
+#define COCOAPODS_VERSION_MINOR_WebViewJavascriptBridge 1
+#define COCOAPODS_VERSION_PATCH_WebViewJavascriptBridge 0
 

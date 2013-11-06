@@ -7,9 +7,12 @@
 //
 
 #import <Foundation/Foundation.h>
+
 #include "PPProtocols.h"
 #include "PPCodeMirror.h"
 #include "PPCodeMirrorWindow.h"
+
+#include "PPRule.h"
 
 @interface ParseParty : NSObject <PPTokenize, PPLoadDelegate, PPActionDelegate>
 

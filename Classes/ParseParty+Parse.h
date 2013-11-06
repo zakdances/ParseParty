@@ -11,6 +11,6 @@
 
 @interface ParseParty (Parse) <PPParseProtocol>
 
-
+@property (weak) id <PPParseProtocol> parseEngine;
 
 @end

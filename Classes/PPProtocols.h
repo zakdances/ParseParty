@@ -17,7 +17,7 @@
 
 @end
 
-@protocol PPActionDelegate <NSObject>
+@protocol PPActionDelegate <NSObject, PPLoadDelegate>
 
 @optional
 
@@ -31,7 +31,7 @@ typedef void (^PPTokensBlock) (NSArray *tokens);
 
 @required
 
-- (void)tokenize:(NSString *)string tokens:(PPTokensBlock)tokensBlock;
+- (void)tokenize:(NSString *)string mode:(NSString *)mode tokens:(PPTokensBlock)tokensBlock;
 
 @end
 

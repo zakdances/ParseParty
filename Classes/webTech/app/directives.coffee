@@ -14,10 +14,8 @@ angular.module('myApp.directives', [])
 	
 
 	(scope, elm, attrs) ->
-		console.log 'hi'
 		# CM = CMd.CodeMirror
 		d  = CMdi
-		console.log 'hii ' + String( CM )
 		
 		# $('body').css 'background-color', 'orange'
 		elm.css
@@ -34,19 +32,20 @@ angular.module('myApp.directives', [])
 				# onKeyEvent: (cm, e) ->
 				# 	$.event.fix e
 				# 	return
+			$('.CodeMirror').css
+				'width': '100%'
+				'height': '100%'
 			
 		catch e
 			console.log 'error CM ' + String( e )
 			# bridge.send 'error loading CodeMirror: ' + String( e )
 		
-		$('.CodeMirror').css
-			'width': '100%'
-			'height': '100%'
+		
 			# 'display': 'none'
 		d.resolve myCM
 		# jsBridge.then (jsBridge) ->
 		# 	jsBridge.send 'jsBridge ' + String( d.promise )
 		# 	return
-		scope.apply()
+		# scope.apply()
 		return
 ])

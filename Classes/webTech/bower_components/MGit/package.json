@@ -1,0 +1,28 @@
+{
+  "name": "MGit-CoffeeScript",
+  "version": "0.0.0",
+  "main": "MGit.coffee",
+  "description": "The best module ever.",
+  "homepage": "https://github.com/zakdances/MGit-CoffeeScript",
+  "bugs": "https://github.com/zakdances/MGit-CoffeeScript/issues",
+  "author": {
+    "name": "Zak",
+    "email": ""
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/zakdances/MGit-CoffeeScript"
+  },
+  "licenses": [
+    {
+      "type": "MIT"
+    }
+  ],
+  "devDependencies": {
+    "matchdep": "~0.1.1",
+    "grunt-contrib-jshint": "~0.6.0",
+    "grunt-contrib-watch": "~0.5.0",
+    "grunt-contrib-coffee": "~0.7.0",
+    "grunt-contrib-concat": "~0.3.0"
+  }
+}
