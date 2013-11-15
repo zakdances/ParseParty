@@ -8,16 +8,16 @@
       };
     }
   ]).directive('codeMirror', [
-    'CMdi', 'CM', 'jsBridge', function(CMdi, CM, jsBridge) {
-      return function(scope, elm, attrs) {
-        var d, e, myCM;
-        d = CMdi;
-        elm.css({
+    'cm1', 'jsBridge', function(cm1, jsBridge) {
+      return function(scope, el, attrs) {
+        var cm, d, e;
+        d = cm1.deferred;
+        el.css({
           'width': '100%',
           'height': '100%'
         });
         try {
-          myCM = CM(elm[0], {
+          cm = CM(el[0], {
             lineNumbers: true,
             autofocus: true,
             autoCloseBrackets: true
@@ -28,9 +28,9 @@
           });
         } catch (_error) {
           e = _error;
-          console.log('error CM ' + String(e));
+          console.log(String(e));
         }
-        d.resolve(myCM);
+        d.resolve(cm);
       };
     }
   ]);

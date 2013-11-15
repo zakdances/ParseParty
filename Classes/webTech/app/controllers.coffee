@@ -1,14 +1,17 @@
 'use strict'
 
-parseRange = null
-myCallback = null
+
+myCallback 	= null
+parseRange 	= null
+deferred = null
+# replaceData = null
 # parseCallBack 	= null
 
 # Controllers 
 angular.module('myApp.controllers', [])
-.controller('MyCtrl1', ['$scope', 'jsBridge', 'CMi', 'CM', 'PPAttributedString', '_', ($scope, jsBridge, CMi, CM, PPAttributedString, _) ->
+.controller('MyCtrl1', ['$scope', '$q', 'jsBridge', 'cm1', 'PPAttributedString', '_', 'Counter', ($scope, $q, jsBridge, cm1, PPAttributedString, _, Counter) ->
 
-	CMi.then (CMi) ->
+	cm1.promise.then () ->
 		$('html, body, .ng-view').css
 			'width': '100%'
 			'height': '100%'
@@ -17,58 +20,220 @@ angular.module('myApp.controllers', [])
 		# jsBridge = $scope.jsBridge
 		
 
-		doc = CMi.doc
-		display = CMi.display
+		# doc = cm1.doc
+		display = cm1.display
 		input = display.input
 		# jsBridge.then (jsBridge) ->
 		# 	jsBridge.send 'asd'
 		# 	jsBridge.send 'ready ' + String( typeof jsBridge )
 		# 	return
-		CMi.on 'change', (myCM, change) ->
+		cm1.on 'change', (cm, change) ->
 
 			data 			= {}
-			data.mode 		= myCM.getMode().name
-			data.docLength 	= myCM.doc.getValue().length
+			data.mode 		= cm.getMode().name
+			data.docLength 	= cm.doc.getValue().length
+			data.cursorData =
+				location: cm1.doc.indexFromPos cm1.doc.getCursor()
 
-			try
+
+			data.selectedRangesData =
+				selectedRanges: selectedRanges()
+
+
+			if parseRange then data.parseData = parse parseRange
+			# try
+
+			# 	# if parseRange
+			# 		# data.parseData = parse parseRange
+
+			# 		# attributedStrings: parseData.attributedStrings
+			# 		# tokens: parseData.tokens
 				
+			# catch e
+			# 	jsBridge.send String( e )
 
-				
-				# jsBridge.send 'got here1 ' + JSON.stringify( parseRange )
+			jsBridge.callHandler 'action', data, (responseData) ->
 
-				if parseRange
-					data.parseData 			= parse parseRange
-					data.parseData.mode 	= data.mode
+			myCallback data if myCallback
 
-					# attributedStrings: parseData.attributedStrings
-					# tokens: parseData.tokens
+			parseData = null
+			myCallback = null
 
-				
-
-				jsBridge.callHandler 'action', data, (responseData) ->
-				myCallback data if myCallback
-
-				parseRange = null
-				myCallback = null
-				
-			catch e
-				jsBridge.send String( e )
-			
-			
 			return
 
-		jsBridge.registerHandler 'mode', (data, callback) ->
+		jsBridge.registerHandler 'request', (data, callback) ->
+			requests = if data.request then [data.request] else data.requests
+
+			data = {}
+			data.requests = []
+
+			for r in requests
+				newData = {}
+				newData.request = r.request
+
+				switch r.request
+
+					when 'tokenize'
+						string = r.string
+						mode = r.mode
+						tokens = if string and mode then cm1.tokenize string, mode
+						if tokens
+							newData.tokens = tokens
+
+					when 'parse'
+						range = if r.range then CSRange.newRangeFromJSON r.range
+						parseData = if range then cm1.parse range
+						if parseData
+							newData[k] = v for k, v of parseData
+
+					when 'replace'
+						s = r.string ? null
+						range = if r.range then CSRange.newRangeFromJSON r.range
+						e = r.event ? null
+
+						if s and range
+
+							deferred = $q.defer()
+							deferred.promise.then (replaceData) ->
+								newData[k] = v for k, v of replaceData
+								return
+
+							args = {}
+							if s then args.string = s 
+							if range then args.range = range
+							if e then args.event = e
+							cm1.replaceCharacters args
+
+					when 'cursor'
+						jsBridge.send 'This feature (cursor) is not yet implimented.'
+
+					when 'selectedRanges'
+						attributedRanges = if r.attributedRange then [r.attributedRange] else r.attributedRanges
+
+						if attributedRanges
+							if attributedRanges.length > 0
+								ar = attributedRanges[0]
+								ar = if ar.location and ar.length and ar.attributes and ar.attributes.affinity then new CSAttributedRange ar
+							else
+								ar = new CSAttributedRange cm1.cursor().location, 0
+
+						# ars = if ar then cm1.selectionRanges(ar) else cm1.selectionRanges()
+						newData.attributedRanges = if ar then cm1.selectedRanges(ar) else cm1.selectedRanges()
+
+					when 'mode'
+						m 	= if r.mode == 'scss' then 'text/x-scss' else r.mode
+						currentMode = cm1.getMode().name
+
+						# data = mode: currentMode
+						if m != currentMode
+							cm1.setOption 'mode', m
+
+						newData.mode = cm1.getMode().name
+						# data.modeHistory = [
+						# 	currentMode
+						# 	cm1.getMode().name
+						# ]
+
+
+				data.requests.push newData
+
+
+			if deferred
+				deferred.promise.then () ->
+					callback newData
+					return
+			else
+				callback newData
+
+			deferred = null
+			return
+
+		jsBridge.registerHandler 'cursorAndSelectedRannges', (data, callback) ->
+			
+			cd = data.cursor
+			cl = if cd? then cd.location
+
+			sr = data.selectionRanges
+			# sr = if srd? then srd.ranges
+			# aff = if srd? then srd.affinity
+			# jsBridge.send 'sr: ' + JSON.stringify( sr )
+
+			try
+				if cl? and typeof cl is 'number'
+					
+					cm1.doc.setCursor cm1.doc.posFromIndex cl
+				
+				if Array.isArray(sr) and sr.length > 0
+
+					# r = CSRange.newRangeFromJSON _sr[0]
+					ar 			= new CSAttributedRange sr[0]
+					aff 		= ar.attributes.affinity
+					start 		= cm1.doc.posFromIndex ar.location
+					
+					anchorPos 	= start
+					headPos 	= anchorPos
+					if ar.length > 0 and ( aff == 'up' or aff == 'down' )
+						end = cm1.doc.posFromIndex ar.maxEdge()
+
+						anchorPos 	= if aff == 'down' then start else end
+						headPos 	= if aff == 'down' then end else start
+
+					# cm1.doc.setCursor headPos
+					cm1.doc.setSelection anchorPos, headPos
+
+				# sr = selectedRanges()
+
+				
+
+			catch e
+				jsBridge.send String( e )
+
+
+			newData =
+				cursor: cursorData()
+				selectionRanges: selectionRangesData()
+
+			callback newData
+
+			return
+
+		# cursorData = () ->
+		# 	location: cm1.doc.indexFromPos cm1.doc.getCursor()
+
+		selectionRangesDataa = () ->
+
+			selectionRanges = []
+			
+			cursorHead = cm1.doc.indexFromPos cm1.doc.getCursor()
+			cursorAnchor = cm1.doc.indexFromPos cm1.doc.getCursor 'anchor'
+
+			if cursorAnchor != cursorHead
+				start = cm1.doc.indexFromPos cm1.doc.getCursor 'start'
+				end = cm1.doc.indexFromPos cm1.doc.getCursor 'end'
+
+				ar = new CSAttributedRange
+					location: start
+					length: end
+					attributes:
+						affinity: if cursorAnchor < cursorHead then 'down' else 'up'
+				selectionRanges.push ar
+				# data.affinity = if cursorAnchor < cursorHead then 'down' else 'up'
+			
+			# _selectedRanges.push new CSRange cursorIndex, cm1.doc.getSelection().length
+			selectionRanges
+
+		jsBridge.registerHandler 'moode', (data, callback) ->
 			# jsBridge.send 'setting mode...'
 			try
 				newMode 	= if data.mode == 'scss' then 'text/x-scss' else data.mode
-				currentMode = CMi.getMode().name
+				currentMode = cm1.getMode().name
 
 				data = mode: currentMode
 				if newMode and newMode != currentMode
-					CMi.setOption 'mode', newMode
+					cm1.setOption 'mode', newMode
 					data.modeHistory = [
 						currentMode
-						CMi.getMode().name
+						cm1.getMode().name
 					]
 
 				callback data
@@ -76,71 +241,59 @@ angular.module('myApp.controllers', [])
 				jsBridge.send String( e )
 			return
 
-		jsBridge.registerHandler 'tokenize', (data, callback) ->
+		# jsBridge.registerHandler 'tokenize', (data, callback) ->
 			
-			mode 		= if data.mode == 'scss' then 'text/x-scss' else data.mode
-			string 		= data.string
+		# 	mode 		= if data.mode == 'scss' then 'text/x-scss' else data.mode
+		# 	string 		= data.string
 
-			# Verify incoming data
-			if !mode
-				callback error: 'Error: no mode specified'
-				return
+		# 	# Verify incoming data
+		# 	if !mode
+		# 		callback error: 'Error: no mode specified'
+		# 		return
 
-			jsBridge.send 'tokenizing in ' + mode + ' mode...'
+		# 	jsBridge.send 'tokenizing in ' + mode + ' mode...'
 			
 
-			tokens = []
-			try
-				CM.runMode string, mode, (text, styleClass, state) ->
-					# jsBridge.send 'state: ' + JSON.stringify( state )
-					# if text != ' ' and text != '' and text != '\n' and text != '\t'
-					tokens.push
-						text: text
-						styleClass: styleClass
-						state: state
+		# 	tokens = []
+		# 	try
+		# 		cm1.CodeMirror.runMode string, mode, (text, styleClass, state) ->
+		# 			tokens.push
+		# 				text: text
+		# 				styleClass: styleClass
+		# 				state: state
+		# 			return
 
-					return
-				# jsBridge.send 'ok'
-				# jsBridge.send tokens.length + ' tokens collected.'
-			catch e
-				jsBridge.send String( e )
+		# 	catch e
+		# 		jsBridge.send String( e )
 
-			# returnData = { 'tokens': tokens }
-			callback 'tokens': tokens
+		# 	callback 'tokens': tokens
 
-			return
+		# 	return
 
 
-		jsBridge.registerHandler 'replaceCharacters', (data, callback) ->
-			jsBridge.send 'replacing ' + JSON.stringify( data.range ) + ' with ' + data.string.substr( 0, 5 )
+		# jsBridge.registerHandler 'replaceCharacterss', (data, callback) ->
+		# 	jsBridge.send 'replacing ' + JSON.stringify( data.range ) + ' with ' + data.string.substr( 0, 5 )
 
 
-			try
+		# 	try
 			
-				s 			= data.string
-				r 			= CSRange.newRangeFromJSON data.range
-				jsBridge.send 'r: ' + JSON.stringify( r )
-				startPos 	= doc.posFromIndex r.location
-				endPos		= doc.posFromIndex r.maxEdge()
-				pr 			= if data.parseRange then CSRange.newRangeFromJSON data.parseRange
-				event 		= data.event
-				# catch e
-				# 	jsBridge.send String( e )
-				if event == 'keypress'
-					jsBridge.send 'keypress'
-				
-				# if mode
-				# 	jsBridge.send 'setting mode to ' + mode
-				# 	CMi.setOption 'mode', mode
-				if pr
-					parseRange = pr
+		# 		s 			= data.string
+		# 		r 			= CSRange.newRangeFromJSON data.range
 
-				myCallback = callback
-				# jsBridge.send 'replacing range with s'
-				doc.replaceRange s , startPos , endPos
+		# 		startPos 	= doc.posFromIndex r.location
+		# 		endPos		= doc.posFromIndex r.maxEdge()
+		# 		if data.parseRange then parseRange = CSRange.newRangeFromJSON data.parseRange
+		# 		event 		= data.event
 
-			catch e
-				jsBridge.send String( e )
+		# 		if event == 'keypress'
+		# 			jsBridge.send 'keypress'
+
+		# 		# myCallback = callback
+
+		# 		doc.replaceRange s , startPos , endPos
+
+		# 	catch e
+		# 		jsBridge.send String( e )
 			
 
 			
@@ -148,14 +301,14 @@ angular.module('myApp.controllers', [])
 			# callback { 'message': true }
 			return
 
-		jsBridge.registerHandler 'parse', (_data, callback) ->
+		jsBridge.registerHandler 'parseee', (_data, callback) ->
 
 			try
 				r = CSRange.newRangeFromJSON _data.range
 
 				data 			= {}
-				data.mode 		= CMi.getMode().name
-				data.docLength 	= CMi.doc.getValue().length
+				data.mode 		= cm1.getMode().name
+				data.docLength 	= cm1.doc.getValue().length
 			catch e
 				jsBridge.send String( e )
 
@@ -170,89 +323,47 @@ angular.module('myApp.controllers', [])
 
 			return
 
-		parse = (range) ->
+		parsee = (range) ->
 			try
-				jsBridge.send 'parsing range ' + JSON.stringify( range.range() ) + ' in mode: ' + JSON.stringify( CMi.getMode().name )
+				jsBridge.send 'parsing range ' + JSON.stringify( range.range() ) + ' in mode: ' + JSON.stringify( cm1.getMode().name )
 
-
+				
 
 						# Create new attributed string to represent the chosen substring of CodeMirror's doc text.
-				as 		= new PPAttributedString string: doc.getValue().substr( range.location, range.length )
+				
 						# Create an array in which to collect tokens
 				tokens 	= []
 				attributedRanges = []
 
 				# Set loop parameters. 1 is added because CodeMirror doesn't detect tokens at their beginning location.
-				_i 		= range.location + 1
-				_loopEnd = range.maxEdge() + 1
+				c = new Counter
+					i: range.location + 1
+					end: range.maxEdge() + 1
 
-				class Counter
-					constructor: (@i=_i,@end=_loopEnd) ->
 
-					incrimentSafelyTo: (new_i) ->
-						@i = if new_i? and new_i > @i then new_i else @i + 1
-						return
+				# Loop through all of the substring's tokens, collecting tokens and CSS styles
+				while c.i < c.end
 
-				c = new Counter()
+					pos 	= cm1.doc.posFromIndex c.i
+					token 	= cm1.getTokenAt pos, precise: true
+					tsl 	= token.string.length
 
-			catch e
-				jsBridge.send String( e )
-
-			# Loop through all of the substring's tokens, collecting tokens and CSS styles
-			while c.i < c.end
-
-				pos 	= doc.posFromIndex c.i
-				token 	= CMi.getTokenAt pos, precise: true
-				tsl 	= token.string.length
-
-				# Global range of token
-				gr 	= new CSRange doc.indexFromPos( line: pos.line, ch: token.start ), tsl
-
-				try
+					ar = attributedRanges[ attributedRanges.push( new CSAttributedRange defaultContextName: 'global' ) - 1 ]
+					ar.range cm1.doc.indexFromPos( line: pos.line, ch: token.start ), tsl
+					# Global range of token
 
 					
+					# intersection = _.intersection range.array(), gr.array()
+					# if intersection.length != tsl and intersection.length > 0
+					# 	gr.array intersection
+					# else if not gr.length == 0 and not _.intersection( range.array(), new CSRange( gr.location, 1 ).array() ).length > 0
 
-					# if gr.maxEdge() <= range.location and gr.location != range.location
-					# rangeArray = range.array()
-					# grArray = gr.array()
-					intersection = _.intersection range.array(), gr.array()
-					if intersection.length != tsl and intersection.length > 0
-						gr.array intersection
-					else if not gr.length == 0 and not _.intersection( range.array(), new CSRange( gr.location, 1 ).array() ).length > 0
-						# newIntersection = _.intersection range.array()
-						jsBridge.send 'Invalid token!'
-						c.incrimentSafelyTo gr.maxEdge() + 1
-						continue
-					# if intersection.length == 0
-
-					# if not ( range.location <= gr.location < range.maxEdge() )
-					# 	# intersection = _.intersection range.array(), gr.array()
-
-					# 	if intersection.length == 0
-							# test = JSON.stringify _.intersection( range.array(), gr.array() )
-							# jsBridge.send 'invalid? ' + test
-							
-
+					# 	jsBridge.send 'Invalid token!'
+					# 	c.incrimentSafelyTo gr.maxEdge() + 1
+					# 	continue
 
 					jsBridge.send 'token string: ' + token.string
-					# gr 	= new CSRange i, tsl
-					# lRange	= gRange.copy()
-					# if range.length() > 0 and lRange.length() > 0
-					# 	lRange	= CSRange.newRangeFromArray _.intersection( range.array(), lRange.array() )
-					# lRange.m 'globalRange', gRange
 
-					
-					# ar = as.attributedRanges[ as.attributedRanges.push( new CSAttributedRange( i - range.location, tsl ) ) - 1 ]
-					ar = attributedRanges[ attributedRanges.push( new CSAttributedRange() ) - 1 ]
-					# jsBridge.send 'flyin over you: ' + JSON.stringify( ar.range() )
-					# ar.range gr.range()
-					ar.range gr.location - range.location, gr.length
-
-					jsBridge.send 'lr: ' + JSON.stringify( ar.range() ) + ' gr: ' + JSON.stringify( gr.range() )
-
-					# if range.length > 0 and ar.length > 0
-					# 	ar.array _.intersection( range.array(), ar.array() )
-					ar.m 'globalRange', gr
 
 					# jsBridge.send 'just checking ' + ar.array() + ' ' + JSON.stringify( ar.range() ) + ' ' + _.intersection( range.array(), gr.array() )
 
@@ -297,7 +408,7 @@ angular.module('myApp.controllers', [])
 
 
 
-					jsBridge.send 'attributes created at local range: ' + ar.location + ' ' + ar.length
+					jsBridge.send 'attributes created at global range: ' + ar.location + ' ' + ar.length
 
 					# else
 					# 	nooooo = true
@@ -310,11 +421,55 @@ angular.module('myApp.controllers', [])
 					# endIndex = r.maxEdge() + 1
 					
 					
+					c.incrimentSafelyTo ar.maxEdge() + 1
 
-				catch e
-					jsBridge.send String( e )
 
-				c.incrimentSafelyTo gr.maxEdge() + 1
+
+
+				
+				# ar.range gr.location - range.location, gr.length
+				
+				globalRanges = ( { location: ar.location, length: ar.length, maxEdge: ar.maxEdge() } for ar in attributedRanges )
+
+				start = _.sortBy( globalRanges, (r) ->
+					r.location	
+					)[0].location
+
+				end = _.sortBy( globalRanges, (r) ->
+					r.maxEdge	
+					).pop().maxEdge
+
+				r = new CSRange
+					contexts:
+						edited:
+							location: start
+							length: end - start
+							default: true
+						original: CSRange.newRangeFromRange range
+
+				# originalR = r.c('original')
+
+				
+				for ar in attributedRanges
+					ar.c 'local', ar.location - r.location, ar.length
+					ar.switchDefaultContext 'local'
+
+				
+				
+					
+				# jsBridge.send 'global: ' + JSON.stringify( ar.c('global') )
+				jsBridge.send 'lr: ' + JSON.stringify( ar.range() ) + ' gr: ' + JSON.stringify( ar.c('global').range() )
+
+				# ar.m 'globalRange', gr
+				as = new PPAttributedString string: doc.getValue().substr( r.c('edited').location, r.c('edited').length )
+				as.attributedRanges.push ar for ar in attributedRanges
+
+
+				# jsBridge.send 'range: ' + JSON.stringify( r ) + 'string length: ' + as.string.length + ' string: ' + as.string
+			catch e
+				jsBridge.send String( e )
+
+							
 				# Incriment the curent loop index to move to the next token
 				
 				# jsBridge.send 'before ' + i
@@ -329,15 +484,28 @@ angular.module('myApp.controllers', [])
 				# i = 20
 				# endIndex = 9999999999
 				
-
+			
 			
 			attributedString: as
 			tokens: tokens
-			range: range
+			range: r
 
 
 
 		jsBridge.send 'ready'
+
+		# cursorCheckIteration = 0
+		# setInterval () ->
+		# 	if cursorCheckIteration < 1000
+		# 		c = cm1.doc.getCursor()
+		# 		c.index = cm1.doc.indexFromPos c
+		# 		jsBridge.send JSON.stringify( c )
+
+		# 	cursorCheckIteration++
+
+		# 	return
+		# , 1000
+
 		return
 
 	return

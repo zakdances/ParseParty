@@ -5,42 +5,58 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>B6D8A9B8-A2F9-4450-949D-7D93C1DB4235</string>
+	<string>D0E70370-E14C-4FF9-81DA-52189BFFFCFA</string>
 	<key>IDESourceControlProjectName</key>
 	<string>ParsePartyTest</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>43651C90-B005-4ECC-A092-6D03540B0D22</key>
-		<string>https://github.com/marijnh/CodeMirror.git</string>
-		<key>72936378-EA7A-4095-97BF-03597991A8C5</key>
-		<string>https://github.com/zakdances/ParseParty.git</string>
-		<key>F18A45DF-C57B-4704-AEF4-CD5B1F373421</key>
+		<key>28691573-A5AD-496A-A45F-651547C0B761</key>
+		<string>https://github.com/zakdances/NSAttributedRange.git</string>
+		<key>37D439A7-3E1D-4143-B0B6-DA48D8FEFCB1</key>
+		<string>https://github.com/zakdances/jCocoaPlus.git</string>
+		<key>73D8E7B7-65B3-434F-B41D-584CF1E62331</key>
 		<string>https://github.com/zakdances/CocoaPlus.git</string>
+		<key>81AB3264-3D03-4AEA-B669-AFDA1912CC73</key>
+		<string>https://github.com/marijnh/CodeMirror.git</string>
+		<key>93139D9F-5FCE-4FA7-9513-786198D3D967</key>
+		<string>https://github.com/zakdances/Jantle.git</string>
+		<key>A419718F-57D8-4EF3-BD11-9C9CB9E7C647</key>
+		<string>https://github.com/zakdances/ParseParty.git</string>
+		<key>D3AA3357-23C7-492D-BC32-86A9F34282C6</key>
+		<string>https://github.com/zakdances/NSAttributedRange-Jantle.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>ParsePartyTest/ParsePartyTest.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>43651C90-B005-4ECC-A092-6D03540B0D22</key>
-		<string>../../submodules/CodeMirror</string>
-		<key>72936378-EA7A-4095-97BF-03597991A8C5</key>
-		<string>../..</string>
-		<key>F18A45DF-C57B-4704-AEF4-CD5B1F373421</key>
+		<key>28691573-A5AD-496A-A45F-651547C0B761</key>
+		<string>../../../Range/NSAttributedRange</string>
+		<key>37D439A7-3E1D-4143-B0B6-DA48D8FEFCB1</key>
+		<string>../../../Jantle/jCocoaPlus</string>
+		<key>73D8E7B7-65B3-434F-B41D-584CF1E62331</key>
 		<string>../../../CocoaPlus</string>
+		<key>81AB3264-3D03-4AEA-B669-AFDA1912CC73</key>
+		<string>../../submodules/CodeMirror</string>
+		<key>93139D9F-5FCE-4FA7-9513-786198D3D967</key>
+		<string>../../../Jantle/Jantle</string>
+		<key>A419718F-57D8-4EF3-BD11-9C9CB9E7C647</key>
+		<string>../..</string>
+		<key>D3AA3357-23C7-492D-BC32-86A9F34282C6</key>
+		<string>../../../Range/jNSAttributedRange</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
 	<string>https://github.com/zakdances/ParseParty.git</string>
 	<key>IDESourceControlProjectVersion</key>
 	<integer>110</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>72936378-EA7A-4095-97BF-03597991A8C5</string>
+	<string>A419718F-57D8-4EF3-BD11-9C9CB9E7C647</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>F18A45DF-C57B-4704-AEF4-CD5B1F373421</string>
+			<string>73D8E7B7-65B3-434F-B41D-584CF1E62331</string>
 			<key>IDESourceControlWCCName</key>
 			<string>CocoaPlus</string>
 		</dict>
@@ -48,7 +64,7 @@
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>43651C90-B005-4ECC-A092-6D03540B0D22</string>
+			<string>81AB3264-3D03-4AEA-B669-AFDA1912CC73</string>
 			<key>IDESourceControlWCCName</key>
 			<string>CodeMirror</string>
 		</dict>
@@ -56,7 +72,39 @@
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>72936378-EA7A-4095-97BF-03597991A8C5</string>
+			<string>93139D9F-5FCE-4FA7-9513-786198D3D967</string>
+			<key>IDESourceControlWCCName</key>
+			<string>Jantle</string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>37D439A7-3E1D-4143-B0B6-DA48D8FEFCB1</string>
+			<key>IDESourceControlWCCName</key>
+			<string>jCocoaPlus</string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>28691573-A5AD-496A-A45F-651547C0B761</string>
+			<key>IDESourceControlWCCName</key>
+			<string>NSAttributedRange</string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>D3AA3357-23C7-492D-BC32-86A9F34282C6</string>
+			<key>IDESourceControlWCCName</key>
+			<string>NSAttributedRange-Jantle</string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>A419718F-57D8-4EF3-BD11-9C9CB9E7C647</string>
 			<key>IDESourceControlWCCName</key>
 			<string>ParseParty</string>
 		</dict>

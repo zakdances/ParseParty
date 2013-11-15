@@ -1,23 +1,27 @@
 PODS:
+  - CocoaPlus/NSRange (0.0.7)
   - CocoaPlus/WebView (0.0.7)
+  - Jantle (0.0.1):
+    - Mantle
+  - jCocoaPlus/NSRange (0.0.1):
+    - CocoaPlus/NSRange
+    - Jantle
+  - jNSAttributedRange (0.0.1):
+    - jCocoaPlus/NSRange
+    - NSAttributedRange
   - Mantle (1.3.1):
     - Mantle/extobjc
   - Mantle/extobjc (1.3.1)
-  - MantleFoundation (0.0.1):
-    - Mantle
+  - NSAttributedRange (0.0.1):
+    - CocoaPlus/NSRange
   - ParseParty/Core (0.0.1):
     - CocoaPlus/WebView
+    - jNSAttributedRange
     - StandardPaths
     - WebViewJavascriptBridge
   - ParseParty/Parse (0.0.1):
     - CocoaPlus/WebView
-    - Mantle
-    - MantleFoundation
-    - ParseParty/Tokenize
-    - StandardPaths
-    - WebViewJavascriptBridge
-  - ParseParty/Tokenize (0.0.1):
-    - CocoaPlus/WebView
+    - jNSAttributedRange
     - ParseParty/Core
     - StandardPaths
     - WebViewJavascriptBridge
@@ -25,23 +29,36 @@ PODS:
   - WebViewJavascriptBridge (4.1.0)
 
 DEPENDENCIES:
-  - CocoaPlus/WebView (from `../../CocoaPlus/`)
-  - MantleFoundation (from `../../MantleFoundation`)
+  - CocoaPlus/NSRange (from `/Users/zak/Zak/projects/CocoaPlus`)
+  - CocoaPlus/WebView (from `/Users/zak/Zak/projects/CocoaPlus`)
+  - Jantle (from `/Users/zak/Zak/projects/Jantle/Jantle`)
+  - jCocoaPlus/NSRange (from `/Users/zak/Zak/projects/Jantle/jCocoaPlus`)
+  - jNSAttributedRange (from `/Users/zak/Zak/projects/Range/jNSAttributedRange`)
+  - NSAttributedRange (from `/Users/zak/Zak/projects/Range/NSAttributedRange`)
   - ParseParty/Parse (from `../`)
 
 EXTERNAL SOURCES:
   CocoaPlus:
-    :path: ../../CocoaPlus/
-  MantleFoundation:
-    :path: ../../MantleFoundation
+    :path: /Users/zak/Zak/projects/CocoaPlus
+  Jantle:
+    :path: /Users/zak/Zak/projects/Jantle/Jantle
+  jCocoaPlus:
+    :path: /Users/zak/Zak/projects/Jantle/jCocoaPlus
+  jNSAttributedRange:
+    :path: /Users/zak/Zak/projects/Range/jNSAttributedRange
+  NSAttributedRange:
+    :path: /Users/zak/Zak/projects/Range/NSAttributedRange
   ParseParty:
     :path: ../
 
 SPEC CHECKSUMS:
-  CocoaPlus: 13b9f298965897adff35b7caa8e90139f6d1caa8
+  CocoaPlus: 229ca25d4f08cb45ffb48c6e0addeb2f630b207a
+  Jantle: e4cec3a35028cce1ee8ccdaade921b318b72efad
+  jCocoaPlus: 655eb3a55143360f5abf45141ac39391c787b1d0
+  jNSAttributedRange: d8cc49012e4e82412b25d528c3de24019ef8ae47
   Mantle: abc3b0c81bc66eb624cf9cebb8640e377d5a44ae
-  MantleFoundation: b3fbc4b1a5f16129aebb611a43718aebf0cccf4c
-  ParseParty: 3e99d3105d1daf736682135b43bdbf1ed152092f
+  NSAttributedRange: 071b59c12af53f79f75825eb2aed0c9323c5e66d
+  ParseParty: faba9b56cde27ec5e33553984ff1b7072df41b01
   StandardPaths: 3251b6aac8bf4e8a32e980f53e4de6d558617353
   WebViewJavascriptBridge: eb504e9485f5b7f3fa036b6f0d748cfccb2aa18b
 

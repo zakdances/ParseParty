@@ -39,7 +39,7 @@
 {
 	self.editSource = NSTextViewEditSourceKeyboard;
 	if ([self.delegate respondsToSelector:@selector(willInsertTextInTextView:newText:replacementRange:)]) {
-		[self.delegate willInsertTextInTextView:self newText:aString replacementRange:replacementRange];
+//		[self.delegate willInsertTextInTextView:self newText:aString replacementRange:replacementRange];
 	}
 	else {
 		[super insertText:aString replacementRange:replacementRange];
@@ -51,7 +51,7 @@
 {
 	self.editSource = NSTextViewEditSourcePaste;
 	if ([self.delegate respondsToSelector:@selector(willSetMarkedTextIn:newText:selectedRange:replacementRange:)]) {
-		[self.delegate willSetMarkedTextIn:self newText:aString selectedRange:selectedRange replacementRange:replacementRange];
+//		[self.delegate willSetMarkedTextIn:self newText:aString selectedRange:selectedRange replacementRange:replacementRange];
 	}
 	else {
 		[super setMarkedText:aString selectedRange:selectedRange replacementRange:replacementRange];
@@ -63,7 +63,7 @@
 {
 	self.editSource = NSTextViewEditSourceOtherCommand;
 	if ([self.delegate respondsToSelector:@selector(willDoCommandOnTextView:selector:)]) {
-		[self.delegate willDoCommandOnTextView:self selector:aSelector];
+//		[self.delegate willDoCommandOnTextView:self selector:aSelector];
 	}
 	else {
 		[super doCommandBySelector:aSelector];

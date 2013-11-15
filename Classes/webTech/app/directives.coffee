@@ -9,23 +9,23 @@ angular.module('myApp.directives', [])
 			elm.text version
 			return
 ])
-.directive('codeMirror', ['CMdi', 'CM', 'jsBridge', (CMdi, CM, jsBridge) ->
+.directive('codeMirror', ['cm1', 'jsBridge', (cm1, jsBridge) ->
 	# console.log 'directive'
 	
 
-	(scope, elm, attrs) ->
+	(scope, el, attrs) ->
 		# CM = CMd.CodeMirror
-		d  = CMdi
+		d  = cm1.deferred
 		
 		# $('body').css 'background-color', 'orange'
-		elm.css
+		el.css
 			'width': '100%'
 			'height': '100%'
 
 		# console.log 'directive CodeMirror ran'
 		# console.log String( elm )
 		try
-			myCM = CM elm[0],
+			cm = CM el[0],
 				lineNumbers: true
 				autofocus: true
 				autoCloseBrackets: true
@@ -37,12 +37,12 @@ angular.module('myApp.directives', [])
 				'height': '100%'
 			
 		catch e
-			console.log 'error CM ' + String( e )
+			console.log String( e )
 			# bridge.send 'error loading CodeMirror: ' + String( e )
 		
 		
 			# 'display': 'none'
-		d.resolve myCM
+		d.resolve cm
 		# jsBridge.then (jsBridge) ->
 		# 	jsBridge.send 'jsBridge ' + String( d.promise )
 		# 	return

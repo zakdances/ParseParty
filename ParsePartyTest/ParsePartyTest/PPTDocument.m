@@ -9,7 +9,7 @@
 #import "PPTDocument.h"
 #import "PPTWindow.h"
 // TODO: Find a way to avoid an extra import
-#import <ParseParty/ParseParty+Parse.h>
+
 
 @implementation PPTDocument
 
@@ -42,15 +42,15 @@
 	self.sampleWindow.output1.delegate = self;
 	self.sampleWindow.output1.dataSource = self;
 	self.sampleWindow.output2.textStorage.delegate = self;
-	
+	self.sampleWindow.output2.delegate = self;
 	
 	[self.sampleWindow.parseButton setAction:@selector(parseButtonAction:)];
 	
+
+	self.parser = [ParseParty parserWithCodeMirror:self.sampleWindow.input];
 	
-	ParseParty *parser = [ParseParty sharedParserWithCodeMirror:self.sampleWindow.input];
-	
-	parser.loadDelegate		= self;
-	parser.actionDelegate	= self;
+	self.parser.statusDelegate		= self;
+//	parser.actionDelegate	= self;
 //	parser.parseDelegate	= self;
 
 	
@@ -94,13 +94,17 @@
 
 - (void)tokenize:(NSString *)string mode:(NSString *)mode
 {
-	[[ParseParty sharedParser] tokenize:string mode:mode tokens:^(NSArray *tokens) {
-
+	[self.parser tokenize:string mode:mode response:^(NSArray *tokens) {
 		self.tokens = tokens;
-
+		
 		[self.sampleWindow.output1 reloadData];
-
 	}];
+	
+//	[[ParseParty sharedParser] tokenize:string mode:mode tokens:^(NSArray *tokens) {
+//
+//		
+//
+//	}];
 
 
 }
@@ -116,11 +120,16 @@
 - (void)parseButtonAction:(id)sender
 {
 //	NSLog(@"Action!");
-	ParseParty *parser = [ParseParty sharedParser];
-	[parser parseRange:NSMakeRange(0, parser.codeMirror.docLength) response:^(NSRange range, NSAttributedString *attributedString, NSArray *tokens, NSDictionary *responseData) {
-//		NSLog(@"parsed!");
-		[self didParse:range attributedString:attributedString tokens:tokens];
+	ParseParty *parser = self.parser;
+	
+	NSRange range = NSMakeRange(0, parser.codeMirror.docLength);
+	[parser parseRange:[NSRangePlus rangeWithRange:range] response:^(NSAttributedString *attributedString, NSArray *tokens, NSDictionary *responseData) {
+		
 	}];
+	
+//	[parser parseRange:NSMakeRange(0, parser.codeMirror.docLength) response:^(NSRange range, NSAttributedString *attributedString, NSArray *tokens, NSDictionary *responseData) {
+//		[self didParse:range attributedString:attributedString tokens:tokens];
+//	}];
 }
 //- (void)runAll
 //{
@@ -130,15 +139,16 @@
 
 - (void)textStorageDidProcessEditing:(NSNotification *)notification
 {
+	
 //	[[ParseParty sharedParser] replaceCharactersWith:self.textStorage.string range:NSMakeRange(0, 0) mode:@"scss" parseSubstring:YES response:^(NSDictionary *responseData) {
 //		
 //	}];
-	
+	NSLog(@"ahha");
 //	[[ParseParty sharedParser] replaceCharactersAt:NSMakeRange(0, 0) withCharacters:self.textStorage.string parseRange:NSMakeRange(0, self.textStorage.string.length) response:^(NSDictionary *responseData) {
 //		
 //	}];
 	NSTextStorage *textStorage = notification.object;
-	
+
 	NSRange editedRange = textStorage.editedRange;
 	NSInteger changeInLength = textStorage.changeInLength;
 	
@@ -148,39 +158,59 @@
 //	}
 //	NSLog(@"user info: %@", notification.userInfo);
 //	NSLog(@"edited. TextView ready? %@", (self.sampleWindow.output2ready ? @"YES" : @"NO"));
+
 	if (textStorage.textView.editSource == NSTextViewEditSourceKeyboard) {
+		self.shouldReportSelectionAndInsertionPointChangesToParser = NO;
+		NSLog(@"heh");
 		
-		
-		NSUInteger docLength = [ParseParty sharedParser].codeMirror.docLength;
+		NSUInteger docLength = self.parser.codeMirror.docLength;
 //		self.sampleWindow.output2ready = NO;
 		NSInteger newLocation			= editedRange.location > docLength ? docLength : editedRange.location;
 		NSInteger newLength				= editedRange.length - changeInLength;
 		
 		// NSRange newRange = NSMakeRange(newLocation, newLength);
 		NSRange range = NSIntersectionRange( NSMakeRange(newLocation, newLength), NSMakeRange(0, docLength) );
-
+		NSRange parseRange = NSMakeRange(editedRange.location, attributedString.length);
 		
-		[[ParseParty sharedParser] replaceCharactersAt:range
-										withCharacters:attributedString.string
-										thenParseRange:NSMakeRange(editedRange.location, attributedString.length)
-											  response:^(NSRange range, NSAttributedString *attributedString, NSArray *tokens, NSDictionary *responseData)
-		{
-			NSLog(@"neat! %@", responseData);
-			[textStorage beginEditing];
-			[textStorage replaceCharactersInRange:range withAttributedString:attributedString];
-			[textStorage endEditing];
-		}];
+//		[[ParseParty sharedParser] replaceCharactersAt:range
+//										withCharacters:attributedString.string
+//										thenParseRange:parseRange
+//											  response:^(NSRange range, NSAttributedString *attributedString, NSArray *tokens, NSDictionary *responseData)
+//		{
+//
+//			
+//			[textStorage beginEditing];
+//			[textStorage replaceCharactersInRange:range withAttributedString:attributedString];
+//			[textStorage endEditing];
+//			
+//			[textStorage.textView setSelectedRanges:@[[NSValue valueWithRange:NSMakeRange(0, 0)]] affinity:NSSelectionAffinityDownstream stillSelecting:NO];
+//			self.shouldReportSelectionAndInsertionPointChangesToParser = YES;
+//		}];
+
 	}
-	
+
 }
 
+- (void)textViewDidChangeSelection:(NSNotification *)aNotification
+{
+	if (self.parser.status == PPStatusReady && self.shouldReportSelectionAndInsertionPointChangesToParser) {
+		NSTextView *textView = aNotification.object;
+		NSRange selectedRange = textView.selectedRange;
+		NSSelectionAffinity affinity = textView.selectionAffinity;
+		NSString *affinityString = affinity == NSSelectionAffinityUpstream ? @"up" : @"down";
 
+		NSAttributedRange *selectedAttributedRange = [NSAttributedRange attributedRangeWithRange:selectedRange attributes:@{@"affinity":affinityString}];
+//		[[ParseParty sharedParser] setSelections:@[[NSValue valueWithRange:selectedRange]] response:^(NSArray *selections, NSDictionary *responseData) {
+//			NSLog(@"selection changed range: %@", selections);
+//		}];
+		
+		
+		[self.parser selectedAttributedRanges:@[selectedAttributedRange] response:^(NSArray *selectedAttributedRanges, id responseData) {
+			NSLog(@"selection changed range: %@", selectedAttributedRanges);
+		}];
+	}
+}
 
-//- (void)transferTextToParser
-//{
-//	
-//	
-//}
 
 - (void)parserAction:(NSDictionary *)data
 {
@@ -189,6 +219,7 @@
 
 - (void)didParse:(NSRange)globalRange attributedString:(NSAttributedString *)attributedString tokens:(NSArray *)tokens
 {
+	self.shouldReportSelectionAndInsertionPointChangesToParser = NO;
 //	NSLog(@"did parse");
 	NSTextStorage *textStorage = self.sampleWindow.output2.textStorage;
 	
@@ -203,46 +234,42 @@
 	
 	[textStorage beginEditing];
 	[textStorage replaceCharactersInRange:range2 withAttributedString:attributedString];
-	
-//	[attributedString enumerateAttributesInRange:NSMakeRange(0, attributedString.length) options:0 usingBlock:^(NSDictionary *_attrs, NSRange _range, BOOL *stop) {
-//	
-//
-//		NSMutableDictionary *attrs = _attrs.mutableCopy;
-//		attrs[@"range"] = attrs[@"globalRange"];
-//		
-//		NSDictionary *rangeData = attrs[@"range"];
-//		NSRange range = NSMakeRange([rangeData[@"location"] unsignedIntegerValue], [rangeData[@"length"] unsignedIntegerValue]);
-//		[textStorage addAttributes:attrs range:range];
-//		
-//	}];
-//
 	[textStorage endEditing];
 
+	self.shouldReportSelectionAndInsertionPointChangesToParser = YES;
 }
 
-- (void)parserLoaded:(ParseParty *)_parser
+// When parser loads, then do this.
+- (void)parserStatusDidChangeTo:(PPStatus)newStatus from:(PPStatus)oldStatus parser:(ParseParty *)parser
 {
-	__weak ParseParty *parser = _parser;
+//	__weak ParseParty *weakParser = parser;
+	__weak PPTDocument *weakSelf = self;
 	
-	NSLog(@"parserLoaded: %@", parser);
-	NSString *mode = @"scss";
-	
-	[parser setMode:mode response:^(NSString *mode, NSDictionary *responseData) {
-		
-		
-
-	
-		[parser replaceCharactersAt:NSMakeRange(0, 0)
-						 withCharacters:self.textStorage.string
-						 thenParseRange:NSMakeRange(0, self.textStorage.string.length)
-							   response:^(NSRange range, NSAttributedString *attributedString, NSArray *tokens, NSDictionary *responseData)
-		{
-				
-			[self didParse:range attributedString:attributedString tokens:tokens];
+	NSLog(@"Parser status changed to \"%@\" from \"%@\".", @(newStatus), @(oldStatus));
+	if (newStatus == PPStatusReady && oldStatus == PPStatusUnloaded) {
 			
+		NSString *mode = @"scss";
+		
+		[parser beginRequest];
+		
+		[parser mode:mode response:nil];
+		[parser replaceCharactersAt:[NSRangePlus rangeWithLocation:0 length:0] withCharacters:self.textStorage.string response:nil];
+		[parser parseRange:[NSRangePlus rangeWithLocation:0 length:self.textStorage.string.length] response:nil];
+		
+		[parser endRequest:^(NSArray *compoundResponseData) {
+			__strong PPTDocument *strongSelf = weakSelf;
+			
+			NSDictionary *parseRangeData = compoundResponseData[2];
+			
+			NSAttributedString *attributedString = parseRangeData[@"attributedString"];
+			NSArray *tokens = parseRangeData[@"tokens"];
+			// TODO: Make sure this attributed is unserialized correctly
+			NSRangePlus *globalRange = [attributedString attribute:@"globalRange" atIndex:0 effectiveRange:nil];
+			
+			[strongSelf didParse:globalRange.range attributedString:attributedString tokens:tokens];
 		}];
-	
-	}];
+		
+	}
 }
 
 

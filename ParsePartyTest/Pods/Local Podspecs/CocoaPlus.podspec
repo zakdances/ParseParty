@@ -19,7 +19,7 @@ Pod::Spec.new do |s|
 	s.author       = 'Zak'
 
 	s.ios.deployment_target = '7.0'
-	s.osx.deployment_target = '10.8'
+	s.osx.deployment_target = '10.9'
 
 
 	s.source       = { :git => "https://github.com/zakdances/CocoaPlus.git", :tag => "#{s.version}" }
@@ -53,11 +53,15 @@ Pod::Spec.new do |s|
 		
 	end
 
-	s.subspec 'NSAttributedString' do |as|
+	# s.subspec 'NSAttributedString' do |as|
 		
-		as.source_files  = 'Categories/NSAttributedString+Plus.{h,m}'
+	# 	as.source_files  = 'Categories/NSAttributedString+Plus.{h,m}'
 
-		# as.dependency = ['NSAttributedRange']
+	# end
+
+	s.subspec 'NSRange' do |rp|
+		
+		rp.source_files  = 'Classes/NSRangePlus.{h,m}'
 
 	end
 

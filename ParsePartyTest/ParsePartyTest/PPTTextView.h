@@ -33,6 +33,6 @@ typedef NS_ENUM(NSUInteger, NSTextViewEditSource) {
 // Notify the delegate when changes are generated via keyboard, not copy paste.
 @property BOOL textInsertedWithKeyboard;
 @property NSTextViewEditSource editSource;
-@property (weak) id <NSTextViewPlusDelegate> delegate;
+//@property (weak) id <NSTextViewPlusDelegate> delegate;
 
 @end

@@ -1,5 +1,5 @@
 #include "Pods-NSAttributedRange.xcconfig"
 GCC_PREPROCESSOR_DEFINITIONS = COCOAPODS=1
-HEADER_SEARCH_PATHS = "${PODS_ROOT}/BuildHeaders" "${PODS_ROOT}/BuildHeaders/NSAttributedRange" "${PODS_ROOT}/Headers" "${PODS_ROOT}/Headers/CocoaPlus" "${PODS_ROOT}/Headers/Mantle" "${PODS_ROOT}/Headers/NSAttributedRange" "${PODS_ROOT}/Headers/ParseParty" "${PODS_ROOT}/Headers/StandardPaths" "${PODS_ROOT}/Headers/WebViewJavascriptBridge"
+HEADER_SEARCH_PATHS = "${PODS_ROOT}/BuildHeaders" "${PODS_ROOT}/BuildHeaders/NSAttributedRange" "${PODS_ROOT}/Headers" "${PODS_ROOT}/Headers/CocoaPlus" "${PODS_ROOT}/Headers/Jantle" "${PODS_ROOT}/Headers/Mantle" "${PODS_ROOT}/Headers/NSAttributedRange" "${PODS_ROOT}/Headers/ParseParty" "${PODS_ROOT}/Headers/StandardPaths" "${PODS_ROOT}/Headers/WebViewJavascriptBridge" "${PODS_ROOT}/Headers/jCocoaPlus" "${PODS_ROOT}/Headers/jNSAttributedRange"
 OTHER_LDFLAGS = -ObjC ${PODS_NSATTRIBUTEDRANGE_OTHER_LDFLAGS}
 PODS_ROOT = ${SRCROOT}

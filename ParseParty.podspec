@@ -29,7 +29,7 @@ Pod::Spec.new do |s|
 
 
 
-	s.default_subspec = 'Tokenize'
+	s.default_subspec = 'Parse'
 
 	s.subspec 'Core' do |c|
 		c.source_files 		= 	'Classes', 'Classes/**/*.{h,m}'
@@ -44,10 +44,10 @@ Pod::Spec.new do |s|
 		c.exclude_files = 'test.js', '**/test.js', 'submodules/CodeMirror/test.js', 'submodules/CodeMirror/**/test.js'
 	end
 
-	s.subspec 'Tokenize' do |t|
-		# t.source_files = 'Classes', 'Classes/**/*.{h,m}'
-		t.dependency 'ParseParty/Core'
-	end
+	# s.subspec 'Tokenize' do |t|
+	# 	# t.source_files = 'Classes', 'Classes/**/*.{h,m}'
+		
+	# end
 
 	s.subspec 'Parse' do |p|
 
@@ -70,27 +70,23 @@ Pod::Spec.new do |s|
 		# 				CMD
 		# p.prefix_header_contents = '#import ParseParty+Parse.h'
 		# p.prefix_header_contents = '#import PPCodeMirror+Parse.h'
-
-		p.dependency 'ParseParty/Tokenize'
-		p.dependency 'Mantle'
-		p.dependency 'MantleFoundation'
-		# p.dependency 'NSAttributedRange'
+		p.dependency 'ParseParty/Core'
 
 	end
 
-	s.subspec 'AutoParse' do |ap|
-		ap.resource_bundles = { 'MGitCoffeeScriptBungle' => ['Classes/webTech/bower_components/MGit-CoffeeScript/.built/MGit.js'] }
+	# s.subspec 'AutoParse' do |ap|
+	# 	ap.resource_bundles = { 'MGitCoffeeScriptBungle' => ['Classes/webTech/bower_components/MGit-CoffeeScript/.built/MGit.js'] }
 
-		ap.exclude_files = 'test.js', '**/test.js', 'submodules/CodeMirror/test.js', 'submodules/CodeMirror/**/test.js'
-		ap.prefix_header_contents = '
-#import "PPAutoParseProtocol.h"
-#import "ParseParty+AutoParse.h"
-#import "PPCodeMirror+AutoParse.h"
-'
+	# 	ap.exclude_files = 'test.js', '**/test.js', 'submodules/CodeMirror/test.js', 'submodules/CodeMirror/**/test.js'
+	# 	ap.prefix_header_contents = '
+	# 	#import "PPAutoParseProtocol.h"
+	# 	#import "ParseParty+AutoParse.h"
+	# 	#import "PPCodeMirror+AutoParse.h"
+	# 	'
 
-		ap.dependency 'ParseParty/Parse'
-		ap.dependency 'MGit'
-	end
+	# 	ap.dependency 'ParseParty/Parse'
+	# 	ap.dependency 'MGit'
+	# end
 
 
 		
@@ -115,5 +111,7 @@ Pod::Spec.new do |s|
 	s.dependency 'WebViewJavascriptBridge'
 	s.dependency 'StandardPaths'
 	s.dependency 'CocoaPlus/WebView'
+	s.dependency 'jNSAttributedRange'
+	# s.dependency 'promise'
 
 end
