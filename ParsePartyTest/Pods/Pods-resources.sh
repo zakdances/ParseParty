@@ -42,12 +42,13 @@ install_resource()
   esac
 }
 install_resource "WebViewJavascriptBridge/WebViewJavascriptBridge/WebViewJavascriptBridge.js.txt"
-install_resource "${BUILT_PRODUCTS_DIR}/PPJQueryBundle.bundle"
-install_resource "${BUILT_PRODUCTS_DIR}/PPUnderscoreBundle.bundle"
+install_resource "${BUILT_PRODUCTS_DIR}/PPBowerBundle.bundle"
 install_resource "${BUILT_PRODUCTS_DIR}/PPCodeMirrorBundle.bundle"
-install_resource "${BUILT_PRODUCTS_DIR}/PPAngularJSBundle.bundle"
-install_resource "${BUILT_PRODUCTS_DIR}/PPMainScriptBundle.bundle"
-install_resource "${BUILT_PRODUCTS_DIR}/PPScriptBundle.bundle"
+install_resource "${BUILT_PRODUCTS_DIR}/PPMGitBundle.bundle"
+install_resource "${BUILT_PRODUCTS_DIR}/PPAppBundle.bundle"
+install_resource "${BUILT_PRODUCTS_DIR}/PPControllersBundle.bundle"
+install_resource "${BUILT_PRODUCTS_DIR}/PPDirectivesBundle.bundle"
+install_resource "${BUILT_PRODUCTS_DIR}/PPServicesBundle.bundle"
 
 rsync -avr --copy-links --no-relative --exclude '*/.svn/*' --files-from="$RESOURCES_TO_COPY" / "${CONFIGURATION_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}"
 if [[ "${ACTION}" == "install" ]]; then
@@ -55,8 +56,21 @@ if [[ "${ACTION}" == "install" ]]; then
 fi
 rm -f "$RESOURCES_TO_COPY"
 
-if [ `find . -name '*.xcassets' | wc -l` -ne 0 ]
+if [[ -n "${WRAPPER_EXTENSION}" ]] && [ `xcrun --find actool` ] && [ `find . -name '*.xcassets' | wc -l` -ne 0 ]
 then
-  DEVICE=`if [ "${TARGETED_DEVICE_FAMILY}" -eq 1 ]; then echo "iphone"; else echo "ipad"; fi`
-  find "${PWD}" -name "*.xcassets" -print0 | xargs -0 actool --output-format human-readable-text --notices --warnings --platform "${PLATFORM_NAME}" --minimum-deployment-target "${IPHONEOS_DEPLOYMENT_TARGET}" --target-device "${DEVICE}" --compress-pngs --compile "${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.${WRAPPER_EXTENSION}"
+  case "${TARGETED_DEVICE_FAMILY}" in 
+    1,2)
+      TARGET_DEVICE_ARGS="--target-device ipad --target-device iphone"
+      ;;
+    1)
+      TARGET_DEVICE_ARGS="--target-device iphone"
+      ;;
+    2)
+      TARGET_DEVICE_ARGS="--target-device ipad"
+      ;;
+    *)
+      TARGET_DEVICE_ARGS="--target-device mac"
+      ;;  
+  esac 
+  find "${PWD}" -name "*.xcassets" -print0 | xargs -0 actool --output-format human-readable-text --notices --warnings --platform "${PLATFORM_NAME}" --minimum-deployment-target "${IPHONEOS_DEPLOYMENT_TARGET}" ${TARGET_DEVICE_ARGS} --compress-pngs --compile "${BUILT_PRODUCTS_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}"
 fi

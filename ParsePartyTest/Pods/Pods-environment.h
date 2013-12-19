@@ -6,12 +6,6 @@
 // project.
 
 
-// CocoaPlus/NSRange
-#define COCOAPODS_POD_AVAILABLE_CocoaPlus_NSRange
-#define COCOAPODS_VERSION_MAJOR_CocoaPlus_NSRange 0
-#define COCOAPODS_VERSION_MINOR_CocoaPlus_NSRange 0
-#define COCOAPODS_VERSION_PATCH_CocoaPlus_NSRange 7
-
 // CocoaPlus/WebView
 #define COCOAPODS_POD_AVAILABLE_CocoaPlus_WebView
 #define COCOAPODS_VERSION_MAJOR_CocoaPlus_WebView 0
@@ -23,6 +17,12 @@
 #define COCOAPODS_VERSION_MAJOR_Jantle 0
 #define COCOAPODS_VERSION_MINOR_Jantle 0
 #define COCOAPODS_VERSION_PATCH_Jantle 1
+
+// MGit-Objective-C
+#define COCOAPODS_POD_AVAILABLE_MGit_Objective_C
+#define COCOAPODS_VERSION_MAJOR_MGit_Objective_C 0
+#define COCOAPODS_VERSION_MINOR_MGit_Objective_C 0
+#define COCOAPODS_VERSION_PATCH_MGit_Objective_C 1
 
 // Mantle
 #define COCOAPODS_POD_AVAILABLE_Mantle
@@ -36,23 +36,35 @@
 #define COCOAPODS_VERSION_MINOR_Mantle_extobjc 3
 #define COCOAPODS_VERSION_PATCH_Mantle_extobjc 1
 
-// NSAttributedRange
-#define COCOAPODS_POD_AVAILABLE_NSAttributedRange
-#define COCOAPODS_VERSION_MAJOR_NSAttributedRange 0
-#define COCOAPODS_VERSION_MINOR_NSAttributedRange 0
-#define COCOAPODS_VERSION_PATCH_NSAttributedRange 1
+// Masonry
+#define COCOAPODS_POD_AVAILABLE_Masonry
+#define COCOAPODS_VERSION_MAJOR_Masonry 0
+#define COCOAPODS_VERSION_MINOR_Masonry 3
+#define COCOAPODS_VERSION_PATCH_Masonry 1
+
+// OMPromises
+#define COCOAPODS_POD_AVAILABLE_OMPromises
+#define COCOAPODS_VERSION_MAJOR_OMPromises 0
+#define COCOAPODS_VERSION_MINOR_OMPromises 1
+#define COCOAPODS_VERSION_PATCH_OMPromises 1
+
+// OMPromises/Core
+#define COCOAPODS_POD_AVAILABLE_OMPromises_Core
+#define COCOAPODS_VERSION_MAJOR_OMPromises_Core 0
+#define COCOAPODS_VERSION_MINOR_OMPromises_Core 1
+#define COCOAPODS_VERSION_PATCH_OMPromises_Core 1
+
+// ParseParty
+#define COCOAPODS_POD_AVAILABLE_ParseParty
+#define COCOAPODS_VERSION_MAJOR_ParseParty 0
+#define COCOAPODS_VERSION_MINOR_ParseParty 0
+#define COCOAPODS_VERSION_PATCH_ParseParty 1
 
 // ParseParty/Core
 #define COCOAPODS_POD_AVAILABLE_ParseParty_Core
 #define COCOAPODS_VERSION_MAJOR_ParseParty_Core 0
 #define COCOAPODS_VERSION_MINOR_ParseParty_Core 0
 #define COCOAPODS_VERSION_PATCH_ParseParty_Core 1
-
-// ParseParty/Parse
-#define COCOAPODS_POD_AVAILABLE_ParseParty_Parse
-#define COCOAPODS_VERSION_MAJOR_ParseParty_Parse 0
-#define COCOAPODS_VERSION_MINOR_ParseParty_Parse 0
-#define COCOAPODS_VERSION_PATCH_ParseParty_Parse 1
 
 // StandardPaths
 #define COCOAPODS_POD_AVAILABLE_StandardPaths
@@ -65,16 +77,4 @@
 #define COCOAPODS_VERSION_MAJOR_WebViewJavascriptBridge 4
 #define COCOAPODS_VERSION_MINOR_WebViewJavascriptBridge 1
 #define COCOAPODS_VERSION_PATCH_WebViewJavascriptBridge 0
-
-// jCocoaPlus/NSRange
-#define COCOAPODS_POD_AVAILABLE_jCocoaPlus_NSRange
-#define COCOAPODS_VERSION_MAJOR_jCocoaPlus_NSRange 0
-#define COCOAPODS_VERSION_MINOR_jCocoaPlus_NSRange 0
-#define COCOAPODS_VERSION_PATCH_jCocoaPlus_NSRange 1
-
-// jNSAttributedRange
-#define COCOAPODS_POD_AVAILABLE_jNSAttributedRange
-#define COCOAPODS_VERSION_MAJOR_jNSAttributedRange 0
-#define COCOAPODS_VERSION_MINOR_jNSAttributedRange 0
-#define COCOAPODS_VERSION_PATCH_jNSAttributedRange 1
 

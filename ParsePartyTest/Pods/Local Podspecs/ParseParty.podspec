@@ -3,7 +3,7 @@ Pod::Spec.new do |s|
 
 	s.name         = "ParseParty"
 	s.version      = "0.0.1"
-	s.summary      = "ParseParty is a code parser written in Objective-C for OSX. Powered by CodeMirror."
+	s.summary      = "ParseParty is a code parser and tokenizer written in Objective-C for OSX. Powered by CodeMirror."
 
 	s.description  = <<-DESC
 									 A longer description of Objective-CSS in Markdown format.
@@ -22,23 +22,48 @@ Pod::Spec.new do |s|
 	s.osx.deployment_target = '10.9'
 
 	s.source       = { :git => "https://github.com/zakdances/ParseParty.git", :tag => "#{s.version}" }
-	# s.source_files = 'Classes', 'Classes/**/*.{h,m}'
-
-	
-	# s.exclude_files = 'test.js', '**/test.js', 'submodules/CodeMirror/test.js', 'submodules/CodeMirror/**/test.js'
 
 
 
-	s.default_subspec = 'Parse'
+	s.default_subspec = 'Core'
 
 	s.subspec 'Core' do |c|
-		c.source_files 		= 	'Classes', 'Classes/**/*.{h,m}'
+
+		distPath 	= 'ParseParty/webTech/dist'
+		scriptPath 	= distPath + '/scripts'
+		stylesPath 	= distPath + '/styles'
+		bowerPath 	= distPath + '/bower_components'
+
+		c.source_files 		= 	'ParseParty', 'ParseParty/**/*.{h,m}'
+
 		c.resource_bundles 	= 	{
-								'PPJQueryBundle' => ['Classes/webTech/bower_components/jquery/jquery.js'],
-								'PPUnderscoreBundle' => ['Classes/webTech/bower_components/underscore/underscore.js'],
+								'PPBowerBundle' => [
+									bowerPath + '/jquery/jquery.js',
+									bowerPath + '/underscore/underscore.js',
+									bowerPath + '/angular/angular.js',
+									bowerPath + '/angular-route/angular-route.js',
+									bowerPath + '/jquery-color/jquery.color.js',
+									'' 		  + 'submodules/CSRange/.jsc/CSRange.js'
+									],
+								# 'PPUnderscoreBundle' => ['Classes/webTech/bower_components/underscore/underscore.js'],
+								# 'PPAngularJSBundle' => ['Classes/webTech/bower_components/angular-seed/app/lib/angular/*{angular.js,angular-route.js}'],
+
 								'PPCodeMirrorBundle' => ['submodules/CodeMirror/*.{js,css}', 'submodules/CodeMirror/**/*.{js,css}'],
-								'PPAngularJSBundle' => ['Classes/webTech/bower_components/angular-seed/app/lib/angular/*{angular.js,angular-route.js}'],
-								'PPMainScriptBundle' => ['Classes/webTech/app/.jsc/*{app.js,controllers.js,directives.js,filters.js,services.js}']
+
+								'PPMGitBundle' => ['submodules/MGit-CoffeeScript/.jsc/MGit.js', 'submodules/MGit-CoffeeScript/bower_components/node-uuid/uuid.js'],
+
+								'PPAppBundle' => [
+									scriptPath + '/*.{js,map}'
+									],
+								'PPControllersBundle' => [
+									scriptPath + '/controllers/*.{js,map}', scriptPath + '/controllers/**/*.{js,map}'
+									],
+								'PPDirectivesBundle' => [
+									scriptPath + '/directives/*.{js,map}', scriptPath + '/directives/**/*.{js,map}'
+									],
+								'PPServicesBundle' => [
+									scriptPath + '/services/*.{js,map}', scriptPath + '/services/**/*.{js,map}'
+									]
 								}
 
 		c.exclude_files = 'test.js', '**/test.js', 'submodules/CodeMirror/test.js', 'submodules/CodeMirror/**/test.js'
@@ -49,12 +74,12 @@ Pod::Spec.new do |s|
 		
 	# end
 
-	s.subspec 'Parse' do |p|
+	# s.subspec 'Parse' do |p|
 
-		p.resource_bundles = { 'PPScriptBundle' => ['Classes/webTech/app/.jsc/parse.js', 'Classes/webTech/bower_components/NSAttributedRange/NSAttributedRange.js', 'Classes/webTech/bower_components/NSAttributedString/NSAttributedString.js'] }
+		# p.resource_bundles = { 'PPScriptBundle' => ['Classes/webTech/app/.jsc/parse.js', 'Classes/webTech/bower_components/NSAttributedRange/NSAttributedRange.js', 'Classes/webTech/bower_components/NSAttributedString/NSAttributedString.js'] }
 		# p.resource_bundles = { 'PPParseBundle' => ['Classes/webTech/app/.jsc/*{parse.js}', '../NSAttributedRange/.jsc/NSAttributedRange.js'] }
 
-		p.exclude_files 	= 'test.js', '**/test.js', 'submodules/CodeMirror/test.js', 'submodules/CodeMirror/**/test.js'
+		# p.exclude_files 	= 'test.js', '**/test.js', 'submodules/CodeMirror/test.js', 'submodules/CodeMirror/**/test.js'
 # 		p.prefix_header_contents = '
 # #import "PPParseProtocol.h"
 # #import "ParseParty+Parse.h"
@@ -70,9 +95,9 @@ Pod::Spec.new do |s|
 		# 				CMD
 		# p.prefix_header_contents = '#import ParseParty+Parse.h'
 		# p.prefix_header_contents = '#import PPCodeMirror+Parse.h'
-		p.dependency 'ParseParty/Core'
+	# 	p.dependency 'ParseParty/Core'
 
-	end
+	# end
 
 	# s.subspec 'AutoParse' do |ap|
 	# 	ap.resource_bundles = { 'MGitCoffeeScriptBungle' => ['Classes/webTech/bower_components/MGit-CoffeeScript/.built/MGit.js'] }
@@ -111,7 +136,9 @@ Pod::Spec.new do |s|
 	s.dependency 'WebViewJavascriptBridge'
 	s.dependency 'StandardPaths'
 	s.dependency 'CocoaPlus/WebView'
-	s.dependency 'jNSAttributedRange'
-	# s.dependency 'promise'
+	s.dependency 'MGit-Objective-C'
+	s.dependency 'Jantle'
+	# s.dependency 'jNSAttributedRange'
+	s.dependency 'OMPromises'
 
 end

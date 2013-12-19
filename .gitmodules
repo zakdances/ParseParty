@@ -1,3 +1,9 @@
 [submodule "submodules/CodeMirror"]
 	path = submodules/CodeMirror
 	url = https://github.com/marijnh/CodeMirror.git
+[submodule "submodules/CSRange"]
+	path = submodules/CSRange
+	url = https://github.com/zakdances/CSRange.git
+[submodule "MGit-CoffeeScript"]
+	path = submodules/MGit-CoffeeScript
+	url = https://github.com/zakdances/MGit-CoffeeScript.git

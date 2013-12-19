@@ -9,30 +9,35 @@
 #import <Cocoa/Cocoa.h>
 #import "NSTextStorage+TextViewReference.h"
 
-typedef NS_ENUM(NSUInteger, NSTextViewEditSource) {
-    NSTextViewEditSourceNone,
-    NSTextViewEditSourceKeyboard,
-	NSTextViewEditSourcePaste,
-    NSTextViewEditSourceOtherCommand
-};
+//typedef NS_ENUM(NSUInteger, NSTextViewEditSource) {
+//    NSTextViewEditSourceNone,
+//    NSTextViewEditSourceKeyboard,
+//	NSTextViewEditSourcePaste,
+//	NSTextViewEditSourceDeleteBackward,
+//    NSTextViewEditSourceOtherCommand
+//};
 
-@protocol NSTextViewPlusDelegate <NSObject, NSTextViewDelegate>
+@protocol NSTextViewPlusDelegate <NSTextViewDelegate>
 
 @optional
 
-- (void)willInsertTextInTextView:(NSTextView *)textView newText:(id)aString replacementRange:(NSRange)replacementRange;
+- (BOOL)textView:(PPTTextView *)aTextView shouldChangeSelectionFromCharacterRanges:(NSArray *)oldSelectedCharRanges fromAffinity:(NSSelectionAffinity)oldAffinity toCharacterRanges:(NSArray *)newSelectedCharRanges toAffinity:(NSSelectionAffinity)newAffinity stillSelecting:(BOOL)stillSelectingFlag;
 
-- (void)willSetMarkedTextIn:(NSTextView *)textView newText:(id)aString selectedRange:(NSRange)selectedRange replacementRange:(NSRange)replacementRange;
+- (NSArray *)textView:(PPTTextView *)aTextView willChangeSelectionFromCharacterRanges:(NSArray *)oldSelectedCharRanges fromAffinity:(NSSelectionAffinity)oldAffinity toCharacterRanges:(NSArray *)newSelectedCharRanges toAffinity:(NSSelectionAffinity)newAffinity stillSelecting:(BOOL)stillSelectingFlag;
 
-- (void)willDoCommandOnTextView:(NSTextView *)textView selector:(SEL)aSelector;
+- (void)textView:(PPTTextView *)aTextView didChangeSelectionFromCharacterRanges:(NSArray *)oldSelectedCharRanges fromAffinity:(NSSelectionAffinity)oldAffinity toCharacterRanges:(NSArray *)newSelectedCharRanges toAffinity:(NSSelectionAffinity)newAffinity stillSelecting:(BOOL)stillSelectingFlag;
 
 @end
 
 @interface PPTTextView : NSTextView
 
 // Notify the delegate when changes are generated via keyboard, not copy paste.
-@property BOOL textInsertedWithKeyboard;
-@property NSTextViewEditSource editSource;
-//@property (weak) id <NSTextViewPlusDelegate> delegate;
+//@property BOOL textInsertedWithKeyboard;
+
+//@property NSTextViewEditSource editSource;
+
+@property (weak) id <NSTextViewPlusDelegate> delegate;
+
+//@property (strong) MGITCommit *premadeCommit;
 
 @end

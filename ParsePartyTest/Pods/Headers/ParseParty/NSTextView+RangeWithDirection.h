@@ -1,0 +1,1 @@
+../../../../ParseParty/Categories/NSTextView+RangeWithDirection.h

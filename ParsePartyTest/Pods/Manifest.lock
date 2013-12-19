@@ -1,65 +1,59 @@
 PODS:
-  - CocoaPlus/NSRange (0.0.7)
   - CocoaPlus/WebView (0.0.7)
   - Jantle (0.0.1):
     - Mantle
-  - jCocoaPlus/NSRange (0.0.1):
-    - CocoaPlus/NSRange
-    - Jantle
-  - jNSAttributedRange (0.0.1):
-    - jCocoaPlus/NSRange
-    - NSAttributedRange
   - Mantle (1.3.1):
     - Mantle/extobjc
   - Mantle/extobjc (1.3.1)
-  - NSAttributedRange (0.0.1):
-    - CocoaPlus/NSRange
-  - ParseParty/Core (0.0.1):
+  - Masonry (0.3.1)
+  - MGit-Objective-C (0.0.1)
+  - OMPromises (0.1.1):
+    - OMPromises/Core
+  - OMPromises/Core (0.1.1)
+  - ParseParty (0.0.1):
     - CocoaPlus/WebView
-    - jNSAttributedRange
+    - Jantle
+    - MGit-Objective-C
+    - OMPromises
+    - ParseParty/Core
     - StandardPaths
     - WebViewJavascriptBridge
-  - ParseParty/Parse (0.0.1):
+  - ParseParty/Core (0.0.1):
     - CocoaPlus/WebView
-    - jNSAttributedRange
-    - ParseParty/Core
+    - Jantle
+    - MGit-Objective-C
+    - OMPromises
     - StandardPaths
     - WebViewJavascriptBridge
   - StandardPaths (1.5.4)
   - WebViewJavascriptBridge (4.1.0)
 
 DEPENDENCIES:
-  - CocoaPlus/NSRange (from `/Users/zak/Zak/projects/CocoaPlus`)
   - CocoaPlus/WebView (from `/Users/zak/Zak/projects/CocoaPlus`)
   - Jantle (from `/Users/zak/Zak/projects/Jantle/Jantle`)
-  - jCocoaPlus/NSRange (from `/Users/zak/Zak/projects/Jantle/jCocoaPlus`)
-  - jNSAttributedRange (from `/Users/zak/Zak/projects/Range/jNSAttributedRange`)
-  - NSAttributedRange (from `/Users/zak/Zak/projects/Range/NSAttributedRange`)
-  - ParseParty/Parse (from `../`)
+  - Masonry
+  - MGit-Objective-C (from `/Users/zak/Zak/projects/MGit/MGit-Objective-C`)
+  - ParseParty (from `../`)
 
 EXTERNAL SOURCES:
   CocoaPlus:
     :path: /Users/zak/Zak/projects/CocoaPlus
   Jantle:
     :path: /Users/zak/Zak/projects/Jantle/Jantle
-  jCocoaPlus:
-    :path: /Users/zak/Zak/projects/Jantle/jCocoaPlus
-  jNSAttributedRange:
-    :path: /Users/zak/Zak/projects/Range/jNSAttributedRange
-  NSAttributedRange:
-    :path: /Users/zak/Zak/projects/Range/NSAttributedRange
+  MGit-Objective-C:
+    :path: /Users/zak/Zak/projects/MGit/MGit-Objective-C
   ParseParty:
     :path: ../
 
 SPEC CHECKSUMS:
   CocoaPlus: 229ca25d4f08cb45ffb48c6e0addeb2f630b207a
   Jantle: e4cec3a35028cce1ee8ccdaade921b318b72efad
-  jCocoaPlus: 655eb3a55143360f5abf45141ac39391c787b1d0
-  jNSAttributedRange: d8cc49012e4e82412b25d528c3de24019ef8ae47
   Mantle: abc3b0c81bc66eb624cf9cebb8640e377d5a44ae
-  NSAttributedRange: 071b59c12af53f79f75825eb2aed0c9323c5e66d
-  ParseParty: faba9b56cde27ec5e33553984ff1b7072df41b01
+  Masonry: 9d43e954fbe6e903002acd063e11aa648800a310
+  MGit-Objective-C: 72ab575b2259e5c9af7314feb5a9addf0a9cab48
+  OMPromises: 16dde8d854db0d68f72182f8ae6a23a720303f45
+  ParseParty: db3b20887cb6b4a080fff1f54267a60b08d49df7
   StandardPaths: 3251b6aac8bf4e8a32e980f53e4de6d558617353
   WebViewJavascriptBridge: eb504e9485f5b7f3fa036b6f0d748cfccb2aa18b
 
-COCOAPODS: 0.27.1
+COCOAPODS: 0.28.0

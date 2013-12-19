@@ -19,3 +19,6 @@ DerivedData
 *.sublime-workspace
 dev/
 design/
+
+.tmp
+.sass-cache

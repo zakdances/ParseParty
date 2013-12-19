@@ -21,7 +21,7 @@
 
 - (void)applicationDidFinishLaunching:(NSNotification *)notification
 {
-//	NSLog(@"well that's great");
+	
 }
 
 //- (BOOL)applicationShouldOpenUntitledFile:(NSApplication *)sender

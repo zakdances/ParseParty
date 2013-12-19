@@ -1,4 +1,4 @@
 GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
-HEADER_SEARCH_PATHS = "${PODS_ROOT}/Headers" "${PODS_ROOT}/Headers/CocoaPlus" "${PODS_ROOT}/Headers/Jantle" "${PODS_ROOT}/Headers/Mantle" "${PODS_ROOT}/Headers/NSAttributedRange" "${PODS_ROOT}/Headers/ParseParty" "${PODS_ROOT}/Headers/StandardPaths" "${PODS_ROOT}/Headers/WebViewJavascriptBridge" "${PODS_ROOT}/Headers/jCocoaPlus" "${PODS_ROOT}/Headers/jNSAttributedRange"
-OTHER_LDFLAGS = -ObjC -framework Foundation -framework WebKit
+HEADER_SEARCH_PATHS = "${PODS_ROOT}/Headers" "${PODS_ROOT}/Headers/CocoaPlus" "${PODS_ROOT}/Headers/Jantle" "${PODS_ROOT}/Headers/MGit-Objective-C" "${PODS_ROOT}/Headers/Mantle" "${PODS_ROOT}/Headers/Masonry" "${PODS_ROOT}/Headers/OMPromises" "${PODS_ROOT}/Headers/ParseParty" "${PODS_ROOT}/Headers/StandardPaths" "${PODS_ROOT}/Headers/WebViewJavascriptBridge"
+OTHER_LDFLAGS = -ObjC -framework AppKit -framework Foundation -framework WebKit
 PODS_ROOT = ${SRCROOT}/Pods

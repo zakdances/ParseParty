@@ -1,11 +1,13 @@
 pod 'CocoaPlus/WebView', 		:path => '/Users/zak/Zak/projects/CocoaPlus'
-pod 'CocoaPlus/NSRange', 		:path => '/Users/zak/Zak/projects/CocoaPlus'
+# pod 'CocoaPlus/NSRange', 		:path => '/Users/zak/Zak/projects/CocoaPlus'
 
-pod 'NSAttributedRange', 		:path => '/Users/zak/Zak/projects/Range/NSAttributedRange'
+# pod 'NSAttributedRange', 		:path => '/Users/zak/Zak/projects/Range/NSAttributedRange'
 
 pod 'Jantle', 					:path => '/Users/zak/Zak/projects/Jantle/Jantle'
-pod 'jCocoaPlus/NSRange', 		:path => '/Users/zak/Zak/projects/Jantle/jCocoaPlus'
-pod 'jNSAttributedRange', :path => '/Users/zak/Zak/projects/Range/jNSAttributedRange'
+pod 'MGit-Objective-C', 		:path => '/Users/zak/Zak/projects/MGit/MGit-Objective-C'
+# pod 'jCocoaPlus/NSRange', 		:path => '/Users/zak/Zak/projects/Jantle/jCocoaPlus'
+# pod 'jNSAttributedRange', 		:path => '/Users/zak/Zak/projects/Range/jNSAttributedRange'
 # pod 'promise', 					:path => '/Users/zak/Zak/projects/promise'
+pod 'Masonry'
 
-pod 'ParseParty/Parse', :path => '../'
+pod 'ParseParty', :path => '../'

@@ -1,0 +1,10 @@
+{
+  "version": 3,
+  "file": "PPAttributedString.js",
+  "sourceRoot": "",
+  "sources": [
+    "PPAttributedString.coffee"
+  ],
+  "names": [],
+  "mappings": "AAkBC;CAAA;CAAA"
+}

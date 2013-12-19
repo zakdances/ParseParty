@@ -1,1 +1,1 @@
-../../../../Classes/ParseParty+AutoParse.h
+../../../../ParseParty/Categories/ParseParty+AutoParse.h

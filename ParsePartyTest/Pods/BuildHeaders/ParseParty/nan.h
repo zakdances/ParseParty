@@ -1,0 +1,1 @@
+../../../../ParseParty/webTech/node_modules/karma/node_modules/socket.io/node_modules/socket.io-client/node_modules/ws/node_modules/nan/nan.h

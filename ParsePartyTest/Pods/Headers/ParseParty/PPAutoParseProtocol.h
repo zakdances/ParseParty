@@ -1,1 +1,1 @@
-../../../../Classes/PPAutoParseProtocol.h
+../../../../ParseParty/Protocols/PPAutoParseProtocol.h

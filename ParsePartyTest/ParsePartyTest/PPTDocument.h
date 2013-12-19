@@ -8,16 +8,22 @@
 
 #import <Cocoa/Cocoa.h>
 #import <ParseParty/ParseParty.h>
-#import <ParseParty/PPParseProtocol.h>
-@class PPTWindow;
+//#import <ParseParty/PPParseProtocol.h>
+#import "PPTWindow.h"
 
-@interface PPTDocument : NSDocument <PPStatusDelegate, NSTextStorageDelegate, NSTextViewDelegate, NSTableViewDelegate, NSTableViewDataSource>
+@interface PPTDocument : NSDocument <PPDelegate, NSTextStorageDelegate, NSTextViewPlusDelegate, NSTableViewDelegate, NSTableViewDataSource> {
+//	BOOL _shouldTextViewChangeSelectedRanges;
+//	BOOL _shouldReplaceRange;
+}
 
 @property (strong) ParseParty *parser;
+@property (strong) MGITRepository *repo;
 
 @property (strong)	NSTextStorage	*textStorage;
-@property (weak)	PPTWindow		*sampleWindow;
-@property BOOL shouldReportSelectionAndInsertionPointChangesToParser;
+//@property (strong) NSMapTable *premadeCommits;
+@property (weak)	PPTWindow		*w;
+
+//@property BOOL shouldReportSelectionAndInsertionPointChangesToParser;
 @property (strong) NSArray *tokens;
 
 @end

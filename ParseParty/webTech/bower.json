@@ -1,0 +1,32 @@
+{
+  "name": "parse-party",
+  "version": "0.0.0",
+  "homepage": "https://github.com/zakdances/ParseParty",
+  "authors": [
+    "Zak"
+  ],
+  "description": "A code parser written in Objective-C. This is the WebView component.",
+  "license": "MIT",
+  "keywords": [
+    "parser",
+    "syntax-highlighting",
+    "Objective-C"
+  ],
+  "main": "app/app.coffee",
+  "dependencies": {
+    "angular": "~1.2.0",
+    "angular-resource": "~1.2.0",
+    "angular-cookies": "~1.2.0",
+    "angular-sanitize": "~1.2.0",
+    "angular-route": "~1.2.0",
+    "jquery": "~2.0.3",
+    "underscore": "~1.5.2",
+    "jquery-color": "~2.1.2",
+    "CSAttributedString": "https://github.com/zakdances/NSAttributedString-CoffeeScript.git#~0.0.1",
+    "CSRange": "https://github.com/zakdances/NSAttributedRange.git#~0.0.1"
+  },
+  "devDependencies": {
+    "angular-mocks": "~1.2.0",
+    "angular-scenario": "~1.2.0"
+  }
+}

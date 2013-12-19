@@ -8,9 +8,12 @@
 
 #import <Cocoa/Cocoa.h>
 @class PPTTextView;
+@class MGITCommit;
 
 @interface NSTextStorage (TextViewReference)
 
-@property (weak) PPTTextView *textView;
+//@property (weak) PPTTextView *textView;
+
+//@property (strong) MGITCommit *premadeCommit;
 
 @end
