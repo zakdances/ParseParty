@@ -3,9 +3,11 @@ $body-font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
 
 @import 'bourbon/app/assets/stylesheets/bourbon';
 @import 'foundation/scss/foundation';
+@import 'foundation-icons/foundation_icons_general/sass/general_foundicons';
 
 $light-grey: #e5e5e5;
-$green: #b6ff07;
+$light-green: #b6ff07;
+$green: #B6F600;
 $dark-green: #78ff00;
 
 // .browsehappy {
@@ -17,11 +19,13 @@ $dark-green: #78ff00;
 
 /* Space out content a bit */
 body {
-    padding-top: 40px;
-    padding-bottom: 0px;
-    // border-top: 3px solid #e5e5e5;
+    height: 100%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-top: 4px solid #e5e5e5;
+    border-bottom: 2px solid $light-green;
     background-color: rgba(#f7f7f7, 1);
-    color: #bbb;
+    color: #aaa;
 }
 
 /* Everything but the jumbotron gets side spacing for mobile first views */
@@ -35,31 +39,30 @@ body {
 /* Custom page header */
 .container > header {
     padding-top: 0px;
-    border-top: 1px solid $green;
+    border-top: 2px solid #eee;
     border-bottom: 0px solid $light-grey;
-     position: relative;
-     perspective: 700px;
-     z-index: 1;
+    position: relative;
+    perspective: 700px;
+    z-index: 1;
 
     /* Make the masthead heading the same height as the navigation */
     h1 {
         font-size: 60px;
-        font-weight: 200;
+        font-weight: 100;
         text-align: center;
         position: relative;
-        left: -190px;
-        margin-top: 50px;
+        left: -150px;
+        margin-top: 30px;
         margin-bottom: 0;
         // line-height: 40px;
-        padding-bottom: 30px;
+        padding-bottom: 20px;
         z-index: 2;
         
         background-position: 20px 10px;
         background-repeat: no-repeat;
         background-clip: no-clip;
 
-        transform:rotateY(40deg);
-        transform:rotateX(5deg);
+        transform: rotateX(2deg) rotateY(40deg);
 
     }
 
@@ -78,27 +81,33 @@ body {
 
     .reflection {
         position: absolute;
-        top: 65px;
-        right: 42px;
+        top: 45px;
+        right: 80px;
         transform:rotateY(-210deg);
 
-        font-weight: 200;
+        font-weight: 100;
         font-size: 60px;
         color: rgba(#000, .1);
     }
 
     .light {
         position: absolute;
-        top: -175px;
-        left: -80px;
+        // top: -165px;
+        // left: 0px;
+        bottom: -415px;
+        left: 31px;
         width: 900px;
-        height: 600px;
+        height: 900px;
         z-index: 1;
 
-        transform:rotateX(85deg);
+        transform:rotateX(92deg);
+        // @include background(
+        //     linear-gradient(180deg, rgba(#fff, 0), rgba(#fff, 0)),
+        //     radial-gradient(#fff 10%, #ddd 50%, rgba(#fff, 0) 70%)
+        // );
         @include background(
             linear-gradient(180deg, rgba(#fff, 0), rgba(#fff, 0)),
-            radial-gradient(#fff 10%, #ddd 50%, rgba(#fff, 0) 70%)
+            radial-gradient(#fff 10%, #ddd 20%, rgba(#fff, 0) 60%)
         );
     }
 }
@@ -152,26 +161,28 @@ body {
     // text-align: center;
     position: relative;
     // border-top: 1px solid #78ff00;
-    border-bottom: 1px solid $green;
+    border-bottom: 0px solid $light-grey;
     // @extend .top-border;
     // padding-top: 0px;
     // font-size: 32px;
 
-    &:before {
+    &:after {
         content: "";
+        width: 100%;
+        height: 5px;
         display: block;
         position: absolute;
-        top: 2px;
+        bottom: -4px;
         left: 0;
-        border-top: 5px solid $dark-green;
+        border-top: 0px solid $light-green;
     }
 
     h2 {
         margin-top: 0;
-        // margin-bottom: 0.3rem;
+        margin-bottom: 0.1rem;
         font-weight: 600;
-        font-size: 38px;
-        color: $green;
+        font-size: 20px;
+        color: #444;
         position: relative;
         z-index: 2;
     }
@@ -184,20 +195,48 @@ body {
 
 
 .links {
-    margin-top: 35px;
+    margin-top: 1.0rem;
+    padding-top: 0px;
     position: relative;
     z-index: 2;
     // text-align: center;
-    // border-bottom: 1px solid #e5e5e5;
+    // border-top: 1px solid #e5e5e5;
 
     a {
-        // margin-top: 0px;
-        font-size: 32px;
-        font-weight: 600;
+        position: relative;
+        padding: 6px 12px 4px 5px;
+        // @extend h2;
+        
+        font-size: 28px;
+        font-weight: 900;
+        letter-spacing: -1px;
         // text-transform: uppercase;
-        color: #ddd;
+        color: $green;
+
+        border-radius: 0px 0px 0 15px;
         // border-top: 2px solid #b6ff07;
-        // border-bottom: 1px solid #b6ff07;
+        border: 1px solid $green;
+        border-top: 1px solid $green;
+        border-left: 1px solid $green;
+        border-right: 0px solid $green;
+
+        &:before {
+            content: "";
+            width: 100%;
+            left: 0;
+            top: 0;
+            position: absolute;
+            border-top: 0px solid rgba($dark-green, .2);
+        }
+        // background-color: #eee;
+    }
+    a + a {
+        // margin-left: 0px;
+        // margin-right: 15px;
+        // padding-right: 5px;
+        border-left: 1px solid $green;
+        border-right: 1px solid $green;
+        border-radius: 0 6px 6px 0;
     }
 }
 
@@ -217,9 +256,9 @@ body {
 
 a {
     content:attr(data-text);
-    margin-right: 10px;
-    margin-top: 0px;
-    margin-bottom: 5px;
+    // margin-right: 10px;
+    // margin-top: 0px;
+    // margin-bottom: 5px;
     position: relative;
     
     font-weight: 100;
@@ -243,11 +282,11 @@ a {
 
 /* Supporting marketing content */ 
 .marketing {
-    padding-top: 12px;
+    padding-top: 28px;
     padding-left: 0px;
-    margin: 18px 0;
+    margin: 30px 0;
     font-size: 10px;
-    border-top: 0px solid rgba($light-grey, 1);
+    // border-top: 1px solid #b6ff07;
 
     // &:before {
     //     content: "";
@@ -261,14 +300,14 @@ a {
     }
 }
 
-h4 {
-    font-size: 32px;
-    color: $green;
-}
+// h4 {
+//     font-size: 32px;
+//     color: $green;
+// }
 .marketing p + h4 {
     // margin-top: 0px;
     // margin-bottom: 0.2rem; 
-    font-size: 23px;
+    font-size: 25px;
     font-weight: 400;
     // line-height: 3.4rem;
     color: #111;
@@ -276,23 +315,23 @@ h4 {
 }
 
 p {
-    font-size: 26px;
+    font-size: 23px;
     font-weight: 100;
     // line-height: 1.8;
-    margin-bottom: 0.7rem;
+    // margin-bottom: 0.7rem;
 }
 
 
 /* Custom page footer */
 .footer {
     display: flex;
-    padding-top: 0px;
-    padding-bottom: 10px;
+    padding-top: 20px;
+    padding-bottom: 20px;
     position: relative;
     border-top: 1px solid $green;
-    border-bottom: 3px solid $green;
+    border-bottom: 1px solid $green;
     background-clip: no-clip;
-
+    vertical-align: center;
     color: #777;
 
     // &:before {
@@ -307,27 +346,42 @@ p {
     // }
 
     h3 {
-        margin-right: 7px;
-        // font-size: 20px;
-        font-weight: 600;
+        padding: 0rem;
+        margin: 0rem;
+        margin-right: 15px;
+        font-size: 20px;
+        font-weight: 100;
+        line-height: 100%;
         color: $green;
     }
     .content {
-        padding-top: 4px;
+         // padding-top: 0px;
+         height: 100%;
+         line-height: 100%;
+         vertical-align: center;
+         display: flex;
+        h3 {
+            margin-top: 0rem;
+            margin-bottom: 0rem;
+            font-weight: 900;
+            line-height: 100%;
+            color: #666;
+        }
         p {
-            font-size: 28px;
+            font-size: 20px;
             font-weight: 900;
             color: #777;
             margin: 0;
             padding: 0;
-            line-height: 2.5rem;
+            line-height: 100%;
             // flex: 1;
         }
-        p + p {
-            color: #999;
-            // font-size: 24px;
-            font-weight: 100;
-        }
+        // p + p {
+        //     line-height: 1rem;
+        //     color: #999;
+        //     // font-size: 24px;
+        //     font-weight: 100;
+        // }
     }
     
 }
@@ -345,8 +399,8 @@ p {
     // .links,
     // .footer,
     .marketing {
-        // padding-left: 45px;
-        padding-right: 45px;
+        padding-left: 55px;
+        padding-right: 0px;
         
         // color: #b6ff07;
         &:after {
