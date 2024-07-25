@@ -1,4 +1,4 @@
-ParseParty
+ParseParty (project discontinued)
 =============
 
 ParseParty is a code parser written in Objective-C for OSX. Powered by CodeMirror.
